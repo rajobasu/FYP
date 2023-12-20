@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 import torch
 import transformers
+from pprint import pprint
 
 DOWNLOAD_URL = "https://github.com/unitaryai/detoxify/releases/download/"
 MODEL_URLS = {
@@ -27,9 +28,11 @@ class DetoxifyModel(ToxicityModel):
         self.model = MyDetoxify('original')
 
     def predict(self, sentence: str) -> float:
-        print(sentence)
-        return self.model.predict(sentence)["toxicity"]
-
+        # print(sentence)
+        prediction = self.model.predict(sentence)
+        # pprint(prediction)
+        # exit(0)
+        return prediction["toxicity"]
 
 
 def get_model_and_tokenizer(
@@ -46,7 +49,7 @@ def get_model_and_tokenizer(
     tokenizer = getattr(transformers, tokenizer_name).from_pretrained(
         huggingface_config_path or model_type,
         local_files_only=huggingface_config_path is not None,
-        
+
     )
 
     return model, tokenizer

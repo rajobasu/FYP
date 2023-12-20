@@ -17,11 +17,11 @@ class RandomSearch:
         self.db = db
         self.orig_sentence = ""
 
-    def start_search(self, sentence: str, search_limit: int = 10):
+    def start_search(self, sentence: str, search_limit: int = 100):
         self.orig_sentence = sentence
         print(self.orig_sentence)
         for _ in range(search_limit):
-            modified_sentence = self.modifier.modify(sentence, 0.3, 0.4, 0.5)
+            modified_sentence = self.modifier.modify(sentence)
             toxic_score = self.toxic.predict(modified_sentence)
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
 

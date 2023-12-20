@@ -23,3 +23,11 @@ class InMemStorage(Storage):
 
     def print_records(self):
         pprint(self.all_sentences)
+
+    def output_records(self):
+        # hello
+        print("outputting")
+        with open("./data/output.csv", "w") as f:
+            for tox, sim, sentence in self.all_sentences:
+                print(f"{tox},{sim}\n")
+                f.write(f"{tox},{sim}\n")
