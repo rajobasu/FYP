@@ -7,8 +7,10 @@ from storage.simple_storage import InMemStorage
 
 
 def main():
+    print("Fetching data...")
     data_list = get_data()
 
+    print("Initialising models...")
     # initialise models
     morpher = RandomMorpher()
     toxic = DetoxifyModel()
@@ -16,13 +18,16 @@ def main():
 
     max_ = 0
     data_final = [""]
+    print(len(data_list))
     for item in data_list:
         score = toxic.predict(item)
+        print("TOXICITY PREDICTED")
         if score > max_:
             max_ = score
             data_final = [item]
 
     print(max_)
+    print(item)
 
     for item in data_final:
         db = InMemStorage(item, toxic.predict(item))

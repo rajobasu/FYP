@@ -2,6 +2,7 @@ from models.similarity import SentenceSimilarityModel
 from models.toxicity import ToxicityModel
 from morphers.fancy_morpher import Morpher
 from storage.simple_storage import Storage
+from pprint import pprint
 
 
 class RandomSearch:
@@ -17,10 +18,12 @@ class RandomSearch:
         self.db = db
         self.orig_sentence = ""
 
-    def start_search(self, sentence: str, search_limit: int = 100):
+    def start_search(self, sentence: str, search_limit: int = 3):
         self.orig_sentence = sentence
         print(self.orig_sentence)
+        pprint("start search")
         for _ in range(search_limit):
+            pprint(f"Searching item {_}")
             modified_sentence = self.modifier.modify(sentence)
             toxic_score = self.toxic.predict(modified_sentence)
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)

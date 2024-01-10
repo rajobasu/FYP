@@ -25,7 +25,7 @@ class QualityControlPipeline(Morpher):
             'questions': {'lex': [0, 90], 'syn': [0, 75], 'sem': [0, 95]}
         }[type]
 
-    def modify2(self, text, lexical, syntactic , semantic, **kwargs):
+    def modify2(self, text, lexical, syntactic, semantic, **kwargs):
         assert all([0 <= val <= 1 for val in [lexical, syntactic, semantic]]), \
             f' control values must be between 0 and 1, got {lexical}, {syntactic}, {semantic}'
         names = ['semantic_sim', 'lexical_div', 'syntactic_div']
@@ -41,12 +41,30 @@ class QualityControlPipeline(Morpher):
         self.modify2(text, 0.3, 0.4, 0.5)
 
 
+"""
+This morpher replaces words entirely at random from a preselected word list. 
+"""
+
+
 class RandomMorpher(Morpher):
     def __init__(self):
         pass
 
-    def modify(self, sentence):
+
+    def add_word(self, sentence):
+        """Append a word to the end of the sentence"""
+        sentence += " " + get_random_word()
+        return sentence
+
+    def word_replacement(self, sentence):
+        """Take a random word in the sentence and modify it"""
         words = sentence.split(" ")
         words[random.randint(0, len(words) - 1)] = get_random_word()
         return " ".join(words)
 
+    def modify(self, sentence):
+        randval = random.randint(0, 100)
+        if randval < 40:
+            return self.add_word(sentence)
+
+        return self.word_replacement(sentence)

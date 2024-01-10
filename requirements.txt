@@ -1,2 +1,4 @@
-transformers~=4.28.1
+transformers~=4.25.0
 pandas~=2.1.1
+torch~=2.1.1
+matplotlib~=3.8.0
