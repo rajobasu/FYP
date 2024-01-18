@@ -2,7 +2,7 @@ from dataparser import get_data
 from models.similarity import MiniLM
 from models.toxicity import DetoxifyModel
 from morphers.fancy_morpher import RandomMorpher
-from search.random_search import RandomSearch
+from search.random_search import IterativeSearch, PopulationSearch
 from storage.simple_storage import InMemStorage
 
 
@@ -16,22 +16,10 @@ def main():
     toxic = DetoxifyModel()
     sent_sim = MiniLM()
 
-    max_ = 0
-    data_final = [""]
-    print(len(data_list))
+
     for item in data_list:
-        score = toxic.predict(item)
-        print("TOXICITY PREDICTED")
-        if score > max_:
-            max_ = score
-            data_final = [item]
-
-    print(max_)
-    print(item)
-
-    for item in data_final:
         db = InMemStorage(item, toxic.predict(item))
-        searcher = RandomSearch(toxic, morpher, sent_sim, db)
+        searcher = PopulationSearch(toxic, morpher, sent_sim, db)
         searcher.start_search(item)
 
         db.print_records()
