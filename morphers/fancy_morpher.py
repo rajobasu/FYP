@@ -64,7 +64,7 @@ class RandomMorpher(Morpher):
 
     def modify(self, sentence):
         randval = random.randint(0, 100)
-        if randval < 40:
+        if randval < 30:
             return self.add_word(sentence)
 
         return self.word_replacement(sentence)
