@@ -2,7 +2,7 @@ from dataparser import get_data
 from models.similarity import MiniLM
 from models.toxicity import DetoxifyModel
 from morphers.fancy_morpher import RandomMorpher
-from search.random_search import IterativeSearch, PopulationSearch
+from search.random_search import IterativeSearch, PopulationSearch, PopulationSearchWithLooseFrontier
 from storage.simple_storage import InMemStorage
 
 
@@ -19,7 +19,7 @@ def main():
 
     for item in data_list:
         db = InMemStorage(item, toxic.predict(item))
-        searcher = PopulationSearch(toxic, morpher, sent_sim, db)
+        searcher = PopulationSearchWithLooseFrontier(toxic, morpher, sent_sim, db)
         searcher.start_search(item)
 
         db.print_records()
