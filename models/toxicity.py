@@ -26,15 +26,15 @@ class ToxicityModel(ABC):
 random_morpher = RandomMorpher()
 
 
-def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> int:
+def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
     tox = toxicity_rater.predict(sentence)
     ctr = 1
     while tox == 1:
         ctr += 1
         sentence = random_morpher.modify(sentence)
         tox = toxicity_rater.predict(sentence)
-
-    return ctr
+    # 100 is an arbitrary value that is chosen
+    return min(ctr / 100, 1.0)
 
 
 class ToxicityModelWrapper(ToxicityModel):
