@@ -36,7 +36,7 @@ all_words = get_word_list()
 
 def get_random_word() -> str:
     n = len(all_words)
-    return all_words[random.randint(0, n)]
+    return all_words[random.randint(0, n - 1)]
 
 
 def get_data(value: int = 2):

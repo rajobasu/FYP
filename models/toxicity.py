@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 
 import torch
 import transformers
-from pprint import pprint
+
+from morphers.fancy_morpher import RandomMorpher
 
 DOWNLOAD_URL = "https://github.com/unitaryai/detoxify/releases/download/"
 MODEL_URLS = {
@@ -14,10 +15,34 @@ MODEL_URLS = {
 }
 
 PRETRAINED_MODEL = None
+
+
 class ToxicityModel(ABC):
     @abstractmethod
     def predict(self, sentence: str) -> float:
         pass
+
+
+random_morpher = RandomMorpher()
+
+
+def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> int:
+    tox = toxicity_rater.predict(sentence)
+    ctr = 1
+    while tox == 1:
+        ctr += 1
+        sentence = random_morpher.modify(sentence)
+        tox = toxicity_rater.predict(sentence)
+
+    return ctr
+
+
+class ToxicityModelWrapper(ToxicityModel):
+    def __init__(self, model):
+        self._model = model
+
+    def predict(self, sentence: str) -> float:
+        return get_distance(self._model, sentence)
 
 
 class DetoxifyModel(ToxicityModel):
@@ -32,11 +57,11 @@ class DetoxifyModel(ToxicityModel):
         prediction = self.model.predict(sentence)
         # pprint(prediction)
         # exit(0)
-        return prediction["toxicity"]
+        return 1 if prediction["toxicity"] > 0.8 else 0
 
 
 def get_model_and_tokenizer(
-    model_type, model_name, tokenizer_name, num_classes, state_dict, huggingface_config_path=None
+        model_type, model_name, tokenizer_name, num_classes, state_dict, huggingface_config_path=None
 ):
     model_class = getattr(transformers, model_name)
     model = model_class.from_pretrained(
