@@ -15,7 +15,7 @@ MODEL_URLS = {
 }
 
 PRETRAINED_MODEL = None
-
+TOXIC_THRESHOLD = 0.5
 
 class ToxicityModel(ABC):
     @abstractmethod
@@ -28,13 +28,15 @@ random_morpher = RandomMorpher()
 
 def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
     tox = toxicity_rater.predict(sentence)
-    ctr = 1
+    orig_tox = tox
+    ctr = 0
     while tox == 1:
         ctr += 1
         sentence = random_morpher.modify(sentence)
         tox = toxicity_rater.predict(sentence)
-    # 100 is an arbitrary value that is chosen
-    return min(ctr / 100, 1.0)
+
+    # 300 is an arbitrary value that is chosen
+    return min(ctr / 300, 1.0)
 
 
 class ToxicityModelWrapper(ToxicityModel):
@@ -57,7 +59,7 @@ class DetoxifyModel(ToxicityModel):
         prediction = self.model.predict(sentence)
         # pprint(prediction)
         # exit(0)
-        return 1 if prediction["toxicity"] > 0.8 else 0
+        return 1 if prediction["toxicity"] > TOXIC_THRESHOLD else 0
 
 
 def get_model_and_tokenizer(
