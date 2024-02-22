@@ -13,14 +13,18 @@ class Storage(ABC):
     def print_records(self):
         pass
 
-
-def get_and_increment_id():
+def get_id():
     _id = 0
     if not os.path.isfile("./data/id.txt"):
         _id = 1
     else:
         with open("./data/id.txt", "r") as f:
             _id = int(f.readline().strip())
+
+    return _id
+
+def get_and_increment_id():
+    _id = get_id()
 
     with open("./data/id.txt", "w") as f:
         f.write(f"{_id + 1}\n")
@@ -35,6 +39,7 @@ class InMemStorage(Storage):
 
     def add_record(self, sentence: str, toxicity: float, similarity: float, generation: int = 1):
         self.all_sentences.append((toxicity, similarity, sentence, generation))
+        self.output_temp_record(toxicity, similarity, generation)
 
     def print_records(self):
         pprint(self.all_sentences)
@@ -45,7 +50,12 @@ class InMemStorage(Storage):
         print(id)
         print("outputting")
         with open(f"./data/output{_id}.csv", "w") as f:
-            f.write(f"toxicity,similarity\n")
+            f.write(f"toxicity,similarity,generation\n")
             for tox, sim, sentence, gen in self.all_sentences:
                 f.write(f"{tox},{sim},{gen}\n")
         print("finished outputting")
+
+    def output_temp_record(self, tox, sim, gen):
+        with open(f"./data/tmpout.csv", "a+") as f:
+            f.write(f"{tox},{sim},{gen}\n")
+

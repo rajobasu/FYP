@@ -15,7 +15,7 @@ MODEL_URLS = {
 }
 
 PRETRAINED_MODEL = None
-TOXIC_THRESHOLD = 0.5
+TOXIC_THRESHOLD = 0.05
 
 class ToxicityModel(ABC):
     @abstractmethod

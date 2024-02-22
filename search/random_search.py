@@ -146,13 +146,14 @@ class PopulationBasedIterativeSearch:
         self.db = db
         self.orig_sentence = ""
 
-    def create_generation(self, sentence: str, children_limit: int = 10) -> list[tuple[str, float, float]]:
+    def create_generation(self, sentence: str, generation_num: int, children_limit: int = 10) -> list[tuple[str, float, float]]:
         result: list[tuple[str, float, float]] = []
         for _ in range(children_limit):
             modified_sentence = self.modifier.modify(sentence)
             toxic_score = self.toxic.predict(modified_sentence)
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
             result.append((modified_sentence, toxic_score, similarity_score))
+            self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
             print("|", end="")
 
         return result
@@ -165,11 +166,10 @@ class PopulationBasedIterativeSearch:
             pprint(f"Generation {_}")
             result = []
             for sentence in list_of_sentences:
-                result.extend(self.create_generation(sentence))
+                result.extend(self.create_generation(sentence, _))
             print("")
             for modified_sentence, toxic_score, similarity_score in result:
                 print(toxic_score, similarity_score)
-                self.db.add_record(modified_sentence, toxic_score, similarity_score)
 
             scored_results = [(scoring(tox, sim), sent) for sent, tox, sim in result]
             scored_results.sort(key=lambda x: x[0], reverse=True)
