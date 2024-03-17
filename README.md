@@ -9,9 +9,9 @@ List of research papers used.
 [6] https://arxiv.org/pdf/2402.05668.pdf Survey study    
 [7] https://proceedings.neurips.cc/paper_files/paper/2023/file/fd6613131889a4b656206c50a8bd7790-Paper-Conference.pdf Important paper, discusses why attacks succeed   
 [8] https://arxiv.org/pdf/2402.08679.pdf Uses Controllable text generation. best for morpher   
-[9] https://arxiv.org/pdf/2402.09091.pdf   
-[10] https://arxiv.org/pdf/2402.02309.pdf    
-[11] https://arxiv.org/pdf/2401.06824.pdf   
+[9] https://arxiv.org/pdf/2402.09091.pdf Weird paper, breaks down prompt into secondary prompts which are indirect clues to actual intent.    
+[10] https://arxiv.org/pdf/2402.02309.pdf against MLLM    
+[11] https://arxiv.org/pdf/2401.06824.pdf white box attacks using representation spaces.    
 [12] https://openreview.net/pdf?id=1zt8GWZ9sc   
 [13] https://arxiv.org/pdf/2402.09177.pdf   
 [14] https://arxiv.org/pdf/2309.10253.pdf    
