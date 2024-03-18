@@ -47,7 +47,7 @@ class InMemStorage(Storage):
     def output_records(self):
         # hello
         _id = get_and_increment_id()
-        print(id)
+        print(_id)
         print("outputting")
         with open(f"./data/output{_id}.csv", "w") as f:
             f.write(f"toxicity,similarity,generation\n")

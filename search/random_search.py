@@ -160,24 +160,24 @@ class PopulationBasedIterativeSearch:
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
             t3 = time.time_ns()
 
-            stats["ttp"].append(t2 - t1)
-            stats["tts"].append(t3 - t2)
+            # stats["ttp"].append(t2 - t1)
+            # stats["tts"].append(t3 - t2)
 
             result.append((modified_sentence, toxic_score, similarity_score))
-            # self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
+            self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
             print("|", end="", flush=True)
 
-        avgt = float(np.average(stats["ttp"]))
-        stdt = float(np.std(stats["ttp"]))
-
-        avgs = float(np.average(stats["tts"]))
-        stds = float(np.std(stats["tts"]))
-
-        print(f">>>>>avgt={avgt / 1e9}, stdt={stdt / 1e9}")
-        print(f">>>>>avgs={avgs / 1e9}, stds={stds / 1e9}")
+        # avgt = float(np.average(stats["ttp"]))
+        # stdt = float(np.std(stats["ttp"]))
+        #
+        # avgs = float(np.average(stats["tts"]))
+        # stds = float(np.std(stats["tts"]))
+        #
+        # print(f">>>>>avgt={avgt / 1e9}, stdt={stdt / 1e9}")
+        # print(f">>>>>avgs={avgs / 1e9}, stds={stds / 1e9}")
         return result
 
-    def start_search(self, sentence: str, num_generations: int = 5):
+    def start_search(self, sentence: str, num_generations: int = 25):
         self.orig_sentence = sentence
         pprint("start search")
         list_of_sentences = [sentence]
@@ -193,6 +193,6 @@ class PopulationBasedIterativeSearch:
             scored_results = [(scoring(tox, sim), sent) for sent, tox, sim in result]
             scored_results.sort(key=lambda x: x[0], reverse=True)
             list_of_sentences = [sent for score, sent in scored_results[:10]]
-            avg, std = self.toxic.stats()
-            print(f"avg={avg / 1e9}, std={std / 1e9}")
+            # avg, std = self.toxic.stats()
+            # print(f"avg={avg / 1e9}, std={std / 1e9}")
 

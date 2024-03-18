@@ -25,7 +25,7 @@ def main():
         searcher.start_search(item)
 
         # db.print_records()
-        # db.output_records()
+        db.output_records()
 
 
 def get_freer_gpu():

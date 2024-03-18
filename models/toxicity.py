@@ -1,11 +1,11 @@
 import math
-from abc import ABC, abstractmethod
-from detoxify import Detoxify
 import time
-import numpy as np
+from abc import ABC, abstractmethod
 
+import numpy as np
 import torch
 import transformers
+from detoxify import Detoxify
 
 from morphers.fancy_morpher import RandomMorpher
 
@@ -21,6 +21,7 @@ MODEL_URLS = {
 PRETRAINED_MODEL = None
 TOXIC_THRESHOLD = 0.05
 
+
 class ToxicityModel(ABC):
     @abstractmethod
     def predict(self, sentence: str) -> float:
@@ -31,7 +32,6 @@ class ToxicityModel(ABC):
 
 
 random_morpher = RandomMorpher()
-
 
 
 def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
@@ -52,7 +52,7 @@ def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
             hi = hi - 1
             continue
 
-        if toxicity_rater.predict(sentence) == 1:
+        if toxicity_rater.predict(sentences[mid]) == 1:
             lo = mid + 1
         else:
             hi = mid
@@ -65,9 +65,7 @@ class ToxicityModelWrapper(ToxicityModel):
         self._model = model
 
     def predict(self, sentence: str) -> float:
-
         ans = get_distance(self._model, sentence)
-
 
         return ans
 
@@ -85,10 +83,10 @@ class DetoxifyModel(ToxicityModel):
 
     def predict(self, sentence: str) -> float:
         # print(sentence)
-        start_time = time.time_ns()
+        # start_time = time.time_ns()
         prediction = self.model.predict(sentence)
-        end_time = time.time_ns()
-        self.time_list.append(end_time - start_time)
+        # end_time = time.time_ns()
+        # self.time_list.append(end_time - start_time)
         # pprint(prediction)
         # exit(0)
         return 1 if prediction["toxicity"] > TOXIC_THRESHOLD else 0
