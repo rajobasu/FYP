@@ -2,6 +2,7 @@ from pprint import pprint
 from random import randrange
 import random
 
+from dev.perf import print_gpu_utilization
 from models.similarity import SentenceSimilarityModel
 from models.toxicity import ToxicityModel
 from morphers.fancy_morpher import Morpher
@@ -148,17 +149,18 @@ class PopulationBasedIterativeSearch:
 
     def create_generation(self, sentence: str, generation_num: int, children_limit: int = 10) -> list[tuple[str, float, float]]:
         result: list[tuple[str, float, float]] = []
+        stats = []
         for _ in range(children_limit):
             modified_sentence = self.modifier.modify(sentence)
             toxic_score = self.toxic.predict(modified_sentence)
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
             result.append((modified_sentence, toxic_score, similarity_score))
-            self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
-            print("|", end="")
+            # self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
+            print("|", end="", flush=True)
 
         return result
 
-    def start_search(self, sentence: str, num_generations: int = 30):
+    def start_search(self, sentence: str, num_generations: int = 5):
         self.orig_sentence = sentence
         pprint("start search")
         list_of_sentences = [sentence]
@@ -174,3 +176,6 @@ class PopulationBasedIterativeSearch:
             scored_results = [(scoring(tox, sim), sent) for sent, tox, sim in result]
             scored_results.sort(key=lambda x: x[0], reverse=True)
             list_of_sentences = [sent for score, sent in scored_results[:10]]
+            avg, std = self.toxic.stats()
+            print(f"avg={avg / 1e9}, std={std / 1e9}")
+

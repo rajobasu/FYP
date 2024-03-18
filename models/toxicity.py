@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+from detoxify import Detoxify
+import time
+import numpy as np
 
 import torch
 import transformers
@@ -17,9 +20,13 @@ MODEL_URLS = {
 PRETRAINED_MODEL = None
 TOXIC_THRESHOLD = 0.05
 
+
 class ToxicityModel(ABC):
     @abstractmethod
     def predict(self, sentence: str) -> float:
+        pass
+
+    def stats(self) -> tuple[float, float]:
         pass
 
 
@@ -32,6 +39,8 @@ def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
     ctr = 0
     while tox == 1:
         ctr += 1
+        if ctr > 50:
+            break
         sentence = random_morpher.modify(sentence)
         tox = toxicity_rater.predict(sentence)
 
@@ -42,9 +51,17 @@ def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
 class ToxicityModelWrapper(ToxicityModel):
     def __init__(self, model):
         self._model = model
+        self.time_list = []
 
     def predict(self, sentence: str) -> float:
-        return get_distance(self._model, sentence)
+        start_time = time.time_ns()
+        ans = get_distance(self._model, sentence)
+        end_time = time.time_ns()
+        self.time_list.append(end_time - start_time)
+        return ans
+
+    def stats(self) -> tuple[float, float]:
+        return float(np.average(self.time_list)), float(np.std(self.time_list))
 
 
 class DetoxifyModel(ToxicityModel):
@@ -52,11 +69,14 @@ class DetoxifyModel(ToxicityModel):
         # self.model2 = torch.hub.load('unitaryai/detoxify','toxic_bert')
         # print(dir(self.model2))
 
-        self.model = MyDetoxify('original')
+        # self.model = MyDetoxify('original')
+        self.model = Detoxify('original', device="cuda:2")
 
     def predict(self, sentence: str) -> float:
         # print(sentence)
+
         prediction = self.model.predict(sentence)
+
         # pprint(prediction)
         # exit(0)
         return 1 if prediction["toxicity"] > TOXIC_THRESHOLD else 0
