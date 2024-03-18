@@ -1,6 +1,8 @@
 from pprint import pprint
 from random import randrange
 import random
+import numpy as np
+import time
 
 from dev.perf import print_gpu_utilization
 from models.similarity import SentenceSimilarityModel
@@ -149,15 +151,30 @@ class PopulationBasedIterativeSearch:
 
     def create_generation(self, sentence: str, generation_num: int, children_limit: int = 10) -> list[tuple[str, float, float]]:
         result: list[tuple[str, float, float]] = []
-        stats = []
+        stats = {"ttp":[], "tts":[]}
         for _ in range(children_limit):
             modified_sentence = self.modifier.modify(sentence)
+            t1 = time.time_ns()
             toxic_score = self.toxic.predict(modified_sentence)
+            t2 = time.time_ns()
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
+            t3 = time.time_ns()
+
+            stats["ttp"].append(t2 - t1)
+            stats["tts"].append(t3 - t2)
+
             result.append((modified_sentence, toxic_score, similarity_score))
             # self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
             print("|", end="", flush=True)
 
+        avgt = float(np.average(stats["ttp"]))
+        stdt = float(np.std(stats["ttp"]))
+
+        avgs = float(np.average(stats["tts"]))
+        stds = float(np.std(stats["tts"]))
+
+        print(f">>>>>avgt={avgt / 1e9}, stdt={stdt / 1e9}")
+        print(f">>>>>avgs={avgs / 1e9}, stds={stds / 1e9}")
         return result
 
     def start_search(self, sentence: str, num_generations: int = 5):

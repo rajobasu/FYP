@@ -1,3 +1,4 @@
+import math
 from abc import ABC, abstractmethod
 from detoxify import Detoxify
 import time
@@ -20,63 +21,74 @@ MODEL_URLS = {
 PRETRAINED_MODEL = None
 TOXIC_THRESHOLD = 0.05
 
-
 class ToxicityModel(ABC):
     @abstractmethod
     def predict(self, sentence: str) -> float:
         pass
 
     def stats(self) -> tuple[float, float]:
-        pass
+        return 0, 0
 
 
 random_morpher = RandomMorpher()
 
 
+
 def get_distance(toxicity_rater: ToxicityModel, sentence: str) -> float:
     tox = toxicity_rater.predict(sentence)
-    orig_tox = tox
-    ctr = 0
-    while tox == 1:
-        ctr += 1
-        if ctr > 50:
-            break
-        sentence = random_morpher.modify(sentence)
-        tox = toxicity_rater.predict(sentence)
+    sentences = [sentence]
+    LIMIT = 300
+    for _ in range(LIMIT):
+        sentences.append(random_morpher.modify(sentences[-1]))
 
-    # 300 is an arbitrary value that is chosen
-    return min(ctr / 300, 1.0)
+    if toxicity_rater.predict(sentences[-1]) == 1:
+        return 1
+
+    lo = 0
+    hi = 300
+    while lo < hi:
+        mid = int(math.ceil((lo + hi) / 2))
+        if hi == mid:
+            hi = hi - 1
+            continue
+
+        if toxicity_rater.predict(sentence) == 1:
+            lo = mid + 1
+        else:
+            hi = mid
+
+    return lo / LIMIT
 
 
 class ToxicityModelWrapper(ToxicityModel):
     def __init__(self, model):
         self._model = model
-        self.time_list = []
 
     def predict(self, sentence: str) -> float:
-        start_time = time.time_ns()
+
         ans = get_distance(self._model, sentence)
-        end_time = time.time_ns()
-        self.time_list.append(end_time - start_time)
+
+
         return ans
 
     def stats(self) -> tuple[float, float]:
-        return float(np.average(self.time_list)), float(np.std(self.time_list))
+        return float(np.average(self._model.time_list)), float(np.std(self._model.time_list))
 
 
 class DetoxifyModel(ToxicityModel):
     def __init__(self):
         # self.model2 = torch.hub.load('unitaryai/detoxify','toxic_bert')
         # print(dir(self.model2))
-
+        self.time_list = []
         # self.model = MyDetoxify('original')
-        self.model = Detoxify('original', device="cuda:2")
+        self.model = Detoxify('original', device="cuda:0")
 
     def predict(self, sentence: str) -> float:
         # print(sentence)
-
+        start_time = time.time_ns()
         prediction = self.model.predict(sentence)
-
+        end_time = time.time_ns()
+        self.time_list.append(end_time - start_time)
         # pprint(prediction)
         # exit(0)
         return 1 if prediction["toxicity"] > TOXIC_THRESHOLD else 0
