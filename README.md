@@ -12,8 +12,8 @@ List of research papers used.
 [9] https://arxiv.org/pdf/2402.09091.pdf Weird paper, breaks down prompt into secondary prompts which are indirect clues to actual intent.    
 [10] https://arxiv.org/pdf/2402.02309.pdf against MLLM    
 [11] https://arxiv.org/pdf/2401.06824.pdf white box attacks using representation spaces.    
-[12] https://openreview.net/pdf?id=1zt8GWZ9sc   
-[13] https://arxiv.org/pdf/2402.09177.pdf   
+[12] https://openreview.net/pdf?id=1zt8GWZ9sc Using a lot of LLMs to do role play   
+[13] https://arxiv.org/pdf/2402.09177.pdf Instead of directly asking prompt, make some interactive questions which leads up to it.    
 [14] https://arxiv.org/pdf/2309.10253.pdf    
 [15] https://hal.science/hal-04328468v1/document    
 [16] https://arxiv.org/pdf/2311.07689.pdf  
@@ -25,7 +25,7 @@ List of research papers used.
 [22] https://arxiv.org/pdf/2310.04451.pdf   
 [23] https://arxiv.org/html/2312.02119v2    
 [24] https://proceedings.neurips.cc/paper_files/paper/2022/file/3e25d1aff47964c8409fd5c8dc0438d7-Paper-Conference.pdf COLD Model    
-
+[25] Safety classifier
 
 
 Ideas: 
