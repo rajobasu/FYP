@@ -30,3 +30,4 @@ List of research papers used.
 
 Ideas: 
 - binary search on the cost function. 
+----------
