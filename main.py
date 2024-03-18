@@ -41,3 +41,34 @@ def setup_system():
 if __name__ == "__main__":
     print(get_freer_gpu())
     main()
+
+"""
+TODO: make logging much better. 
+TODO: add more information to output files. 
+TODO: make infrastructure for swappability
+- add other LLMs
+- try other morphing techniques
+- separate search more from other techniques
+- make distance function more separate from LLM / make it as an independent scoring module. 
+--- we can use scoring in place of a JUDGE model which can give a score based on the output
+- Similarity model can be used for predetermining which outputs to check? think about how to use this method. 
+
+Search techniques: 
+- (1) GA based techniques
+- (2) Gradient descent/SLS
+- (3) simulated annealing
+- (4) Tree based search methods
+- (5) Try adding delta evaluations
+- (6) multi-objective improvement vs single function improvement. 
+- (7) fuzzing techniques
+- (8) SLS + perturbation (iterated local search)
+
+
+
+
+
+TODO: Secondary research objective 
+Investigate what is a good method to finding out what is a good jailbreak success result
+
+
+"""
