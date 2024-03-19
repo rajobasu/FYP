@@ -1,12 +1,10 @@
 from pprint import pprint
 from random import randrange
 import random
-import numpy as np
 import time
 
-from dev.perf import print_gpu_utilization
-from models.similarity import SentenceSimilarityModel
-from models.toxicity import ToxicityModel
+from similarity.similarity import SentenceSimilarityModel
+from toxicity.toxicity import ToxicityEvaluator
 from morphers.fancy_morpher import Morpher
 from storage.simple_storage import Storage
 
@@ -17,7 +15,7 @@ def get_random_item(list_item):
 
 class IterativeSearch:
     def __init__(self,
-                 toxicity_rater: ToxicityModel,
+                 toxicity_rater: ToxicityEvaluator,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage):
@@ -42,7 +40,7 @@ class IterativeSearch:
 
 class PopulationSearch:
     def __init__(self,
-                 toxicity_rater: ToxicityModel,
+                 toxicity_rater: ToxicityEvaluator,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage):
@@ -85,7 +83,7 @@ class PopulationSearch:
 
 class PopulationSearchWithLooseFrontier:
     def __init__(self,
-                 toxicity_rater: ToxicityModel,
+                 toxicity_rater: ToxicityEvaluator,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage):
@@ -138,7 +136,7 @@ def scoring(toxicity: float, similarity: float, scoring_func_type: int = 1):
 
 class PopulationBasedIterativeSearch:
     def __init__(self,
-                 toxicity_rater: ToxicityModel,
+                 toxicity_rater: ToxicityEvaluator,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage):

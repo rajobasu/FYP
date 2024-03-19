@@ -2,6 +2,7 @@ import ollama
 
 
 def get_response(prompt: str):
+    ollama.pull("vicuna")
     return ollama.chat(model='vicuna', messages=[{
         'role': 'user',
         'content': prompt,

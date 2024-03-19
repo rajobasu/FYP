@@ -1,12 +1,15 @@
-from dataparser import get_data
-from models.similarity import MiniLM
-from models.toxicity import DetoxifyModel, ToxicityModelWrapper
-from morphers.fancy_morpher import RandomMorpher
-from search.random_search import IterativeSearch, PopulationSearch, PopulationSearchWithLooseFrontier, \
-    PopulationBasedIterativeSearch
-from storage.simple_storage import InMemStorage
-import os
+import time
+
 import numpy as np
+
+from dataparser import get_data
+from llmapi.custom_model_api import Llm, LlmId, get_llm
+from similarity.similarity import MiniLM
+from toxicity.models.detoxify_specifics import DetoxifyModel
+from toxicity.toxicity import ToxicityModelWrapper
+from morphers.fancy_morpher import RandomMorpher
+from search.random_search import PopulationBasedIterativeSearch
+from storage.simple_storage import InMemStorage
 
 
 def main():
@@ -28,19 +31,22 @@ def main():
         db.output_records()
 
 
-def get_freer_gpu():
-    os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
-    memory_available = [x for x in open('tmp', 'r').readlines()]
-    return memory_available
-
-
-def setup_system():
-    pass
-
+def test1():
+    llm_ref = get_llm(LlmId.GEMMA_2B_IT)
+    print("------")
+    time_list = []
+    for _ in range(30):
+        t1 = time.time_ns()
+        print(llm_ref.generate("how to make a bomb"))
+        t2 = time.time_ns()
+        time_list.append(t2 - t1)
+    print(np.average(time_list) / 1e9)
+    print("------")
 
 if __name__ == "__main__":
-    print(get_freer_gpu())
-    main()
+    # main()
+    test1()
+
 
 """
 TODO: make logging much better. 

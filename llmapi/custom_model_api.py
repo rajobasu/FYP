@@ -1,12 +1,56 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from enum import Enum
+from utils import util
 
-models_dir = "/data/sumanth/models"
-device = "cuda:1"
 
-model_id = "google/gemma-7b-it"
+class LlmId(Enum):
+    VICUNA_7B = "lmsys/vicuna-7b-v1.5"
+    GEMMA_2B_IT = "google/gemma-2b-it"
 
-tokenizer = AutoTokenizer.from_pretrained(f"{models_dir}/{model_id}")
-model = AutoModelForCausalLM.from_pretrained(f"{models_dir}/{model_id}", device_map=device)
 
-input_text = "Give me a mutliple choice question on NLP for advanced undergraduate students."
-input_ids = tokenizer(input_text, return_tensors="pt").to(device)
+class Llm:
+    MODELS_DIR = util.load_env_file()["MODELS_DIR"]
+
+    def __init__(self, llm_id: LlmId):
+        self.modelId = llm_id
+        self.device = util.get_freer_gpu()
+        self.model = AutoModelForCausalLM.from_pretrained(f"{Llm.MODELS_DIR}/{self.modelId.value}",
+                                                          device_map=self.device)
+        self.tokenizer = AutoTokenizer.from_pretrained(f"{Llm.MODELS_DIR}/{self.modelId.value}")
+
+    def generate(self, input_str: str):
+        pass
+
+
+class Vicuna(Llm):
+    def __init__(self):
+        super(Vicuna, self).__init__(LlmId.GEMMA_2B_IT)
+
+    def generate(self, input_str: str):
+        SYSTEM_PROMPT = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
+        USER_PROMPT = f"{{ {SYSTEM_PROMPT} }} USER: {{ {input_str} }} ASSISTANT:"
+        # PARAMS =
+        input_ids = self.tokenizer(USER_PROMPT, return_tensors="pt").to(self.device)
+
+        outputs = self.model.generate(**input_ids, max_length=1000, params=params)
+        return self.tokenizer.decode(outputs[0])
+
+
+class Gemma(Llm):
+    def __init__(self):
+        super(Gemma, self).__init__(LlmId.GEMMA_2B_IT)
+
+    def generate(self, input_str: str):
+        input_ids = self.tokenizer(input_str, return_tensors="pt").to(self.device)
+        outputs = self.model.generate(**input_ids, max_length=1000)
+        return self.tokenizer.decode(outputs[0]).replace(input_str, "", 1).replace("<bos>", "").replace("<eos>", "").strip(
+            " .?\t\s\n")
+
+
+def get_llm(llm_id: LlmId) -> Llm:
+    if llm_id == LlmId.GEMMA_2B_IT:
+        return Gemma()
+    elif llm_id == LlmId.VICUNA_7B:
+        return Vicuna()
+    else:
+        raise Exception()

@@ -1,4 +1,4 @@
-List of research papers used. 
+ist of research papers used. 
 
 
 [1] https://arxiv.org/pdf/2402.05467.pdf   
