@@ -2,8 +2,9 @@ import os
 from pprint import pprint
 import numpy as np
 from dotenv import load_dotenv
+import random
 
-
+random.seed(3324)
 def get_freer_gpu():
     os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
     memory_available = [int(x.split()[2]) for x in open('tmp', 'r').readlines()]

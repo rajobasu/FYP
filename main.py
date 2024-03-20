@@ -5,6 +5,7 @@ import numpy as np
 from dataparser import get_data
 from llmapi.custom_model_api import Llm, LlmId, get_llm
 from similarity.similarity import MiniLM
+from toxicity.distance import get_distance
 from toxicity.models.detoxify_specifics import DetoxifyModel
 from toxicity.toxicity import ToxicityModelWrapper
 from morphers.fancy_morpher import RandomMorpher
@@ -19,7 +20,7 @@ def main():
     print("Initialising models...")
     # initialise models
     morpher = RandomMorpher()
-    toxic = ToxicityModelWrapper(DetoxifyModel())
+    toxic = ToxicityModelWrapper(DetoxifyModel(), get_distance)
     sent_sim = MiniLM()
 
     for item in data_list:
@@ -28,7 +29,7 @@ def main():
         searcher.start_search(item)
 
         # db.print_records()
-        db.output_records()
+        # db.output_records()
 
 
 def test1():
@@ -44,8 +45,8 @@ def test1():
     print("------")
 
 if __name__ == "__main__":
-    # main()
-    test1()
+    main()
+    # test1()
 
 
 """

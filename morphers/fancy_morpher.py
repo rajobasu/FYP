@@ -7,6 +7,8 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from dataparser import get_random_word
+from morphers.paraphraser import Paraphraser
+from morphers.synonym_substitutor import LexSubWrapper
 
 
 class Morpher(ABC):
@@ -68,3 +70,12 @@ class RandomMorpher(Morpher):
             return self.add_word(sentence)
 
         return self.word_replacement(sentence)
+
+
+class SynonymParaphraserMorper(Morpher):
+    def __init__(self):
+        self.lws = LexSubWrapper()
+        self.ppr = Paraphraser()
+
+    def modify(self, text) -> str:
+        return self.lws.generate(self.ppr.generate(text))

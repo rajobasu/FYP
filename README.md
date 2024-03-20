@@ -31,3 +31,9 @@ ist of research papers used.
 Ideas: 
 - binary search on the cost function. 
 ----------
+
+
+synonym sub
+- https://github.com/Samsung/LexSubGen
+- https://github.com/26hzhang/ConceptualPrimitives/blob/master/main.py
+- https://github.com/alicediakova/Lexical-Substitution/blob/main/nlp-hw4/lexsub_main.py#L147
