@@ -1,16 +1,18 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
+from utils.util import FREE_CUDA_ID
+
 
 def main():
     tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")
-    model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws").to('cuda:0')
+    model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws").to(FREE_CUDA_ID)
 
-    sentence = "Do you want to explore an underwater cave for a bit?"
+    sentence = "Do you want to explore an underwater cave for a bit? I think I might want to. Lets see what we can do."
 
     text = "paraphrase: " + sentence + " </s>"
 
     encoding = tokenizer.encode_plus(text, return_tensors="pt")
-    input_ids, attention_masks = encoding["input_ids"].to("cuda:0"), encoding["attention_mask"].to("cuda:0")
+    input_ids, attention_masks = encoding["input_ids"].to(FREE_CUDA_ID), encoding["attention_mask"].to(FREE_CUDA_ID)
 
     outputs = model.generate(
         input_ids=input_ids, attention_mask=attention_masks,
@@ -22,8 +24,13 @@ def main():
         num_return_sequences=5
     )
 
+    results = []
     for output in outputs:
         line = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+        results.append(line)
+
+    results = [x for x in results if len(x) > 0.9 * len(sentence)]
+    for line in results:
         print(line)
 
 

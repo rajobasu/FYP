@@ -1,0 +1,1470 @@
+2024-03-21 12:17:48,255:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,256:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:48,261:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:48,261:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:48,261:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:48,261:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:48,261:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,261:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,261:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:48,261:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:48,261:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:48,261:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:48,261:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:48,261:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,261:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,262:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:48,262:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:48,262:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:48,262:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,262:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,262:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:48,262:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:48,262:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:48,262:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,262:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:48,262:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:48,262:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:48,262:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:48,262:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:48,262:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,333:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:50,334:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:50,334:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:50,334:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:50,334:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP AVG: nan
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP FRQ: 0
+2024-03-21 12:17:50,334:utils.stats:INFO:CML AVG : nan
+2024-03-21 12:17:50,334:utils.stats:INFO:CML FRQ : 0
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP AVG: 2.071451469
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:50,334:utils.stats:INFO:CML AVG : 2.071451469
+2024-03-21 12:17:50,334:utils.stats:INFO:CML FRQ : 1
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:50,334:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP AVG: 2.067769453
+2024-03-21 12:17:50,334:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:50,334:utils.stats:INFO:CML AVG : 2.067769453
+2024-03-21 12:17:50,334:utils.stats:INFO:CML FRQ : 1
+2024-03-21 12:17:50,334:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP AVG: 0.0026513089166666664
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:17:52,447:utils.stats:INFO:CML AVG : 0.0026513089166666664
+2024-03-21 12:17:52,447:utils.stats:INFO:CML FRQ : 12
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP AVG: 0.012462699142857142
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:17:52,447:utils.stats:INFO:CML AVG : 0.012462699142857142
+2024-03-21 12:17:52,447:utils.stats:INFO:CML FRQ : 7
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP AVG: 0.01703413914285714
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:17:52,447:utils.stats:INFO:CML AVG : 0.01703413914285714
+2024-03-21 12:17:52,447:utils.stats:INFO:CML FRQ : 7
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,447:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP AVG: 0.0107576965
+2024-03-21 12:17:52,447:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:17:52,447:utils.stats:INFO:CML AVG : 0.6976556206666666
+2024-03-21 12:17:52,447:utils.stats:INFO:CML FRQ : 3
+2024-03-21 12:17:52,447:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:52,448:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:52,448:utils.stats:INFO:SNAP AVG: 0.010593617
+2024-03-21 12:17:52,448:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:17:52,448:utils.stats:INFO:CML AVG : 0.6963188956666667
+2024-03-21 12:17:52,448:utils.stats:INFO:CML FRQ : 3
+2024-03-21 12:17:52,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:54,568:utils.stats:INFO:SNAP AVG: 0.0023643695384615387
+2024-03-21 12:17:54,568:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:17:54,568:utils.stats:INFO:CML AVG : 0.0025021004399999997
+2024-03-21 12:17:54,568:utils.stats:INFO:CML FRQ : 25
+2024-03-21 12:17:54,568:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:54,568:utils.stats:INFO:SNAP AVG: 0.0071292415
+2024-03-21 12:17:54,568:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:17:54,568:utils.stats:INFO:CML AVG : 0.0096181884
+2024-03-21 12:17:54,568:utils.stats:INFO:CML FRQ : 15
+2024-03-21 12:17:54,568:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,568:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:54,568:utils.stats:INFO:SNAP AVG: 0.01099406675
+2024-03-21 12:17:54,569:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:17:54,569:utils.stats:INFO:CML AVG : 0.013812767199999998
+2024-03-21 12:17:54,569:utils.stats:INFO:CML FRQ : 15
+2024-03-21 12:17:54,569:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,569:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,569:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:54,569:utils.stats:INFO:SNAP AVG: 0.0097724
+2024-03-21 12:17:54,569:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:54,569:utils.stats:INFO:CML AVG : 0.5256848155
+2024-03-21 12:17:54,569:utils.stats:INFO:CML FRQ : 4
+2024-03-21 12:17:54,569:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,569:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:54,569:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:54,569:utils.stats:INFO:SNAP AVG: 0.009613595
+2024-03-21 12:17:54,569:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:54,569:utils.stats:INFO:CML AVG : 0.5246425705
+2024-03-21 12:17:54,569:utils.stats:INFO:CML FRQ : 4
+2024-03-21 12:17:54,569:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,786:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:56,786:utils.stats:INFO:SNAP AVG: 0.002685309785714286
+2024-03-21 12:17:56,786:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:17:56,793:utils.stats:INFO:CML AVG : 0.0025678678974358975
+2024-03-21 12:17:56,793:utils.stats:INFO:CML FRQ : 39
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP AVG: 0.008145697300000001
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:17:56,793:utils.stats:INFO:CML AVG : 0.009029191960000002
+2024-03-21 12:17:56,793:utils.stats:INFO:CML FRQ : 25
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP AVG: 0.0119275422
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:17:56,793:utils.stats:INFO:CML AVG : 0.0130586772
+2024-03-21 12:17:56,793:utils.stats:INFO:CML FRQ : 25
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP AVG: 0.0122668305
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:17:56,793:utils.stats:INFO:CML AVG : 0.3545454871666667
+2024-03-21 12:17:56,793:utils.stats:INFO:CML FRQ : 6
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:56,793:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP AVG: 0.0120936975
+2024-03-21 12:17:56,793:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:17:56,794:utils.stats:INFO:CML AVG : 0.3537929461666666
+2024-03-21 12:17:56,794:utils.stats:INFO:CML FRQ : 6
+2024-03-21 12:17:56,794:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,930:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,930:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:17:58,930:utils.stats:INFO:SNAP AVG: 0.0018109845
+2024-03-21 12:17:58,930:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:17:58,930:utils.stats:INFO:CML AVG : 0.0023679364339622643
+2024-03-21 12:17:58,930:utils.stats:INFO:CML FRQ : 53
+2024-03-21 12:17:58,930:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,930:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,930:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:17:58,930:utils.stats:INFO:SNAP AVG: 0.007933504625
+2024-03-21 12:17:58,930:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:17:58,937:utils.stats:INFO:CML AVG : 0.008763570787878788
+2024-03-21 12:17:58,937:utils.stats:INFO:CML FRQ : 33
+2024-03-21 12:17:58,937:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,937:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,937:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:17:58,937:utils.stats:INFO:SNAP AVG: 0.01112619625
+2024-03-21 12:17:58,937:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:17:58,937:utils.stats:INFO:CML AVG : 0.012590196969696968
+2024-03-21 12:17:58,937:utils.stats:INFO:CML FRQ : 33
+2024-03-21 12:17:58,937:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,937:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,937:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:17:58,937:utils.stats:INFO:SNAP AVG: 0.012341908
+2024-03-21 12:17:58,937:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:58,938:utils.stats:INFO:CML AVG : 0.30565926157142853
+2024-03-21 12:17:58,938:utils.stats:INFO:CML FRQ : 7
+2024-03-21 12:17:58,938:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,938:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:17:58,938:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:17:58,938:utils.stats:INFO:SNAP AVG: 0.012213983
+2024-03-21 12:17:58,938:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:17:58,938:utils.stats:INFO:CML AVG : 0.3049959514285714
+2024-03-21 12:17:58,938:utils.stats:INFO:CML FRQ : 7
+2024-03-21 12:17:58,938:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,021:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,021:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:01,021:utils.stats:INFO:SNAP AVG: 0.0026652865833333337
+2024-03-21 12:18:01,021:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:18:01,021:utils.stats:INFO:CML AVG : 0.002422831846153846
+2024-03-21 12:18:01,021:utils.stats:INFO:CML FRQ : 65
+2024-03-21 12:18:01,021:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,021:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,021:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:01,021:utils.stats:INFO:SNAP AVG: 0.009213132666666667
+2024-03-21 12:18:01,021:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:01,021:utils.stats:INFO:CML AVG : 0.008859905476190475
+2024-03-21 12:18:01,021:utils.stats:INFO:CML FRQ : 42
+2024-03-21 12:18:01,021:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP AVG: 0.012790260777777777
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:01,022:utils.stats:INFO:CML AVG : 0.012633067785714288
+2024-03-21 12:18:01,022:utils.stats:INFO:CML FRQ : 42
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP AVG: 0.010945027
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:01,022:utils.stats:INFO:CML AVG : 0.24016720944444447
+2024-03-21 12:18:01,022:utils.stats:INFO:CML FRQ : 9
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:01,022:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP AVG: 0.0107507945
+2024-03-21 12:18:01,022:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:01,022:utils.stats:INFO:CML AVG : 0.23960813877777776
+2024-03-21 12:18:01,022:utils.stats:INFO:CML FRQ : 9
+2024-03-21 12:18:01,022:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP AVG: 0.0035858960000000003
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:18:03,036:utils.stats:INFO:CML AVG : 0.0026166758717948713
+2024-03-21 12:18:03,036:utils.stats:INFO:CML FRQ : 78
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP AVG: 0.009373437125
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:03,036:utils.stats:INFO:CML AVG : 0.008942070540000001
+2024-03-21 12:18:03,036:utils.stats:INFO:CML FRQ : 50
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP AVG: 0.01522853425
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:03,036:utils.stats:INFO:CML AVG : 0.013048342420000001
+2024-03-21 12:18:03,036:utils.stats:INFO:CML FRQ : 50
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,036:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP AVG: 0.012310636
+2024-03-21 12:18:03,036:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:03,037:utils.stats:INFO:CML AVG : 0.21738155210000004
+2024-03-21 12:18:03,037:utils.stats:INFO:CML FRQ : 10
+2024-03-21 12:18:03,037:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,037:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:03,037:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:03,037:utils.stats:INFO:SNAP AVG: 0.012158945
+2024-03-21 12:18:03,037:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:03,037:utils.stats:INFO:CML AVG : 0.21686321939999997
+2024-03-21 12:18:03,037:utils.stats:INFO:CML FRQ : 10
+2024-03-21 12:18:03,037:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,193:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,193:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP AVG: 0.0022625080000000003
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:18:05,194:utils.stats:INFO:CML AVG : 0.0025660804615384616
+2024-03-21 12:18:05,194:utils.stats:INFO:CML FRQ : 91
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP AVG: 0.012717194
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:05,194:utils.stats:INFO:CML AVG : 0.009405682192982455
+2024-03-21 12:18:05,194:utils.stats:INFO:CML FRQ : 57
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP AVG: 0.016946747571428573
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:05,194:utils.stats:INFO:CML AVG : 0.013527093929824562
+2024-03-21 12:18:05,194:utils.stats:INFO:CML FRQ : 57
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP AVG: 0.012484138
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:05,194:utils.stats:INFO:CML AVG : 0.19875451445454548
+2024-03-21 12:18:05,194:utils.stats:INFO:CML FRQ : 11
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:05,194:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP AVG: 0.01233937
+2024-03-21 12:18:05,194:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:05,194:utils.stats:INFO:CML AVG : 0.19827014218181815
+2024-03-21 12:18:05,194:utils.stats:INFO:CML FRQ : 11
+2024-03-21 12:18:05,194:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,523:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,523:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:07,523:utils.stats:INFO:SNAP AVG: 0.0021164515000000003
+2024-03-21 12:18:07,523:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:18:07,523:utils.stats:INFO:CML AVG : 0.0025136965048543694
+2024-03-21 12:18:07,523:utils.stats:INFO:CML FRQ : 103
+2024-03-21 12:18:07,523:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,523:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,523:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:07,523:utils.stats:INFO:SNAP AVG: 0.0098156517
+2024-03-21 12:18:07,523:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:07,524:utils.stats:INFO:CML AVG : 0.00946687167164179
+2024-03-21 12:18:07,524:utils.stats:INFO:CML FRQ : 67
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP AVG: 0.012377555200000001
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:07,524:utils.stats:INFO:CML AVG : 0.013355520985074629
+2024-03-21 12:18:07,524:utils.stats:INFO:CML FRQ : 67
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP AVG: 0.0126372755
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:07,524:utils.stats:INFO:CML AVG : 0.17012109307692314
+2024-03-21 12:18:07,524:utils.stats:INFO:CML FRQ : 13
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:07,524:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP AVG: 0.012492944499999999
+2024-03-21 12:18:07,524:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:07,524:utils.stats:INFO:CML AVG : 0.16968903484615383
+2024-03-21 12:18:07,524:utils.stats:INFO:CML FRQ : 13
+2024-03-21 12:18:07,524:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,988:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:09,988:utils.stats:INFO:SNAP AVG: 0.0027736880714285717
+2024-03-21 12:18:09,988:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:18:09,988:utils.stats:INFO:CML AVG : 0.0025448066068376064
+2024-03-21 12:18:09,988:utils.stats:INFO:CML FRQ : 117
+2024-03-21 12:18:09,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,988:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:09,988:utils.stats:INFO:SNAP AVG: 0.011200412900000001
+2024-03-21 12:18:09,988:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:09,988:utils.stats:INFO:CML AVG : 0.009692006896103894
+2024-03-21 12:18:09,988:utils.stats:INFO:CML FRQ : 77
+2024-03-21 12:18:09,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,989:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP AVG: 0.015108802600000002
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:09,989:utils.stats:INFO:CML AVG : 0.013583219896103898
+2024-03-21 12:18:09,989:utils.stats:INFO:CML FRQ : 77
+2024-03-21 12:18:09,989:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,989:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,989:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP AVG: 0.014011336
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:09,989:utils.stats:INFO:CML AVG : 0.15897039614285718
+2024-03-21 12:18:09,989:utils.stats:INFO:CML FRQ : 14
+2024-03-21 12:18:09,989:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,989:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:09,989:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP AVG: 0.013870576
+2024-03-21 12:18:09,989:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:09,989:utils.stats:INFO:CML AVG : 0.15855914492857143
+2024-03-21 12:18:09,989:utils.stats:INFO:CML FRQ : 14
+2024-03-21 12:18:09,989:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP AVG: 0.0011643432142857141
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:18:12,365:utils.stats:INFO:CML AVG : 0.0023972761679389317
+2024-03-21 12:18:12,365:utils.stats:INFO:CML FRQ : 131
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP AVG: 0.00965321381818182
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP FRQ: 11
+2024-03-21 12:18:12,365:utils.stats:INFO:CML AVG : 0.009687157761363639
+2024-03-21 12:18:12,365:utils.stats:INFO:CML FRQ : 88
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP AVG: 0.011156430454545455
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP FRQ: 11
+2024-03-21 12:18:12,365:utils.stats:INFO:CML AVG : 0.013279871215909093
+2024-03-21 12:18:12,365:utils.stats:INFO:CML FRQ : 88
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP AVG: 0.0123152165
+2024-03-21 12:18:12,365:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:12,365:utils.stats:INFO:CML AVG : 0.1406384986875
+2024-03-21 12:18:12,365:utils.stats:INFO:CML FRQ : 16
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,365:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:12,366:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:12,366:utils.stats:INFO:SNAP AVG: 0.0121652935
+2024-03-21 12:18:12,366:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:12,366:utils.stats:INFO:CML AVG : 0.1402599135
+2024-03-21 12:18:12,366:utils.stats:INFO:CML FRQ : 16
+2024-03-21 12:18:12,366:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP AVG: 0.0024145819999999998
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:18:14,786:utils.stats:INFO:CML AVG : 0.002398947075862069
+2024-03-21 12:18:14,786:utils.stats:INFO:CML FRQ : 145
+2024-03-21 12:18:14,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP AVG: 0.008282697099999998
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:14,786:utils.stats:INFO:CML AVG : 0.009543845448979592
+2024-03-21 12:18:14,786:utils.stats:INFO:CML FRQ : 98
+2024-03-21 12:18:14,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,786:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP AVG: 0.011684762000000001
+2024-03-21 12:18:14,786:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:14,787:utils.stats:INFO:CML AVG : 0.013117104969387753
+2024-03-21 12:18:14,787:utils.stats:INFO:CML FRQ : 98
+2024-03-21 12:18:14,787:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,787:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,787:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:14,787:utils.stats:INFO:SNAP AVG: 0.012323907
+2024-03-21 12:18:14,787:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:14,787:utils.stats:INFO:CML AVG : 0.13309058152941175
+2024-03-21 12:18:14,787:utils.stats:INFO:CML FRQ : 17
+2024-03-21 12:18:14,787:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,787:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:14,787:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:14,787:utils.stats:INFO:SNAP AVG: 0.01219495
+2024-03-21 12:18:14,787:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:14,787:utils.stats:INFO:CML AVG : 0.1327266803529412
+2024-03-21 12:18:14,787:utils.stats:INFO:CML FRQ : 17
+2024-03-21 12:18:14,787:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,807:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP AVG: 0.0019698208461538464
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:18:16,808:utils.stats:INFO:CML AVG : 0.0023636392215189875
+2024-03-21 12:18:16,808:utils.stats:INFO:CML FRQ : 158
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP AVG: 0.0092383589
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:16,808:utils.stats:INFO:CML AVG : 0.00951555965740741
+2024-03-21 12:18:16,808:utils.stats:INFO:CML FRQ : 108
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP AVG: 0.011819852099999998
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:16,808:utils.stats:INFO:CML AVG : 0.012996988962962962
+2024-03-21 12:18:16,808:utils.stats:INFO:CML FRQ : 108
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP AVG: 0.012270053
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:16,808:utils.stats:INFO:CML AVG : 0.12637832994444442
+2024-03-21 12:18:16,808:utils.stats:INFO:CML FRQ : 18
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:16,808:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP AVG: 0.012127789
+2024-03-21 12:18:16,808:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:16,808:utils.stats:INFO:CML AVG : 0.12602674194444444
+2024-03-21 12:18:16,808:utils.stats:INFO:CML FRQ : 18
+2024-03-21 12:18:16,808:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,920:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,920:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:18,920:utils.stats:INFO:SNAP AVG: 0.0031042175
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:18,921:utils.stats:INFO:CML AVG : 0.002407721261904762
+2024-03-21 12:18:18,921:utils.stats:INFO:CML FRQ : 168
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP AVG: 0.0092115645
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:18,921:utils.stats:INFO:CML AVG : 0.009494594474137932
+2024-03-21 12:18:18,921:utils.stats:INFO:CML FRQ : 116
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP AVG: 0.013113856
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:18,921:utils.stats:INFO:CML AVG : 0.013005048758620692
+2024-03-21 12:18:18,921:utils.stats:INFO:CML FRQ : 116
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP AVG: 0.0112489235
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:18,921:utils.stats:INFO:CML AVG : 0.11486538929999998
+2024-03-21 12:18:18,921:utils.stats:INFO:CML FRQ : 20
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:18,921:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP AVG: 0.0110924435
+2024-03-21 12:18:18,921:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:18,921:utils.stats:INFO:CML AVG : 0.11453331210000002
+2024-03-21 12:18:18,921:utils.stats:INFO:CML FRQ : 20
+2024-03-21 12:18:18,921:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,987:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,987:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:20,987:utils.stats:INFO:SNAP AVG: 0.003100536142857143
+2024-03-21 12:18:20,987:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:18:20,987:utils.stats:INFO:CML AVG : 0.0024610147142857144
+2024-03-21 12:18:20,987:utils.stats:INFO:CML FRQ : 182
+2024-03-21 12:18:20,987:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP AVG: 0.010375219444444445
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:20,988:utils.stats:INFO:CML AVG : 0.009557999472
+2024-03-21 12:18:20,988:utils.stats:INFO:CML FRQ : 125
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP AVG: 0.01522763377777778
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:20,988:utils.stats:INFO:CML AVG : 0.013165074880000004
+2024-03-21 12:18:20,988:utils.stats:INFO:CML FRQ : 125
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP AVG: 0.01249403
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:20,988:utils.stats:INFO:CML AVG : 0.10999056266666665
+2024-03-21 12:18:20,988:utils.stats:INFO:CML FRQ : 21
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:20,988:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP AVG: 0.012356295
+2024-03-21 12:18:20,988:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:20,988:utils.stats:INFO:CML AVG : 0.10966773985714287
+2024-03-21 12:18:20,988:utils.stats:INFO:CML FRQ : 21
+2024-03-21 12:18:20,988:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP AVG: 0.00245787
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:18:23,316:utils.stats:INFO:CML AVG : 0.0024608201958762886
+2024-03-21 12:18:23,316:utils.stats:INFO:CML FRQ : 194
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP AVG: 0.012992958142857142
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:23,316:utils.stats:INFO:CML AVG : 0.009740156371212122
+2024-03-21 12:18:23,316:utils.stats:INFO:CML FRQ : 132
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP AVG: 0.01723298142857143
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:23,316:utils.stats:INFO:CML AVG : 0.013380797196969697
+2024-03-21 12:18:23,316:utils.stats:INFO:CML FRQ : 132
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,316:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:23,316:utils.stats:INFO:SNAP AVG: 0.012413355
+2024-03-21 12:18:23,317:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:23,317:utils.stats:INFO:CML AVG : 0.10555523504545454
+2024-03-21 12:18:23,317:utils.stats:INFO:CML FRQ : 22
+2024-03-21 12:18:23,317:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,317:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:23,317:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:23,317:utils.stats:INFO:SNAP AVG: 0.01227492
+2024-03-21 12:18:23,317:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:23,317:utils.stats:INFO:CML AVG : 0.10524079350000001
+2024-03-21 12:18:23,317:utils.stats:INFO:CML FRQ : 22
+2024-03-21 12:18:23,317:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,433:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,433:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:25,433:utils.stats:INFO:SNAP AVG: 0.003909906444444444
+2024-03-21 12:18:25,433:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:25,433:utils.stats:INFO:CML AVG : 0.002525065399014778
+2024-03-21 12:18:25,433:utils.stats:INFO:CML FRQ : 203
+2024-03-21 12:18:25,433:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,433:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,433:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:25,433:utils.stats:INFO:SNAP AVG: 0.009267888124999998
+2024-03-21 12:18:25,433:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:25,434:utils.stats:INFO:CML AVG : 0.009713169614285713
+2024-03-21 12:18:25,434:utils.stats:INFO:CML FRQ : 140
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP AVG: 0.013688585125
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:25,434:utils.stats:INFO:CML AVG : 0.013398385078571431
+2024-03-21 12:18:25,434:utils.stats:INFO:CML FRQ : 140
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP AVG: 0.0096503255
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:25,434:utils.stats:INFO:CML AVG : 0.09756315924999999
+2024-03-21 12:18:25,434:utils.stats:INFO:CML FRQ : 24
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:25,434:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP AVG: 0.009507546
+2024-03-21 12:18:25,434:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:25,434:utils.stats:INFO:CML AVG : 0.09726302287500001
+2024-03-21 12:18:25,434:utils.stats:INFO:CML FRQ : 24
+2024-03-21 12:18:25,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,433:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,433:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP AVG: 0.003878137555555556
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:27,434:utils.stats:INFO:CML AVG : 0.0025825071415094343
+2024-03-21 12:18:27,434:utils.stats:INFO:CML FRQ : 212
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP AVG: 0.012061835857142855
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:27,434:utils.stats:INFO:CML AVG : 0.009825010863945579
+2024-03-21 12:18:27,434:utils.stats:INFO:CML FRQ : 147
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP AVG: 0.018855155
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:27,434:utils.stats:INFO:CML AVG : 0.013622635897260274
+2024-03-21 12:18:27,434:utils.stats:INFO:CML FRQ : 146
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP AVG: 0.010075299
+2024-03-21 12:18:27,434:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:27,434:utils.stats:INFO:CML AVG : 0.09406364483999999
+2024-03-21 12:18:27,434:utils.stats:INFO:CML FRQ : 25
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:27,434:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:27,435:utils.stats:INFO:SNAP AVG: 0.009937555
+2024-03-21 12:18:27,435:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:27,435:utils.stats:INFO:CML AVG : 0.09377000416000002
+2024-03-21 12:18:27,435:utils.stats:INFO:CML FRQ : 25
+2024-03-21 12:18:27,435:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP AVG: 0.0032489808888888885
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:29,714:utils.stats:INFO:CML AVG : 0.0026096486063348417
+2024-03-21 12:18:29,714:utils.stats:INFO:CML FRQ : 221
+2024-03-21 12:18:29,714:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP AVG: 0.0100564248
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP FRQ: 5
+2024-03-21 12:18:29,714:utils.stats:INFO:CML AVG : 0.009832623164473683
+2024-03-21 12:18:29,714:utils.stats:INFO:CML FRQ : 152
+2024-03-21 12:18:29,714:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,714:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP AVG: 0.0145584115
+2024-03-21 12:18:29,714:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:29,715:utils.stats:INFO:CML AVG : 0.013659574407894738
+2024-03-21 12:18:29,715:utils.stats:INFO:CML FRQ : 152
+2024-03-21 12:18:29,715:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,715:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,715:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:29,715:utils.stats:INFO:SNAP AVG: 0.009661986
+2024-03-21 12:18:29,715:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:29,715:utils.stats:INFO:CML AVG : 0.09081742719230768
+2024-03-21 12:18:29,715:utils.stats:INFO:CML FRQ : 26
+2024-03-21 12:18:29,715:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,715:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:29,715:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:29,715:utils.stats:INFO:SNAP AVG: 0.009532447
+2024-03-21 12:18:29,715:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:29,715:utils.stats:INFO:CML AVG : 0.09053009811538462
+2024-03-21 12:18:29,715:utils.stats:INFO:CML FRQ : 26
+2024-03-21 12:18:29,715:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP AVG: 0.0042092289000000005
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:31,818:utils.stats:INFO:CML AVG : 0.0026788945064935067
+2024-03-21 12:18:31,818:utils.stats:INFO:CML FRQ : 231
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP AVG: 0.010211512
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:31,818:utils.stats:INFO:CML AVG : 0.00985156760625
+2024-03-21 12:18:31,818:utils.stats:INFO:CML FRQ : 160
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP AVG: 0.015498302375
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:31,818:utils.stats:INFO:CML AVG : 0.01375151080625
+2024-03-21 12:18:31,818:utils.stats:INFO:CML FRQ : 160
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP AVG: 0.0110470065
+2024-03-21 12:18:31,818:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:31,818:utils.stats:INFO:CML AVG : 0.08511953999999998
+2024-03-21 12:18:31,818:utils.stats:INFO:CML FRQ : 28
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:31,818:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:31,819:utils.stats:INFO:SNAP AVG: 0.01090812
+2024-03-21 12:18:31,819:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:31,819:utils.stats:INFO:CML AVG : 0.08484281396428572
+2024-03-21 12:18:31,819:utils.stats:INFO:CML FRQ : 28
+2024-03-21 12:18:31,819:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,293:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,293:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:34,293:utils.stats:INFO:SNAP AVG: 0.003546623636363636
+2024-03-21 12:18:34,293:utils.stats:INFO:SNAP FRQ: 11
+2024-03-21 12:18:34,294:utils.stats:INFO:CML AVG : 0.0027183367396694216
+2024-03-21 12:18:34,294:utils.stats:INFO:CML FRQ : 242
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP AVG: 0.006575554571428571
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:34,294:utils.stats:INFO:CML AVG : 0.00971424969461078
+2024-03-21 12:18:34,294:utils.stats:INFO:CML FRQ : 167
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP AVG: 0.012174210142857142
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:34,294:utils.stats:INFO:CML AVG : 0.013685396407185631
+2024-03-21 12:18:34,294:utils.stats:INFO:CML FRQ : 167
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP AVG: 0.012276758
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:34,294:utils.stats:INFO:CML AVG : 0.08260771993103447
+2024-03-21 12:18:34,294:utils.stats:INFO:CML FRQ : 29
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:34,294:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP AVG: 0.012132601
+2024-03-21 12:18:34,294:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:34,294:utils.stats:INFO:CML AVG : 0.08233556524137932
+2024-03-21 12:18:34,294:utils.stats:INFO:CML FRQ : 29
+2024-03-21 12:18:34,294:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP AVG: 0.003449363333333333
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:18:36,489:utils.stats:INFO:CML AVG : 0.002752873429133858
+2024-03-21 12:18:36,489:utils.stats:INFO:CML FRQ : 254
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP AVG: 0.006665874333333333
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:36,489:utils.stats:INFO:CML AVG : 0.009558366863636364
+2024-03-21 12:18:36,489:utils.stats:INFO:CML FRQ : 176
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP AVG: 0.011287802333333331
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:36,489:utils.stats:INFO:CML AVG : 0.013562792164772729
+2024-03-21 12:18:36,489:utils.stats:INFO:CML FRQ : 176
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP AVG: 0.01232226
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:36,489:utils.stats:INFO:CML AVG : 0.07807317412903224
+2024-03-21 12:18:36,489:utils.stats:INFO:CML FRQ : 31
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:36,489:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP AVG: 0.012200255
+2024-03-21 12:18:36,489:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:36,489:utils.stats:INFO:CML AVG : 0.07781070651612904
+2024-03-21 12:18:36,489:utils.stats:INFO:CML FRQ : 31
+2024-03-21 12:18:36,490:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP AVG: 0.004473061555555555
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:38,789:utils.stats:INFO:CML AVG : 0.0028117391825095055
+2024-03-21 12:18:38,789:utils.stats:INFO:CML FRQ : 263
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP AVG: 0.009964640166666667
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:38,789:utils.stats:INFO:CML AVG : 0.00957176048901099
+2024-03-21 12:18:38,789:utils.stats:INFO:CML FRQ : 182
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP AVG: 0.016703117333333333
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:38,789:utils.stats:INFO:CML AVG : 0.01366631936813187
+2024-03-21 12:18:38,789:utils.stats:INFO:CML FRQ : 182
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,789:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP AVG: 0.009872747
+2024-03-21 12:18:38,789:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:38,789:utils.stats:INFO:CML AVG : 0.07594191078124998
+2024-03-21 12:18:38,789:utils.stats:INFO:CML FRQ : 32
+2024-03-21 12:18:38,789:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,790:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:38,790:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:38,790:utils.stats:INFO:SNAP AVG: 0.009742157
+2024-03-21 12:18:38,790:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:38,790:utils.stats:INFO:CML AVG : 0.07568356434375
+2024-03-21 12:18:38,790:utils.stats:INFO:CML FRQ : 32
+2024-03-21 12:18:38,790:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,973:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,973:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:40,973:utils.stats:INFO:SNAP AVG: 0.003737476
+2024-03-21 12:18:40,973:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:40,973:utils.stats:INFO:CML AVG : 0.002845648956043956
+2024-03-21 12:18:40,973:utils.stats:INFO:CML FRQ : 273
+2024-03-21 12:18:40,973:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,973:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,973:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:40,973:utils.stats:INFO:SNAP AVG: 0.009788885714285715
+2024-03-21 12:18:40,973:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:40,974:utils.stats:INFO:CML AVG : 0.009579802164021165
+2024-03-21 12:18:40,974:utils.stats:INFO:CML FRQ : 189
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP AVG: 0.015154097285714287
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:40,974:utils.stats:INFO:CML AVG : 0.013721422253968255
+2024-03-21 12:18:40,974:utils.stats:INFO:CML FRQ : 189
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP AVG: 0.0109662075
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:40,974:utils.stats:INFO:CML AVG : 0.07211981058823527
+2024-03-21 12:18:40,974:utils.stats:INFO:CML FRQ : 34
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:40,974:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP AVG: 0.0108253775
+2024-03-21 12:18:40,974:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:40,974:utils.stats:INFO:CML AVG : 0.07186837688235294
+2024-03-21 12:18:40,974:utils.stats:INFO:CML FRQ : 34
+2024-03-21 12:18:40,974:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,975:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,975:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:42,975:utils.stats:INFO:SNAP AVG: 0.003616903111111111
+2024-03-21 12:18:42,975:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:18:42,975:utils.stats:INFO:CML AVG : 0.00287026345035461
+2024-03-21 12:18:42,975:utils.stats:INFO:CML FRQ : 282
+2024-03-21 12:18:42,975:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,975:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,975:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:42,975:utils.stats:INFO:SNAP AVG: 0.0103562445
+2024-03-21 12:18:42,975:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:42,975:utils.stats:INFO:CML AVG : 0.0096036926974359
+2024-03-21 12:18:42,976:utils.stats:INFO:CML FRQ : 195
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP AVG: 0.0134320632
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP FRQ: 5
+2024-03-21 12:18:42,976:utils.stats:INFO:CML AVG : 0.013713964546391752
+2024-03-21 12:18:42,976:utils.stats:INFO:CML FRQ : 194
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP AVG: 0.011436123
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:42,976:utils.stats:INFO:CML AVG : 0.07038599094285712
+2024-03-21 12:18:42,976:utils.stats:INFO:CML FRQ : 35
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:42,976:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP AVG: 0.011294311
+2024-03-21 12:18:42,976:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:42,976:utils.stats:INFO:CML AVG : 0.07013768928571427
+2024-03-21 12:18:42,976:utils.stats:INFO:CML FRQ : 35
+2024-03-21 12:18:42,976:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP AVG: 0.004700257
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:45,231:utils.stats:INFO:CML AVG : 0.002914588553633218
+2024-03-21 12:18:45,231:utils.stats:INFO:CML FRQ : 289
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP AVG: 0.0121728262
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP FRQ: 5
+2024-03-21 12:18:45,231:utils.stats:INFO:CML AVG : 0.009667921035
+2024-03-21 12:18:45,231:utils.stats:INFO:CML FRQ : 200
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP AVG: 0.020417794333333333
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:45,231:utils.stats:INFO:CML AVG : 0.01391507944
+2024-03-21 12:18:45,231:utils.stats:INFO:CML FRQ : 200
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,231:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP AVG: 0.009799289499999999
+2024-03-21 12:18:45,231:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:45,231:utils.stats:INFO:CML AVG : 0.06711103410810809
+2024-03-21 12:18:45,232:utils.stats:INFO:CML FRQ : 37
+2024-03-21 12:18:45,232:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,232:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:45,232:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:45,232:utils.stats:INFO:SNAP AVG: 0.009661745999999999
+2024-03-21 12:18:45,232:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:45,232:utils.stats:INFO:CML AVG : 0.06686871937837836
+2024-03-21 12:18:45,232:utils.stats:INFO:CML FRQ : 37
+2024-03-21 12:18:45,232:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP AVG: 0.0022956725
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:47,448:utils.stats:INFO:CML AVG : 0.0028938890200668897
+2024-03-21 12:18:47,448:utils.stats:INFO:CML FRQ : 299
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP AVG: 0.006993403999999999
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:47,448:utils.stats:INFO:CML AVG : 0.009590022480582525
+2024-03-21 12:18:47,448:utils.stats:INFO:CML FRQ : 206
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP AVG: 0.010844629
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:47,448:utils.stats:INFO:CML AVG : 0.013825648844660192
+2024-03-21 12:18:47,448:utils.stats:INFO:CML FRQ : 206
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,448:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP AVG: 0.009618808
+2024-03-21 12:18:47,448:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:47,448:utils.stats:INFO:CML AVG : 0.06559808078947367
+2024-03-21 12:18:47,449:utils.stats:INFO:CML FRQ : 38
+2024-03-21 12:18:47,449:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,449:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:47,449:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:47,449:utils.stats:INFO:SNAP AVG: 0.009487126
+2024-03-21 12:18:47,449:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:47,449:utils.stats:INFO:CML AVG : 0.06535867744736841
+2024-03-21 12:18:47,449:utils.stats:INFO:CML FRQ : 38
+2024-03-21 12:18:47,449:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,496:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,496:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:49,496:utils.stats:INFO:SNAP AVG: 0.0052128417
+2024-03-21 12:18:49,496:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:49,496:utils.stats:INFO:CML AVG : 0.0029689360323624596
+2024-03-21 12:18:49,496:utils.stats:INFO:CML FRQ : 309
+2024-03-21 12:18:49,496:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,496:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,496:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:49,496:utils.stats:INFO:SNAP AVG: 0.010952837333333333
+2024-03-21 12:18:49,496:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:49,496:utils.stats:INFO:CML AVG : 0.009628592712264152
+2024-03-21 12:18:49,496:utils.stats:INFO:CML FRQ : 212
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP AVG: 0.019666731666666663
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:49,497:utils.stats:INFO:CML AVG : 0.013990962509433963
+2024-03-21 12:18:49,497:utils.stats:INFO:CML FRQ : 212
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP AVG: 0.011043047
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:49,497:utils.stats:INFO:CML AVG : 0.06287032909999998
+2024-03-21 12:18:49,497:utils.stats:INFO:CML FRQ : 40
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:49,497:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP AVG: 0.0109072965
+2024-03-21 12:18:49,497:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:49,497:utils.stats:INFO:CML AVG : 0.0626361084
+2024-03-21 12:18:49,497:utils.stats:INFO:CML FRQ : 40
+2024-03-21 12:18:49,497:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP AVG: 0.0028426065
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP FRQ: 10
+2024-03-21 12:18:51,738:utils.stats:INFO:CML AVG : 0.0029649758589341694
+2024-03-21 12:18:51,738:utils.stats:INFO:CML FRQ : 319
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP AVG: 0.0094632665
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:51,738:utils.stats:INFO:CML AVG : 0.009624042449541284
+2024-03-21 12:18:51,738:utils.stats:INFO:CML FRQ : 218
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP AVG: 0.014228353166666666
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP FRQ: 6
+2024-03-21 12:18:51,738:utils.stats:INFO:CML AVG : 0.01399749619724771
+2024-03-21 12:18:51,738:utils.stats:INFO:CML FRQ : 218
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP AVG: 0.012304824
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:51,738:utils.stats:INFO:CML AVG : 0.06163702409756096
+2024-03-21 12:18:51,738:utils.stats:INFO:CML FRQ : 41
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:51,738:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP AVG: 0.012174786
+2024-03-21 12:18:51,738:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:51,739:utils.stats:INFO:CML AVG : 0.061405344439024394
+2024-03-21 12:18:51,739:utils.stats:INFO:CML FRQ : 41
+2024-03-21 12:18:51,739:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP AVG: 0.00228575825
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:18:53,827:utils.stats:INFO:CML AVG : 0.0029403516555891237
+2024-03-21 12:18:53,827:utils.stats:INFO:CML FRQ : 331
+2024-03-21 12:18:53,827:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP AVG: 0.012244083499999999
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:53,827:utils.stats:INFO:CML AVG : 0.009716787265486726
+2024-03-21 12:18:53,827:utils.stats:INFO:CML FRQ : 226
+2024-03-21 12:18:53,827:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,827:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP AVG: 0.015696189875000002
+2024-03-21 12:18:53,827:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:53,828:utils.stats:INFO:CML AVG : 0.014057626946902657
+2024-03-21 12:18:53,828:utils.stats:INFO:CML FRQ : 226
+2024-03-21 12:18:53,828:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,828:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,828:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:53,828:utils.stats:INFO:SNAP AVG: 0.0110953255
+2024-03-21 12:18:53,828:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:53,828:utils.stats:INFO:CML AVG : 0.05928624741860463
+2024-03-21 12:18:53,828:utils.stats:INFO:CML FRQ : 43
+2024-03-21 12:18:53,828:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,828:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:53,828:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:53,828:utils.stats:INFO:SNAP AVG: 0.010946715499999999
+2024-03-21 12:18:53,828:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:18:53,828:utils.stats:INFO:CML AVG : 0.05905843146511629
+2024-03-21 12:18:53,828:utils.stats:INFO:CML FRQ : 43
+2024-03-21 12:18:53,828:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP AVG: 0.002807711
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:18:55,867:utils.stats:INFO:CML AVG : 0.002935339072674419
+2024-03-21 12:18:55,867:utils.stats:INFO:CML FRQ : 344
+2024-03-21 12:18:55,867:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP AVG: 0.00898231025
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:55,867:utils.stats:INFO:CML AVG : 0.00969167694017094
+2024-03-21 12:18:55,867:utils.stats:INFO:CML FRQ : 234
+2024-03-21 12:18:55,867:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,867:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP AVG: 0.013570931999999999
+2024-03-21 12:18:55,867:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:18:55,867:utils.stats:INFO:CML AVG : 0.014040987803418805
+2024-03-21 12:18:55,868:utils.stats:INFO:CML FRQ : 234
+2024-03-21 12:18:55,868:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,868:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,868:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:55,868:utils.stats:INFO:SNAP AVG: 0.009733354
+2024-03-21 12:18:55,868:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:55,868:utils.stats:INFO:CML AVG : 0.05816004529545453
+2024-03-21 12:18:55,868:utils.stats:INFO:CML FRQ : 44
+2024-03-21 12:18:55,868:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,868:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:55,868:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:55,868:utils.stats:INFO:SNAP AVG: 0.009598746
+2024-03-21 12:18:55,868:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:55,868:utils.stats:INFO:CML AVG : 0.05793434770454546
+2024-03-21 12:18:55,868:utils.stats:INFO:CML FRQ : 44
+2024-03-21 12:18:55,868:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:18:57,886:utils.stats:INFO:SNAP AVG: 0.0015537440909090907
+2024-03-21 12:18:57,886:utils.stats:INFO:SNAP FRQ: 11
+2024-03-21 12:18:57,886:utils.stats:INFO:CML AVG : 0.0028925290873239437
+2024-03-21 12:18:57,886:utils.stats:INFO:CML FRQ : 355
+2024-03-21 12:18:57,886:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:18:57,886:utils.stats:INFO:SNAP AVG: 0.007557470714285713
+2024-03-21 12:18:57,886:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:57,886:utils.stats:INFO:CML AVG : 0.009629687547717843
+2024-03-21 12:18:57,886:utils.stats:INFO:CML FRQ : 241
+2024-03-21 12:18:57,886:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,886:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:18:57,886:utils.stats:INFO:SNAP AVG: 0.010020501285714285
+2024-03-21 12:18:57,887:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:18:57,887:utils.stats:INFO:CML AVG : 0.013924210186721991
+2024-03-21 12:18:57,887:utils.stats:INFO:CML FRQ : 241
+2024-03-21 12:18:57,887:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,887:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,887:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:18:57,887:utils.stats:INFO:SNAP AVG: 0.012363034
+2024-03-21 12:18:57,887:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:57,887:utils.stats:INFO:CML AVG : 0.05714233393333331
+2024-03-21 12:18:57,887:utils.stats:INFO:CML FRQ : 45
+2024-03-21 12:18:57,887:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,887:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:18:57,887:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:18:57,887:utils.stats:INFO:SNAP AVG: 0.012228146
+2024-03-21 12:18:57,887:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:18:57,887:utils.stats:INFO:CML AVG : 0.05691865433333334
+2024-03-21 12:18:57,887:utils.stats:INFO:CML FRQ : 45
+2024-03-21 12:18:57,887:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP AVG: 0.0020901815833333334
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:19:00,028:utils.stats:INFO:CML AVG : 0.0028662942915531333
+2024-03-21 12:19:00,028:utils.stats:INFO:CML FRQ : 367
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP AVG: 0.008660536222222221
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:00,028:utils.stats:INFO:CML AVG : 0.0095947981
+2024-03-21 12:19:00,028:utils.stats:INFO:CML FRQ : 250
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP AVG: 0.011470082666666666
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:00,028:utils.stats:INFO:CML AVG : 0.013835861596
+2024-03-21 12:19:00,028:utils.stats:INFO:CML FRQ : 250
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,028:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP AVG: 0.010994229500000001
+2024-03-21 12:19:00,028:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:00,029:utils.stats:INFO:CML AVG : 0.05517858480851061
+2024-03-21 12:19:00,029:utils.stats:INFO:CML FRQ : 47
+2024-03-21 12:19:00,029:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,029:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:00,029:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:00,029:utils.stats:INFO:SNAP AVG: 0.0108541315
+2024-03-21 12:19:00,029:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:00,029:utils.stats:INFO:CML AVG : 0.054958461872340436
+2024-03-21 12:19:00,029:utils.stats:INFO:CML FRQ : 47
+2024-03-21 12:19:00,029:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP AVG: 0.0014174358124999999
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP FRQ: 16
+2024-03-21 12:19:02,582:utils.stats:INFO:CML AVG : 0.0028057675665796346
+2024-03-21 12:19:02,582:utils.stats:INFO:CML FRQ : 383
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP AVG: 0.006675536888888888
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:02,582:utils.stats:INFO:CML AVG : 0.00949335659073359
+2024-03-21 12:19:02,582:utils.stats:INFO:CML FRQ : 259
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP AVG: 0.009219412
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:02,582:utils.stats:INFO:CML AVG : 0.01367544442857143
+2024-03-21 12:19:02,582:utils.stats:INFO:CML FRQ : 259
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP AVG: 0.009755414
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:02,582:utils.stats:INFO:CML AVG : 0.05423226875
+2024-03-21 12:19:02,582:utils.stats:INFO:CML FRQ : 48
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:02,582:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP AVG: 0.009609184
+2024-03-21 12:19:02,582:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:02,582:utils.stats:INFO:CML AVG : 0.05401368525
+2024-03-21 12:19:02,582:utils.stats:INFO:CML FRQ : 48
+2024-03-21 12:19:02,582:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:04,649:utils.stats:INFO:SNAP AVG: 0.0032073709230769232
+2024-03-21 12:19:04,649:utils.stats:INFO:SNAP FRQ: 13
+2024-03-21 12:19:04,649:utils.stats:INFO:CML AVG : 0.0028189515151515153
+2024-03-21 12:19:04,649:utils.stats:INFO:CML FRQ : 396
+2024-03-21 12:19:04,649:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:04,649:utils.stats:INFO:SNAP AVG: 0.009778887666666666
+2024-03-21 12:19:04,649:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:04,649:utils.stats:INFO:CML AVG : 0.009502945320895522
+2024-03-21 12:19:04,649:utils.stats:INFO:CML FRQ : 268
+2024-03-21 12:19:04,649:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,649:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:04,649:utils.stats:INFO:SNAP AVG: 0.014437184444444445
+2024-03-21 12:19:04,650:utils.stats:INFO:SNAP FRQ: 9
+2024-03-21 12:19:04,650:utils.stats:INFO:CML AVG : 0.01370102525
+2024-03-21 12:19:04,650:utils.stats:INFO:CML FRQ : 268
+2024-03-21 12:19:04,650:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,650:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,650:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:04,650:utils.stats:INFO:SNAP AVG: 0.012391756
+2024-03-21 12:19:04,650:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:04,650:utils.stats:INFO:CML AVG : 0.05255864824
+2024-03-21 12:19:04,650:utils.stats:INFO:CML FRQ : 50
+2024-03-21 12:19:04,650:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,650:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:04,650:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:04,650:utils.stats:INFO:SNAP AVG: 0.012248662
+2024-03-21 12:19:04,650:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:04,650:utils.stats:INFO:CML AVG : 0.05234308432
+2024-03-21 12:19:04,650:utils.stats:INFO:CML FRQ : 50
+2024-03-21 12:19:04,650:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,709:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,709:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:06,709:utils.stats:INFO:SNAP AVG: 0.0018385916428571428
+2024-03-21 12:19:06,709:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:19:06,709:utils.stats:INFO:CML AVG : 0.002785475812195122
+2024-03-21 12:19:06,709:utils.stats:INFO:CML FRQ : 410
+2024-03-21 12:19:06,709:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,709:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,709:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:06,709:utils.stats:INFO:SNAP AVG: 0.008409505375000001
+2024-03-21 12:19:06,709:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:06,710:utils.stats:INFO:CML AVG : 0.00947125140942029
+2024-03-21 12:19:06,710:utils.stats:INFO:CML FRQ : 276
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP AVG: 0.011652311875
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:06,710:utils.stats:INFO:CML AVG : 0.013641642253623189
+2024-03-21 12:19:06,710:utils.stats:INFO:CML FRQ : 276
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP AVG: 0.010800456
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:06,710:utils.stats:INFO:CML AVG : 0.051739860156862744
+2024-03-21 12:19:06,710:utils.stats:INFO:CML FRQ : 51
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:06,710:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP AVG: 0.010590093
+2024-03-21 12:19:06,710:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:06,710:utils.stats:INFO:CML AVG : 0.051524398215686266
+2024-03-21 12:19:06,710:utils.stats:INFO:CML FRQ : 51
+2024-03-21 12:19:06,710:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP AVG: 0.0025310822500000003
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:19:08,823:utils.stats:INFO:CML AVG : 0.002778241872037915
+2024-03-21 12:19:08,823:utils.stats:INFO:CML FRQ : 422
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP AVG: 0.011816449285714284
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:08,823:utils.stats:INFO:CML AVG : 0.00952925983745583
+2024-03-21 12:19:08,823:utils.stats:INFO:CML FRQ : 283
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP AVG: 0.016182044
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:08,823:utils.stats:INFO:CML AVG : 0.013704479045936396
+2024-03-21 12:19:08,823:utils.stats:INFO:CML FRQ : 283
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,823:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP AVG: 0.009723572
+2024-03-21 12:19:08,823:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:08,823:utils.stats:INFO:CML AVG : 0.05093185461538462
+2024-03-21 12:19:08,824:utils.stats:INFO:CML FRQ : 52
+2024-03-21 12:19:08,824:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,824:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:08,824:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:08,824:utils.stats:INFO:SNAP AVG: 0.009585627
+2024-03-21 12:19:08,824:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:08,824:utils.stats:INFO:CML AVG : 0.05071788338461537
+2024-03-21 12:19:08,824:utils.stats:INFO:CML FRQ : 52
+2024-03-21 12:19:08,824:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP AVG: 0.002578150642857143
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:19:10,902:utils.stats:INFO:CML AVG : 0.0027718169243119263
+2024-03-21 12:19:10,902:utils.stats:INFO:CML FRQ : 436
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP AVG: 0.012259362624999999
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:10,902:utils.stats:INFO:CML AVG : 0.009604314209621993
+2024-03-21 12:19:10,902:utils.stats:INFO:CML FRQ : 291
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP AVG: 0.016798169
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:10,902:utils.stats:INFO:CML AVG : 0.013789528941580755
+2024-03-21 12:19:10,902:utils.stats:INFO:CML FRQ : 291
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP AVG: 0.009759359
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:10,902:utils.stats:INFO:CML AVG : 0.050155015075471696
+2024-03-21 12:19:10,902:utils.stats:INFO:CML FRQ : 53
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:10,902:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP AVG: 0.009631835
+2024-03-21 12:19:10,902:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:10,902:utils.stats:INFO:CML AVG : 0.049942674924528294
+2024-03-21 12:19:10,902:utils.stats:INFO:CML FRQ : 53
+2024-03-21 12:19:10,903:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,075:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,075:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:13,075:utils.stats:INFO:SNAP AVG: 0.0019320833333333334
+2024-03-21 12:19:13,075:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:19:13,075:utils.stats:INFO:CML AVG : 0.002749324060267857
+2024-03-21 12:19:13,075:utils.stats:INFO:CML FRQ : 448
+2024-03-21 12:19:13,075:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,075:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP AVG: 0.010522936285714286
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:13,076:utils.stats:INFO:CML AVG : 0.00962589258053691
+2024-03-21 12:19:13,076:utils.stats:INFO:CML FRQ : 298
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP AVG: 0.013864884999999999
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:13,076:utils.stats:INFO:CML AVG : 0.013791299050335572
+2024-03-21 12:19:13,076:utils.stats:INFO:CML FRQ : 298
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP AVG: 0.012503437499999999
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:13,076:utils.stats:INFO:CML AVG : 0.048785866799999994
+2024-03-21 12:19:13,076:utils.stats:INFO:CML FRQ : 55
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:13,076:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP AVG: 0.0123187235
+2024-03-21 12:19:13,076:utils.stats:INFO:SNAP FRQ: 2
+2024-03-21 12:19:13,076:utils.stats:INFO:CML AVG : 0.04857453123636363
+2024-03-21 12:19:13,076:utils.stats:INFO:CML FRQ : 55
+2024-03-21 12:19:13,076:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,221:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,221:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:15,221:utils.stats:INFO:SNAP AVG: 0.0011835002142857145
+2024-03-21 12:19:15,221:utils.stats:INFO:SNAP FRQ: 14
+2024-03-21 12:19:15,221:utils.stats:INFO:CML AVG : 0.002701874852813853
+2024-03-21 12:19:15,221:utils.stats:INFO:CML FRQ : 462
+2024-03-21 12:19:15,221:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,221:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP AVG: 0.007020769875
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:15,222:utils.stats:INFO:CML AVG : 0.00955778479738562
+2024-03-21 12:19:15,222:utils.stats:INFO:CML FRQ : 306
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP AVG: 0.009116266250000001
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP FRQ: 8
+2024-03-21 12:19:15,222:utils.stats:INFO:CML AVG : 0.013669075970588236
+2024-03-21 12:19:15,222:utils.stats:INFO:CML FRQ : 306
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP AVG: 0.012419715
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:15,222:utils.stats:INFO:CML AVG : 0.048136471232142854
+2024-03-21 12:19:15,222:utils.stats:INFO:CML FRQ : 56
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:15,222:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP AVG: 0.012250591
+2024-03-21 12:19:15,222:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:15,222:utils.stats:INFO:CML AVG : 0.047925889446428574
+2024-03-21 12:19:15,222:utils.stats:INFO:CML FRQ : 56
+2024-03-21 12:19:15,222:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,565:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:PRINTING STATS FOR LST_GEN
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP AVG: 0.0012021607500000001
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP FRQ: 12
+2024-03-21 12:19:17,566:utils.stats:INFO:CML AVG : 0.002663907407172996
+2024-03-21 12:19:17,566:utils.stats:INFO:CML FRQ : 474
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:PRINTING STATS FOR POST_GEN
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP AVG: 0.007757848714285714
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:17,566:utils.stats:INFO:CML AVG : 0.009517530635782749
+2024-03-21 12:19:17,566:utils.stats:INFO:CML FRQ : 313
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:PRINTING STATS FOR LXSW_GEN
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP AVG: 0.009844022714285717
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP FRQ: 7
+2024-03-21 12:19:17,566:utils.stats:INFO:CML AVG : 0.013583531648562299
+2024-03-21 12:19:17,566:utils.stats:INFO:CML FRQ : 313
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:PRINTING STATS FOR GET_DIST
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP AVG: 0.012587395
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:17,566:utils.stats:INFO:CML AVG : 0.04751280322807017
+2024-03-21 12:19:17,566:utils.stats:INFO:CML FRQ : 57
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------
+2024-03-21 12:19:17,566:utils.stats:INFO:PRINTING STATS FOR DTXF
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP AVG: 0.012448019
+2024-03-21 12:19:17,566:utils.stats:INFO:SNAP FRQ: 1
+2024-03-21 12:19:17,566:utils.stats:INFO:CML AVG : 0.04730347066666667
+2024-03-21 12:19:17,566:utils.stats:INFO:CML FRQ : 57
+2024-03-21 12:19:17,566:utils.stats:INFO:-----------------------------------------

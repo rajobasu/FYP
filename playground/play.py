@@ -17,5 +17,8 @@ def main():
         print()
 
 
+def get():
+    return 1, 2
+
 if __name__ == "__main__":
-    main()
+    print([3, *get()])

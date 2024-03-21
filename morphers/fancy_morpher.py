@@ -1,10 +1,8 @@
 import random
-
-from transformers import pipeline
 from abc import ABC, abstractmethod
-from sentence_transformers import SentenceTransformer
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+
+from nltk import sent_tokenize
+from transformers import pipeline
 
 from dataparser import get_random_word
 from morphers.paraphraser import Paraphraser
@@ -13,7 +11,7 @@ from morphers.synonym_substitutor import LexSubWrapper
 
 class Morpher(ABC):
     @abstractmethod
-    def modify(self, text) -> str:
+    def modify(self, text):
         pass
 
 
@@ -52,7 +50,6 @@ class RandomMorpher(Morpher):
     def __init__(self):
         pass
 
-
     def add_word(self, sentence):
         """Append a word to the end of the sentence"""
         sentence += " " + get_random_word()
@@ -77,5 +74,11 @@ class SynonymParaphraserMorper(Morpher):
         self.lws = LexSubWrapper()
         self.ppr = Paraphraser()
 
-    def modify(self, text) -> str:
-        return self.lws.generate(self.ppr.generate(text))
+    def modify(self, text):
+        if type(text) is list:
+            return [self.ppr.generate(item) for item in text]
+
+        return " ".join([
+            self.lws.generate(self.ppr.generate(item))
+            for item in sent_tokenize(text.replace("\n", "").replace("\t", ""))
+        ])

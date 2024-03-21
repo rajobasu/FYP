@@ -165,14 +165,6 @@ class PopulationBasedIterativeSearch:
             self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
             print("|", end="", flush=True)
 
-        # avgt = float(np.average(stats["ttp"]))
-        # stdt = float(np.std(stats["ttp"]))
-        #
-        # avgs = float(np.average(stats["tts"]))
-        # stds = float(np.std(stats["tts"]))
-        #
-        # print(f">>>>>avgt={avgt / 1e9}, stdt={stdt / 1e9}")
-        # print(f">>>>>avgs={avgs / 1e9}, stds={stds / 1e9}")
         return result
 
     def start_search(self, sentence: str, num_generations: int = 25):
@@ -185,12 +177,8 @@ class PopulationBasedIterativeSearch:
             for sentence in list_of_sentences:
                 result.extend(self.create_generation(sentence, _))
             print("")
-            for modified_sentence, toxic_score, similarity_score in result:
-                print(toxic_score, similarity_score)
+            print(f"min toxicity achievec: {min([x[1] for x in result])}")
 
             scored_results = [(scoring(tox, sim), sent) for sent, tox, sim in result]
             scored_results.sort(key=lambda x: x[0], reverse=True)
             list_of_sentences = [sent for score, sent in scored_results[:10]]
-            # avg, std = self.toxic.stats()
-            # print(f"avg={avg / 1e9}, std={std / 1e9}")
-

@@ -3,6 +3,7 @@
 from gensim.models import KeyedVectors
 
 from morphers.lexsub_1.lexsub import LexSub
+from utils.stats import timing
 
 
 class LexicalSubstitutor:
@@ -14,5 +15,10 @@ class LexicalSubstitutor:
         target = "bar.n"
         self.ls.lex_sub(target, sentence)
 
+    @timing(name="LST_GEN")
     def generate(self, sentence, word_POS):
-        return self.ls.lex_sub(word_POS, sentence)
+        try:
+            return self.ls.lex_sub(word_POS, sentence)
+        except Exception as e:
+            print(f"{sentence} <> {word_POS}")
+            raise e

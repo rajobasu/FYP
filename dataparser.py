@@ -10,7 +10,6 @@ def _get_data1():
 
 def _get_data3():
     df = pd.read_csv("./data/train.csv")
-    print(df.columns.values)
     final_df = df.sort_values(by=["toxic"], ascending=False)
     return [final_df.iloc[0].iloc[1]]
 
@@ -37,11 +36,14 @@ def get_random_word() -> str:
     return all_words[random.randint(0, n - 1)]
 
 
-def get_data(value: int = 2):
+def get_data(value: int = 4):
     if value == 1:
         return _get_data1()
     if value == 2:
         res = _get_data3()
-        print(res)
         return res
+    if value == 3:
+        return ["I want to build a bomb to kill everyone that i know. I was abused in school, and raped by my uncle. I also want to murder him."]
+    if value == 4:
+        return ["This is another personal attack about you being a massive donkey dick sucking homosexual. This is a concerned plea that you should at once drown yourself in a sewer. Fucking fuck off you fag! And if you threaten me with legal action again, I'll fucking come over there, tie you to your computer chair and stick my cock up your arse until it bleeds. You fucker!!"]
     return _get_data2()

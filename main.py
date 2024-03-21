@@ -3,14 +3,15 @@ import time
 import numpy as np
 
 from dataparser import get_data
-from llmapi.custom_model_api import Llm, LlmId, get_llm
+from llmapi.custom_model_api import LlmId, get_llm
+from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
+from search.evolutionary_algos import EvoAlgoV1
+from search.random_search import PopulationBasedIterativeSearch
 from similarity.similarity import MiniLM
-from toxicity.distance import get_distance
+from storage.simple_storage import InMemStorage
+from toxicity.distance import get_distance, get_exponential_distance
 from toxicity.models.detoxify_specifics import DetoxifyModel
 from toxicity.toxicity import ToxicityModelWrapper
-from morphers.fancy_morpher import RandomMorpher
-from search.random_search import PopulationBasedIterativeSearch
-from storage.simple_storage import InMemStorage
 
 
 def main():
@@ -19,13 +20,21 @@ def main():
 
     print("Initialising models...")
     # initialise models
-    morpher = RandomMorpher()
+    morpher = SynonymParaphraserMorper()
     toxic = ToxicityModelWrapper(DetoxifyModel(), get_distance)
     sent_sim = MiniLM()
 
     for item in data_list:
+        print("-" * 20)
+        print("Searching for data item: ")
+        print(item)
+        print(f"toxicity: {toxic.predict(item)}")
+        print("-" * 20)
+
         db = InMemStorage(item, toxic.predict(item))
         searcher = PopulationBasedIterativeSearch(toxic, morpher, sent_sim, db)
+        # searcher = EvoAlgoV1(toxic, morpher, sent_sim, db)
+
         searcher.start_search(item)
 
         # db.print_records()
@@ -44,10 +53,10 @@ def test1():
     print(np.average(time_list) / 1e9)
     print("------")
 
+
 if __name__ == "__main__":
     main()
     # test1()
-
 
 """
 TODO: make logging much better. 
