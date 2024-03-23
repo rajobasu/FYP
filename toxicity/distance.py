@@ -1,16 +1,15 @@
 import math
 
-from morphers.fancy_morpher import RandomMorpher, Morpher
+from morphers.fancy_morpher import RandomMorpher
 from toxicity.toxicity import ToxicityEvaluator
-from utils.stats import GLBL_STATS, timing
+from utils.stats import timing
 
+random_morpher = RandomMorpher()
 
 @timing(name="GET_DIST")
 def get_distance(toxicity_rater: ToxicityEvaluator, sentence: str) -> float:
-    random_morpher = RandomMorpher()
-
     sentences = [sentence]
-    LIMIT = 30
+    LIMIT = 300
     for _ in range(LIMIT):
         sentences.append(random_morpher.modify(sentences[-1]))
 
@@ -18,7 +17,7 @@ def get_distance(toxicity_rater: ToxicityEvaluator, sentence: str) -> float:
         return 1
 
     lo = 0
-    hi = 30
+    hi = 300
     while lo < hi:
         mid = int(math.ceil((lo + hi) / 2))
         if hi == mid:

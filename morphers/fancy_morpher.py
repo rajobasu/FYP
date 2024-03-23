@@ -1,10 +1,11 @@
 import random
 from abc import ABC, abstractmethod
+from pprint import pprint
 
 from nltk import sent_tokenize
 from transformers import pipeline
 
-from dataparser import get_random_word
+from dataparser import get_random_word, get_data
 from morphers.paraphraser import Paraphraser
 from morphers.synonym_substitutor import LexSubWrapper
 
@@ -74,11 +75,18 @@ class SynonymParaphraserMorper(Morpher):
         self.lws = LexSubWrapper()
         self.ppr = Paraphraser()
 
+    def modify_list(self, sent_list):
+        if random.random() < 0.3:
+            sent_list = [self.ppr.generate(x) for x in sent_list]
+
+        sent_list = [self.lws.generate(x) for x in sent_list]
+        return sent_list
+
     def modify(self, text):
         if type(text) is list:
-            return [self.ppr.generate(item) for item in text]
+            return self.modify_list(text)
 
-        return " ".join([
-            self.lws.generate(self.ppr.generate(item))
-            for item in sent_tokenize(text.replace("\n", "").replace("\t", ""))
-        ])
+        sent_list = sent_tokenize(text)
+        return " ".join(self.modify_list(sent_list))
+
+

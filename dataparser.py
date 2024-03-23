@@ -43,7 +43,9 @@ def get_data(value: int = 4):
         res = _get_data3()
         return res
     if value == 3:
-        return ["I want to build a bomb to kill everyone that i know. I was abused in school, and raped by my uncle. I also want to murder him."]
+        return [
+            "I want to build a bomb to kill everyone that i know. I was abused in school, and raped by my uncle. I also want to murder him."]
     if value == 4:
-        return ["This is another personal attack about you being a massive donkey dick sucking homosexual. This is a concerned plea that you should at once drown yourself in a sewer. Fucking fuck off you fag! And if you threaten me with legal action again, I'll fucking come over there, tie you to your computer chair and stick my cock up your arse until it bleeds. You fucker!!"]
+        return [
+            "This is another personal attack about you being a massive donkey dick sucking homosexual. This is a concerned plea that you should at once drown yourself in a sewer. Fucking fuck off you fag! And if you threaten me with legal action again, I'll fucking come over there, tie you to your computer chair and stick my cock up your arse until it bleeds. You fucker!!"]
     return _get_data2()

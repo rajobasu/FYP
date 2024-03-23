@@ -4,15 +4,23 @@ from functools import wraps
 
 import numpy as np
 
+from constants import LOGGING_ENABLED
+
 logger = logging.getLogger(__name__)
 
-f_format = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
-f_handler = logging.FileHandler(f"./logs/{time.time_ns()}.STATS.log")
-f_handler.setFormatter(f_format)
-f_handler.setLevel(logging.DEBUG)
 
-logger.addHandler(f_handler)
-logger.setLevel(logging.DEBUG)
+def set_up_logging():
+    f_format = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
+    f_handler = logging.FileHandler(f"./logs/.STATS.log")
+    f_handler.setFormatter(f_format)
+    f_handler.setLevel(logging.DEBUG)
+
+    logger.addHandler(f_handler)
+    logger.setLevel(logging.DEBUG)
+
+
+if LOGGING_ENABLED:
+    set_up_logging()
 
 
 class IndivStats:
@@ -33,16 +41,16 @@ class IndivStats:
     def printStats(self):
         logger.info(f"-----------------------------------------")
         logger.info(f"PRINTING STATS FOR {self._name}")
-        logger.info(f"SNAP AVG: {np.average(self.time_list_snap)}")
-        logger.info(f"SNAP FRQ: {len(self.time_list_snap)}")
-        logger.info(f"CML AVG : {np.average(self.time_list_cumul)}")
-        logger.info(f"CML FRQ : {len(self.time_list_cumul)}")
+        logger.info(f"SNAP AVG: {np.mean(self.time_list_snap) :.5f}")
+        logger.info(f"SNAP FRQ: {len(self.time_list_snap) :.5f}")
+        logger.info(f"CML AVG : {np.mean(self.time_list_cumul) :.5f}")
+        logger.info(f"CML FRQ : {len(self.time_list_cumul) :.5f}")
         self.time_list_snap.clear()
         logger.info(f"-----------------------------------------")
 
 
 class StatsRegistry:
-    def __init__(self):
+    def __init__(self) -> None:
         self.stats: dict[str, IndivStats] = {}
         self.t = time.time_ns()
 

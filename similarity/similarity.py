@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from sentence_transformers import SentenceTransformer, util
 
-from utils.util import FREE_CUDA_ID
+from constants import FREE_CUDA_ID
 
 
 class SentenceSimilarityModel(ABC):

@@ -1,8 +1,8 @@
 from detoxify import Detoxify
 
+from constants import FREE_CUDA_ID
 from toxicity.toxicity import ToxicityEvaluator
 from utils.stats import timing
-from utils.util import FREE_CUDA_ID
 
 TOXIC_THRESHOLD = 0.05
 

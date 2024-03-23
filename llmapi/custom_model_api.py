@@ -1,5 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from enum import Enum
+
+from constants import ENV_VARS, FREE_CUDA_ID
 from utils import util
 
 
@@ -9,11 +11,11 @@ class LlmId(Enum):
 
 
 class Llm:
-    MODELS_DIR = util.load_env_file()["MODELS_DIR"]
+    MODELS_DIR = ENV_VARS
 
     def __init__(self, llm_id: LlmId):
         self.modelId = llm_id
-        self.device = util.get_freer_gpu()
+        self.device = FREE_CUDA_ID
         self.model = AutoModelForCausalLM.from_pretrained(f"{Llm.MODELS_DIR}/{self.modelId.value}",
                                                           device_map=self.device)
         self.tokenizer = AutoTokenizer.from_pretrained(f"{Llm.MODELS_DIR}/{self.modelId.value}")
@@ -32,7 +34,7 @@ class Vicuna(Llm):
         # PARAMS =
         input_ids = self.tokenizer(USER_PROMPT, return_tensors="pt").to(self.device)
 
-        outputs = self.model.generate(**input_ids, max_length=1000, params=params)
+        outputs = self.model.generate(**input_ids, max_length=1000)
         return self.tokenizer.decode(outputs[0])
 
 

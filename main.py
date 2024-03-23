@@ -2,6 +2,7 @@ import time
 
 import numpy as np
 
+from constants import RECORD_EXPERIMENT
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId, get_llm
 from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
@@ -32,13 +33,13 @@ def main():
         print("-" * 20)
 
         db = InMemStorage(item, toxic.predict(item))
-        searcher = PopulationBasedIterativeSearch(toxic, morpher, sent_sim, db)
-        # searcher = EvoAlgoV1(toxic, morpher, sent_sim, db)
+        # searcher = PopulationBasedIterativeSearch(toxic, morpher, sent_sim, db)
+        searcher = EvoAlgoV1(toxic, morpher, sent_sim, db)
 
         searcher.start_search(item)
 
-        # db.print_records()
-        # db.output_records()
+        if RECORD_EXPERIMENT:
+            db.output_records()
 
 
 def test1():

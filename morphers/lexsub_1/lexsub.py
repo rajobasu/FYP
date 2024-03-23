@@ -83,20 +83,25 @@ class LexSub(object):
         word_POS = word with part of speech in form word.POS e.g. dog.n
         context_words = list of words in context
         """
-        w, _, POS = word_POS.partition('.')
-        # generate candidate substitutions
-        candidates = self.get_candidates(w, POS)
-        if sentence is None:
-            return candidates[:self.n_substitutes]
-        else:
-            context_words = tools.get_words(sentence)
-            # filter context words: exist in the word2vec vocab, not stop words
-            context_words = list(filter(lambda c: c in self.word_vectors.key_to_index
-                                                  and c not in tools.stopwords,
-                                        context_words))
-            cand_scores = [self.get_substitutability(w, s, context_words) if s in self.word_vectors.key_to_index else 0
-                           for s
-                           in candidates]
-            assert (len(cand_scores) == len(candidates))
-            sorted_candidates = sorted(zip(candidates, cand_scores), key=lambda x: x[1], reverse=True)
-            return [sub for sub, score in sorted_candidates][:self.n_substitutes]
+
+        try:
+            w, _, POS = word_POS.partition('.')
+            # generate candidate substitutions
+            candidates = self.get_candidates(w, POS)
+            if sentence is None:
+                return candidates[:self.n_substitutes]
+            else:
+                context_words = tools.get_words(sentence)
+                # filter context words: exist in the word2vec vocab, not stop words
+                context_words = list(filter(lambda c: c in self.word_vectors.key_to_index
+                                                      and c not in tools.stopwords,
+                                            context_words))
+                cand_scores = [self.get_substitutability(w, s, context_words) if s in self.word_vectors.key_to_index else 0
+                               for s
+                               in candidates]
+                assert (len(cand_scores) == len(candidates))
+                sorted_candidates = sorted(zip(candidates, cand_scores), key=lambda x: x[1], reverse=True)
+                return [sub for sub, score in sorted_candidates][:self.n_substitutes]
+        except KeyError:
+            print(f"Key {w} was not present in word2vec?")
+            return []

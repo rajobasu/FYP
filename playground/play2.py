@@ -1,6 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-from utils.util import FREE_CUDA_ID
+from constants import FREE_CUDA_ID
 
 
 def main():

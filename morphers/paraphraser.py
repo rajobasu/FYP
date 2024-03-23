@@ -2,7 +2,8 @@ import random
 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-from utils.util import FREE_CUDA_ID
+from constants import FREE_CUDA_ID
+from utils.stats import timing
 
 
 class Paraphraser:
@@ -10,6 +11,7 @@ class Paraphraser:
         self.tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")
         self.model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws").to(FREE_CUDA_ID)
 
+    @timing("PRHSR")
     def generate(self, sentence, n: int = 5) -> list[str]:
         text = "paraphrase: " + sentence + " </s>"
 

@@ -3,6 +3,7 @@ from random import randrange
 import random
 import time
 
+from constants import RECORD_EXPERIMENT
 from similarity.similarity import SentenceSimilarityModel
 from toxicity.toxicity import ToxicityEvaluator
 from morphers.fancy_morpher import Morpher
@@ -129,9 +130,11 @@ class PopulationSearchWithLooseFrontier:
         pprint(sorted([(b, c) for a, b, c in list_of_sentences]))
 
 
-def scoring(toxicity: float, similarity: float, scoring_func_type: int = 1):
+def scoring(toxicity: float, similarity: float, scoring_func_type: int = 2):
     if scoring_func_type == 1:
         return (1 - toxicity) * similarity
+    if scoring_func_type == 2:
+        return 1 - toxicity
 
 
 class PopulationBasedIterativeSearch:
@@ -147,22 +150,18 @@ class PopulationBasedIterativeSearch:
         self.db = db
         self.orig_sentence = ""
 
-    def create_generation(self, sentence: str, generation_num: int, children_limit: int = 10) -> list[tuple[str, float, float]]:
+    def create_generation(self, sentence: str, generation_num: int, children_limit: int = 5) -> list[tuple[str, float, float]]:
         result: list[tuple[str, float, float]] = []
-        stats = {"ttp":[], "tts":[]}
         for _ in range(children_limit):
             modified_sentence = self.modifier.modify(sentence)
-            t1 = time.time_ns()
+
             toxic_score = self.toxic.predict(modified_sentence)
-            t2 = time.time_ns()
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
-            t3 = time.time_ns()
-
-            # stats["ttp"].append(t2 - t1)
-            # stats["tts"].append(t3 - t2)
-
             result.append((modified_sentence, toxic_score, similarity_score))
-            self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
+
+            if RECORD_EXPERIMENT:
+                self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
+
             print("|", end="", flush=True)
 
         return result
@@ -177,8 +176,8 @@ class PopulationBasedIterativeSearch:
             for sentence in list_of_sentences:
                 result.extend(self.create_generation(sentence, _))
             print("")
-            print(f"min toxicity achievec: {min([x[1] for x in result])}")
+            print(f"min toxicity achieved: {min([x[1] for x in result])}")
 
             scored_results = [(scoring(tox, sim), sent) for sent, tox, sim in result]
             scored_results.sort(key=lambda x: x[0], reverse=True)
-            list_of_sentences = [sent for score, sent in scored_results[:10]]
+            list_of_sentences = [sent for score, sent in scored_results[:30]]
