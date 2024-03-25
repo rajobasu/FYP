@@ -1,4 +1,5 @@
 import random
+from pprint import pprint
 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
@@ -42,7 +43,7 @@ class Paraphraser:
     @timing("PRHSR_BATCH")
     def generate_batch(self, sentences, children_per_sentence) -> list[list[str]]:
         texts = ["paraphrase: " + sentence + " </s>" for sentence in sentences]
-
+        pprint(texts)
         encoding = self.tokenizer(texts, return_tensors="pt", padding=True).to(FREE_CUDA_ID)
         input_ids, attention_masks = encoding["input_ids"], encoding["attention_mask"]
         outputs = self.model.generate(
@@ -59,15 +60,21 @@ class Paraphraser:
             output, skip_special_tokens=True,
             clean_up_tokenization_spaces=True
         ) for output in outputs]
-
+        print("RESULTS")
+        pprint(results)
         chunked_results = [
             results[i * children_per_sentence:i * children_per_sentence + children_per_sentence]
             for i in range(len(sentences))
         ]
+        pprint("-" * 10)
+        pprint("printing chunks")
+        pprint(chunked_results)
+        pprint("-" * 10)
 
         chunked_return = []
         for output, input in zip(chunked_results, sentences):
             min_len = len(input) * 0.8
-            chunked_return.append([x for x in output if len(x) > min_len])
+            chunked_return.extend([x for x in output if len(x) > min_len])
+
 
         return chunked_return

@@ -73,6 +73,36 @@ class RandomMorpher(Morpher):
         return self.word_replacement(sentence)
 
 
+def text_to_list(text):
+    if type(text) is list:
+        return text
+    return sent_tokenize(text)
+
+
+def generate_list_using(gen_func, texts: list[list[str]], num_children):
+    sentence_per_text = len(texts[0])
+    for text in texts:
+        if len(text) != sentence_per_text:
+            print("SENTENCES NOT THE SAME LENGTH")
+            print(texts)
+            raise Exception()
+    all_texts = []
+    for text in texts:
+        all_texts.extend(text)  # since text is also a list of sentences
+
+    outputs = gen_func(all_texts, num_children)
+    result = []
+
+    for text_id in range(len(texts)):
+        for child_id in range(num_children):
+            sent = []
+            for sentence_id in range(sentence_per_text):
+                sent.append(outputs[text_id * num_children * sentence_per_text + child_id + sentence_id * num_children])
+            result.append(sent)
+
+    return result
+
+
 class SynonymParaphraserMorper(Morpher):
     def __init__(self):
         self.lws = LexSubWrapper()
@@ -92,8 +122,27 @@ class SynonymParaphraserMorper(Morpher):
         sent_list = sent_tokenize(text)
         return " ".join(self.modify_list(sent_list))
 
+    ## assumption here is that exery text:list in texts has the same length
+    def modify_batch(self, texts, children_per_sentence, ratio=0.5):
+        # we just do replacement for half, and paraphrase for half
 
-    def modify_batch(self, texts, children_per_sentence):
-        pass
+        texts = [text_to_list(text) for text in texts]
+        morph_changes = int(ratio * children_per_sentence)
+        lex_changes = int(children_per_sentence - morph_changes)
 
+        results = []
+        results.extend(generate_list_using(
+            gen_func=self.ppr.generate_batch,
+            texts=texts,
+            num_children=morph_changes
+        ))
 
+        results.extend(
+            generate_list_using(
+                gen_func=self.lws.batch_generate,
+                texts=texts,
+                num_children=lex_changes
+            )
+        )
+
+        return results

@@ -3,7 +3,7 @@
 import os
 
 import numpy as np
-from dotenv import load_dotenv
+from dotenv import load_dotenv, dotenv_values
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -16,22 +16,14 @@ def get_freer_gpu():
     return f"cuda:{np.argmax(memory_available)}"
 
 
-def load_env_file():
-    load_dotenv(".env")
-    return {
-        "MODELS_DIR": os.getenv("MODELS_DIR"),
-        "HUGGING_FACE_TOKEN": os.getenv("HUGGING_FACE_TOKEN")
-    }
-
-
 # ----------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------- CONSTANTS --------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------
 
 
 DEBUG_MODE = True
-LOGGING_ENABLED = False
+LOGGING_ENABLED = True
 RECORD_EXPERIMENT = False
 
 FREE_CUDA_ID = get_freer_gpu()
-ENV_VARS = load_env_file()
+ENV_VARS = dict(dotenv_values(".env"))

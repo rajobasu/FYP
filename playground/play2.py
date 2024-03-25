@@ -1,6 +1,10 @@
 import time
 from pprint import pprint
 
+from detoxify import Detoxify
+
+from constants import FREE_CUDA_ID
+from morphers.fancy_morpher import SynonymParaphraserMorper
 from morphers.paraphraser import Paraphraser
 
 
@@ -9,7 +13,11 @@ def main2(*args):
 
 
 def main():
-    ppr = Paraphraser()
+    # ppr = Paraphraser()
+    # tox = Detoxify()
+    print("cuda : ", FREE_CUDA_ID)
+    morpher = SynonymParaphraserMorper()
+    print("Made morpher")
     # lexsub = LexSubWrapper()
     sentences = [
         "Hello I am going to go to dog shelter today to eat good food.",
@@ -17,11 +25,15 @@ def main():
         "I am quite tired today so i dont want to go to any events"
 
     ]
-    # pprint(ppr.generate(sentences[0], 5))
+    # ppr.generate_batch(sentences, 3)
     t1 = time.time_ns()
 
-    pprint(ppr.generate_batch(sentences, 3))
-    print((time.time_ns() - t1) / 1e9)
+    output = morpher.modify_batch([sentences], 3)
+    pprint(output)
+
+    # pprint(ppr.generate_batch(sentences, 3))
+    # pprint(ppr.generate_batch(sentences, 3))
+    print((time.time_ns() - t1) / 2e9)
 
     # print(lexsub.generate(sentences[0]))
     # print(lexsub.batch_generate([sentences[0]], 1))

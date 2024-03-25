@@ -2,26 +2,28 @@ import random
 
 import pandas as pd
 
+from constants import ENV_VARS
+
 
 def _get_data1():
-    with open("./data/harmful_behaviors.csv", "r") as f:
+    with open(f"{ENV_VARS['DATA_BASE']}/data/harmful_behaviors.csv", "r") as f:
         return [x.split(",")[0] for x in f.readlines()]
 
 
 def _get_data3():
-    df = pd.read_csv("./data/train.csv")
+    df = pd.read_csv(f"{ENV_VARS['DATA_BASE']}/data/train.csv")
     final_df = df.sort_values(by=["toxic"], ascending=False)
     return [final_df.iloc[0].iloc[1]]
 
 
 def _get_data2():
-    df = pd.read_parquet('data/train-00000-of-00001-49def4c1dafd7874.parquet', engine='fastparquet')
+    df = pd.read_parquet(f"{ENV_VARS['DATA_BASE']}/data/train-00000-of-00001-49def4c1dafd7874.parquet', engine='fastparquet")
     query_strings = list(df[["query"]])
 
 
 def get_word_list():
     wordlist = []
-    with open("./data/wordlist.csv", "r") as f:
+    with open(f"{ENV_VARS['DATA_BASE']}/data/wordlist.csv", "r") as f:
         for line in f.readlines():
             wordlist.append(line.strip())
 

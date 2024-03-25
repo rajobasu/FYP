@@ -4,14 +4,15 @@ from functools import wraps
 
 import numpy as np
 
-from constants import LOGGING_ENABLED
+from constants import LOGGING_ENABLED, ENV_VARS
 
 logger = logging.getLogger(__name__)
 
 
 def set_up_logging():
     f_format = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
-    f_handler = logging.FileHandler(f"./logs/.STATS.log")
+    file_name = f"{ENV_VARS['LOG_BASE']}/logs/.STATS.log"
+    f_handler = logging.FileHandler(file_name)
     f_handler.setFormatter(f_format)
     f_handler.setLevel(logging.DEBUG)
 
@@ -21,6 +22,8 @@ def set_up_logging():
 
 if LOGGING_ENABLED:
     set_up_logging()
+
+HEADINGS = [""]#, "SNAP_FREQ", "CML_AVG", "CML_FRQ"]
 
 
 class IndivStats:
@@ -38,33 +41,49 @@ class IndivStats:
         self.time_list_snap.append((t2 - self.t) / 1e9)
         self.time_list_cumul.append((t2 - self.t) / 1e9)
 
-    def printStats(self):
-        logger.info(f"-----------------------------------------")
-        logger.info(f"PRINTING STATS FOR {self._name}")
-        logger.info(f"SNAP AVG: {np.mean(self.time_list_snap) :.5f}")
-        logger.info(f"SNAP FRQ: {len(self.time_list_snap) :.5f}")
-        logger.info(f"CML AVG : {np.mean(self.time_list_cumul) :.5f}")
-        logger.info(f"CML FRQ : {len(self.time_list_cumul) :.5f}")
+    def getStats(self):
+        res = {
+            "": np.mean(self.time_list_snap),
+            # "SNAP_FREQ": len(self.time_list_snap),
+            # "CML_AVG": np.mean(self.time_list_cumul),
+            # "CML_FREQ": len(self.time_list_cumul)
+        }
+
         self.time_list_snap.clear()
-        logger.info(f"-----------------------------------------")
+        return res
 
 
 class StatsRegistry:
     def __init__(self) -> None:
         self.stats: dict[str, IndivStats] = {}
         self.t = time.time_ns()
+        self.headings_printed = False
 
     def register(self, name):
         if name not in self.stats:
             self.stats[name] = IndivStats(name)
+            self.headings_printed = False
 
     def get(self, name):
         t2 = time.time_ns()
-        if t2 - self.t > 2e9:
+        if t2 - self.t > 1e9:
             self.t = t2
-            for _, item in self.stats.items():
-                item.printStats()
+            if not self.headings_printed:
+                str_to_print = ""
+                self.headings_printed = True
+                for _, item in self.stats.items():
+                    for head in HEADINGS:
+                        val = f"{head}[{_}]"
+                        str_to_print += f"{val : >12} "
+                logger.info(str_to_print)
 
+            str_to_print = ""
+            for _, item in self.stats.items():
+                stat = item.getStats()
+                for head in HEADINGS:
+                    str_to_print += f"{stat[head] : >12.5} "
+
+            print()
         return self.stats[name]
 
 
