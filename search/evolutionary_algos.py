@@ -102,11 +102,17 @@ class EvoAlgoV1:
 
             # generate mutations of a sentence and add them to the pool.
             result = []
-            for item in sentence_pool:
-                result.extend(self.create_generation(item[0], _))
+            # for item in sentence_pool:
+            #     result.extend(self.create_generation(item[0], _))
+
+            sentence_only_pool = [item[0] for item in sentence_pool]
+            outputs = self.modifier.modify_batch(sentence_only_pool, children_per_sentence=self.NUM_CHILDREN)
+            for output in outputs:
+                t, s = self.fitness(output)
+                result.append((output, t, s))
 
             self.generated_items = 0
-            print()
+            # print()
 
             sentences_only = [x[0] for x in sentence_pool]
             for _ in range(self.CROSSOVER):

@@ -57,7 +57,7 @@ class LexSubWrapper:
             random.shuffle(parts)
             if not parts:
                 result.append(sentence)
-
+            for_sent_res = []
             for target, sent_index in parts:
                 if replacements_left <= 0:
                     break
@@ -69,9 +69,17 @@ class LexSubWrapper:
                 e, _, i = overall[sent_index]
                 for repl in r:
                     overall[sent_index] = e, repl, i
-                    result.append(" ".join([x[1] for x in overall]))
+                    for_sent_res.append(" ".join([x[1] for x in overall]))
 
                 overall[sent_index] = e, _, i
                 replacements_left -= len(r)
+
+            for _ in range(replacements_left):
+                if not for_sent_res:
+                    for_sent_res.append(sentence)
+                else:
+                    for_sent_res.append(random.choice(for_sent_res))
+
+            result.extend(for_sent_res)
 
         return result

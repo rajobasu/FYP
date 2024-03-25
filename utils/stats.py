@@ -43,7 +43,7 @@ class IndivStats:
 
     def getStats(self):
         res = {
-            "": np.mean(self.time_list_snap),
+            "": np.mean(self.time_list_cumul),
             # "SNAP_FREQ": len(self.time_list_snap),
             # "CML_AVG": np.mean(self.time_list_cumul),
             # "CML_FREQ": len(self.time_list_cumul)
@@ -82,8 +82,8 @@ class StatsRegistry:
                 stat = item.getStats()
                 for head in HEADINGS:
                     str_to_print += f"{stat[head] : >12.5} "
+            logger.info(str_to_print)
 
-            print()
         return self.stats[name]
 
 
