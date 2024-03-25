@@ -71,7 +71,7 @@ class StatsRegistry:
 GLBL_STATS = StatsRegistry()
 
 
-def timing(name):
+def timing(name, batch_item=None, batch_func=None):
     def timing_with_arg(f):
         @wraps(f)
         def wrap(*args, **kw):

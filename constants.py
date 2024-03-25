@@ -30,7 +30,7 @@ def load_env_file():
 
 
 DEBUG_MODE = True
-LOGGING_ENABLED = True
+LOGGING_ENABLED = False
 RECORD_EXPERIMENT = False
 
 FREE_CUDA_ID = get_freer_gpu()

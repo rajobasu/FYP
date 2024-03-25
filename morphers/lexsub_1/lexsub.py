@@ -1,5 +1,13 @@
 """ Different models for performing lexical substitution task
     (find substitution for a word in context)"""
+# https://github.com/Mchristos/lexsub/blob/master/lexsub.py
+from gensim.models import KeyedVectors
+from nltk.corpus import lin_thesaurus as lin
+from nltk.corpus import wordnet as wn
+
+from morphers.lexsub_1 import tools
+from morphers.lexsub_1.tools import process_candidates
+# https://github.com/Mchristos/lexsub/blob/master/lexsub.py
 from gensim.models import KeyedVectors
 from nltk.corpus import lin_thesaurus as lin
 from nltk.corpus import wordnet as wn
@@ -30,13 +38,11 @@ def wordnet_synonyms(word, pos):
 class LexSub(object):
     "Find word substitutions for a word in context using word2vec skip-gram embedding"
 
-    def __init__(self, word_vectors=None, n_substitutes=5,
-                 candidate_generator='word2vec', n_candidates=50):
+    def __init__(self, word_vectors=None, candidate_generator='word2vec', n_candidates=50):
         """
         n_substitutes = number of lexical substitutes to generate
         candidate_generator = word2vec, lin, wordnet
         """
-        self.n_substitutes = n_substitutes
         # supported POS values
         self.poses = ['n', 'a', 'v']
         # number of generated candidates for substitution
@@ -77,7 +83,7 @@ class LexSub(object):
         cscore = sum(cscores)
         return (tscore + cscore) / (len(C) + 1)
 
-    def lex_sub(self, word_POS, sentence):
+    def lex_sub(self, word_POS, sentence, batch_size=5):
         """ Get appropriate substitution for a word given context words
 
         word_POS = word with part of speech in form word.POS e.g. dog.n
@@ -89,19 +95,20 @@ class LexSub(object):
             # generate candidate substitutions
             candidates = self.get_candidates(w, POS)
             if sentence is None:
-                return candidates[:self.n_substitutes]
+                return candidates[:batch_size]
             else:
                 context_words = tools.get_words(sentence)
                 # filter context words: exist in the word2vec vocab, not stop words
                 context_words = list(filter(lambda c: c in self.word_vectors.key_to_index
                                                       and c not in tools.stopwords,
                                             context_words))
-                cand_scores = [self.get_substitutability(w, s, context_words) if s in self.word_vectors.key_to_index else 0
-                               for s
-                               in candidates]
+                cand_scores = [
+                    self.get_substitutability(w, s, context_words) if s in self.word_vectors.key_to_index else 0
+                    for s
+                    in candidates]
                 assert (len(cand_scores) == len(candidates))
                 sorted_candidates = sorted(zip(candidates, cand_scores), key=lambda x: x[1], reverse=True)
-                return [sub for sub, score in sorted_candidates][:self.n_substitutes]
+                return [sub for sub, score in sorted_candidates][:batch_size]
         except KeyError:
             print(f"Key {w} was not present in word2vec?")
             return []

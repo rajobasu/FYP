@@ -29,12 +29,45 @@ class Paraphraser:
 
         actual_len = len(sentence)
         results = [self.tokenizer.decode(
-                output, skip_special_tokens=True,
-                clean_up_tokenization_spaces=True
-            ) for output in outputs]
+            output, skip_special_tokens=True,
+            clean_up_tokenization_spaces=True
+        ) for output in outputs]
 
         constrained_results = [x for x in results if len(x) > 0.9 * actual_len]
         if not constrained_results:
             return random.choice(results)
 
         return random.choice(constrained_results)
+
+    @timing("PRHSR_BATCH")
+    def generate_batch(self, sentences, children_per_sentence) -> list[list[str]]:
+        texts = ["paraphrase: " + sentence + " </s>" for sentence in sentences]
+
+        encoding = self.tokenizer(texts, return_tensors="pt", padding=True).to(FREE_CUDA_ID)
+        input_ids, attention_masks = encoding["input_ids"], encoding["attention_mask"]
+        outputs = self.model.generate(
+            input_ids=input_ids, attention_mask=attention_masks,
+            max_length=256,
+            do_sample=True,
+            top_k=120,
+            top_p=0.95,
+            early_stopping=True,
+            num_return_sequences=children_per_sentence
+        )
+
+        results = [self.tokenizer.decode(
+            output, skip_special_tokens=True,
+            clean_up_tokenization_spaces=True
+        ) for output in outputs]
+
+        chunked_results = [
+            results[i * children_per_sentence:i * children_per_sentence + children_per_sentence]
+            for i in range(len(sentences))
+        ]
+
+        chunked_return = []
+        for output, input in zip(chunked_results, sentences):
+            min_len = len(input) * 0.8
+            chunked_return.append([x for x in output if len(x) > min_len])
+
+        return chunked_return

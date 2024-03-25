@@ -16,9 +16,9 @@ class LexicalSubstitutor:
         self.ls.lex_sub(target, sentence)
 
     @timing(name="LST_GEN")
-    def generate(self, sentence, word_POS):
+    def generate(self, sentence, word_POS, batch_size=5):
         try:
-            return self.ls.lex_sub(word_POS, sentence)
+            return self.ls.lex_sub(word_POS, sentence, batch_size=batch_size)
         except Exception as e:
             print(f"{sentence} <> {word_POS}")
             raise e

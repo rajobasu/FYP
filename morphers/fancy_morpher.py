@@ -15,6 +15,9 @@ class Morpher(ABC):
     def modify(self, text):
         pass
 
+    def modify_batch(self, texts, children_per_sentence):
+        pass
+
 
 class QualityControlPipeline(Morpher):
     def __init__(self, type="sentences"):
@@ -88,5 +91,9 @@ class SynonymParaphraserMorper(Morpher):
 
         sent_list = sent_tokenize(text)
         return " ".join(self.modify_list(sent_list))
+
+
+    def modify_batch(self, texts, children_per_sentence):
+        pass
 
 
