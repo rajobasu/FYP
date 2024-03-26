@@ -14,7 +14,7 @@ class LexSubWrapper:
     def cleanup(self, sentences):
         return [re.sub("\w*\*+\w*", "", sentence) for sentence in sentences]
 
-    @timing(name="LXSW_GEN")
+    # @timing(name="LXSW_GEN")
     def generate(self, sentence, n: int = 2):
         modified_sentence = self.cleanup([sentence])[0]
         parts, overall = self.postagger.generate(modified_sentence)
@@ -42,7 +42,7 @@ class LexSubWrapper:
         # debug_print(f"CHANGED: [[{sentence}]] > [[{output}]]")
         return output
 
-    @timing(name="LXSW_Batch_Gen")
+    @timing(name="SS_BATCH")
     def batch_generate(self, sentences, children_per_sentence):
         # each new generation is one replacement only.
         sentences = self.cleanup(sentences)
@@ -55,8 +55,7 @@ class LexSubWrapper:
             replacements_left = children_per_sentence
 
             random.shuffle(parts)
-            if not parts:
-                result.append(sentence)
+
             for_sent_res = []
             for target, sent_index in parts:
                 if replacements_left <= 0:
@@ -81,5 +80,5 @@ class LexSubWrapper:
                     for_sent_res.append(random.choice(for_sent_res))
 
             result.extend(for_sent_res)
-
+        assert(children_per_sentence * len(sentences) == len(result))
         return result

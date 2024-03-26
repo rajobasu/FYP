@@ -38,8 +38,7 @@ def main():
 
         searcher.start_search(item)
 
-        if RECORD_EXPERIMENT:
-            db.output_records()
+        db.output_records()
 
 
 def test1():

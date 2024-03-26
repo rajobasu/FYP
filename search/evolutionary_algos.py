@@ -42,8 +42,8 @@ class EvoAlgoV1:
                  db: Storage,
                  enable_crossover=True):
         self.NUM_CHILDREN = 5
-        self.CROSSOVER = 50 if enable_crossover else 0
-        self.POOL_SIZE = 20
+        self.CROSSOVER = 20 if enable_crossover else 0
+        self.POOL_SIZE = 10
 
         self.toxic = toxicity_rater
         self.sent_sim = similarity_rater
@@ -62,10 +62,9 @@ class EvoAlgoV1:
         best_similarity = max([x[2] for x in sentencepool])
 
         def scoring(t: float, s: float, bs: float):
-            return (1 - t) #* (s / bs)
+            return (1 - t)  # * (s / bs)
 
         return sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)[:self.POOL_SIZE]
-
 
     def get_generation_as_batch(self, sentence):
         pass
@@ -82,8 +81,6 @@ class EvoAlgoV1:
 
             result.append((modified_sentence, toxic_score, similarity_score))
             debug_print(f"MUTATED: {toxic_score: .3f} {similarity_score : .3f} {modified_sentence} ")
-            if RECORD_EXPERIMENT:
-                self.db.add_record(" ".join(modified_sentence), toxic_score, similarity_score, generation_num)
 
             self.generated_items += 1
             print(f"\r{self.generated_items}", end="")
@@ -95,10 +92,12 @@ class EvoAlgoV1:
         print("start search")
 
         tokenized_sentence: SENTENCE_T = sent_tokenize(sentence)
+
+        print(tokenized_sentence)
         toxicity_initial, similarity_initial = self.fitness(tokenized_sentence)
         sentence_pool: list[SENTENCE_INFO_T] = [(tokenized_sentence, toxicity_initial, similarity_initial)]
-        for _ in range(num_generations):
-            print(f"Generation {_}")
+        for ng in range(num_generations):
+            print(f"Generation {ng}")
 
             # generate mutations of a sentence and add them to the pool.
             result = []
@@ -120,6 +119,9 @@ class EvoAlgoV1:
                 t, s = self.fitness(sample)
                 debug_print(f"CROSSVR: {t} {s} {sample}")
                 result.append((sample, t, s))
+
+            for sent, t, s in result:
+                self.db.add_record("".join(sent), t, s, ng)
 
             sentence_pool.extend(result)
             print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")

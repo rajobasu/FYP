@@ -74,14 +74,14 @@ class StatsRegistry:
                 for _, item in self.stats.items():
                     for head in HEADINGS:
                         val = f"{head}[{_}]"
-                        str_to_print += f"{val : >12} "
+                        str_to_print += f"{val : >20} "
                 logger.info(str_to_print)
 
             str_to_print = ""
             for _, item in self.stats.items():
                 stat = item.getStats()
                 for head in HEADINGS:
-                    str_to_print += f"{stat[head] : >12.5} "
+                    str_to_print += f"{stat[head] : >20.5} "
             logger.info(str_to_print)
 
         return self.stats[name]
@@ -90,7 +90,7 @@ class StatsRegistry:
 GLBL_STATS = StatsRegistry()
 
 
-def timing(name, batch_item=None, batch_func=None):
+def timing(name):
     def timing_with_arg(f):
         @wraps(f)
         def wrap(*args, **kw):

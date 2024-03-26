@@ -13,6 +13,7 @@ from dotenv import load_dotenv, dotenv_values
 def get_freer_gpu():
     os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
     memory_available = [int(x.split()[2]) for x in open('tmp', 'r').readlines()]
+    os.system('rm -f tmp')
     return f"cuda:{np.argmax(memory_available)}"
 
 
@@ -21,7 +22,7 @@ def get_freer_gpu():
 # ----------------------------------------------------------------------------------------------------------------------
 
 
-DEBUG_MODE = True
+DEBUG_MODE = False
 LOGGING_ENABLED = True
 RECORD_EXPERIMENT = False
 

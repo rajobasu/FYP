@@ -72,4 +72,6 @@ class Paraphraser:
                 filtered_output.append(random.choice(filtered_output))
             chunked_return.extend(filtered_output)
 
+        assert(children_per_sentence * len(sentences) == len(chunked_return))
+
         return chunked_return

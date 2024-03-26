@@ -159,8 +159,7 @@ class PopulationBasedIterativeSearch:
             similarity_score = self.sent_sim.predict(self.orig_sentence, modified_sentence)
             result.append((modified_sentence, toxic_score, similarity_score))
 
-            if RECORD_EXPERIMENT:
-                self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
+            self.db.add_record(modified_sentence, toxic_score, similarity_score, generation_num)
 
             print("|", end="", flush=True)
 
