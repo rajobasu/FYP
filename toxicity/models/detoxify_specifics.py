@@ -17,3 +17,7 @@ class DetoxifyModel(ToxicityEvaluator):
         worst = max([item[1] for item in prediction.items()])
         return 1 if worst > TOXIC_THRESHOLD else 0
 
+    def backdoor_predict(self, sentence: str) -> float:
+        prediction = self.model.predict(sentence)
+        worst = max([item[1] for item in prediction.items()])
+        return worst

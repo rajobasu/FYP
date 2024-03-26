@@ -90,7 +90,7 @@ class EvoAlgoV1:
             debug_print(f"MUTATED: {toxic_score: .3f} {similarity_score : .3f} {modified_sentence} ")
 
             self.generated_items += 1
-            debug_print(f"\r{self.generated_items}", end="")
+            # debug_print(f"\r{self.generated_items}", end="")
 
         return result
 
@@ -128,7 +128,8 @@ class EvoAlgoV1:
                 result.append((sample, t, s))
 
             for sent, t, s in result:
-                self.db.add_record("".join(sent), t, s, ng)
+                sent_str = " ".join(sent)
+                self.db.add_record(sent_str, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
 
             sentence_pool.extend(result)
             debug_print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")
