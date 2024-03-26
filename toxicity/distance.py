@@ -7,17 +7,16 @@ from utils.stats import timing
 random_morpher = RandomMorpher()
 
 @timing(name="GET_DIST")
-def get_distance(toxicity_rater: ToxicityEvaluator, sentence: str) -> float:
+def get_distance(toxicity_rater: ToxicityEvaluator, sentence: str, limit) -> float:
     sentences = [sentence]
-    LIMIT = 300
-    for _ in range(LIMIT):
+    for _ in range(limit):
         sentences.append(random_morpher.modify(sentences[-1]))
 
     if toxicity_rater.predict(sentences[-1]) == 1:
         return 1
 
     lo = 0
-    hi = 300
+    hi = limit
     while lo < hi:
         mid = int(math.ceil((lo + hi) / 2))
         if hi == mid:
@@ -29,7 +28,7 @@ def get_distance(toxicity_rater: ToxicityEvaluator, sentence: str) -> float:
         else:
             hi = mid
 
-    return lo / LIMIT
+    return lo / limit
 
 
 

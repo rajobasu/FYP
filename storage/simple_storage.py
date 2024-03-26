@@ -15,6 +15,7 @@ class Storage(ABC):
     def print_records(self):
         pass
 
+
 def get_id():
     _id = 0
     if not os.path.isfile(f"{ENV_VARS['DATA_BASE']}/data/id.txt"):
@@ -25,6 +26,7 @@ def get_id():
 
     return _id
 
+
 def get_and_increment_id():
     _id = get_id()
 
@@ -34,14 +36,14 @@ def get_and_increment_id():
 
 
 class InMemStorage(Storage):
-    def __init__(self, original_sentence: str, toxicity: float):
+    def __init__(self, original_sentence: str, metadata: dict):
         self.original_sentence = original_sentence
-        self.original_toxicity = toxicity
+        self.metadata = metadata
         self.all_sentences: List[Tuple[float, float, str, int]] = []
 
     def add_record(self, sentence: str, toxicity: float, similarity: float, generation: int = 1):
         self.all_sentences.append((toxicity, similarity, sentence, generation))
-        self.output_temp_record(toxicity, similarity, generation, sentence)
+        # self.output_temp_record(toxicity, similarity, generation, sentence)
 
     def print_records(self):
         pprint(self.all_sentences)
@@ -54,13 +56,16 @@ class InMemStorage(Storage):
         _id = get_and_increment_id()
         print(_id)
         print("outputting")
-        with open(f"{ENV_VARS['DATA_BASE']}/data/output{_id}.csv", "w") as f:
+        with open(f"{ENV_VARS['DATA_BASE']}/data/output{_id}.metadata", "w", encoding="utf-8") as f:
+            for k, v in self.metadata.items():
+                f.write(f"{k},{v}\n")
+
+        with open(f"{ENV_VARS['DATA_BASE']}/data/output{_id}.csv", "w", encoding="utf-8") as f:
             f.write(f"toxicity,similarity,generation\n")
             for tox, sim, sentence, gen in self.all_sentences:
                 f.write(f"{tox:.5f},{sim:.5f},{gen}, {sentence}\n")
         print("finished outputting")
 
     def output_temp_record(self, tox, sim, gen, sen):
-        with open(f"{ENV_VARS['DATA_BASE']}/data/tmpout.csv", "a+") as f:
+        with open(f"{ENV_VARS['DATA_BASE']}/data/tmpout.csv", "a+", encoding="utf-8") as f:
             f.write(f"{tox : .5f},{sim: .5f},{gen},{sen}\n")
-

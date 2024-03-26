@@ -24,7 +24,7 @@ def get_freer_gpu():
 
 DEBUG_MODE = False
 LOGGING_ENABLED = True
-RECORD_EXPERIMENT = False
+RECORD_EXPERIMENT = True
 
 FREE_CUDA_ID = get_freer_gpu()
 ENV_VARS = dict(dotenv_values(".env"))

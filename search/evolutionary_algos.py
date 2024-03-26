@@ -23,8 +23,8 @@ def crossover(sentencepool: list[SENTENCE_T]) -> SENTENCE_T:
     length = len(sentencepool[0])
     for item in sentencepool:
         if len(item) != length:
-            print(sentencepool[0])
-            print(item)
+            debug_print(sentencepool[0])
+            debug_print(item)
             raise Exception("Sentence lengths not equal")
 
     result_parts = []
@@ -40,10 +40,17 @@ class EvoAlgoV1:
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage,
-                 enable_crossover=True):
-        self.NUM_CHILDREN = 5
-        self.CROSSOVER = 20 if enable_crossover else 0
-        self.POOL_SIZE = 10
+                 search_params):
+        self.NUM_CHILDREN = search_params["num_children"]
+        self.CROSSOVER = search_params["crossover"]
+        self.POOL_SIZE = search_params["pool_size"]
+
+        if self.NUM_CHILDREN is None:
+            raise Exception()
+        if self.CROSSOVER is None:
+            raise Exception()
+        if self.POOL_SIZE is None:
+            raise Exception()
 
         self.toxic = toxicity_rater
         self.sent_sim = similarity_rater
@@ -83,17 +90,17 @@ class EvoAlgoV1:
             debug_print(f"MUTATED: {toxic_score: .3f} {similarity_score : .3f} {modified_sentence} ")
 
             self.generated_items += 1
-            print(f"\r{self.generated_items}", end="")
+            debug_print(f"\r{self.generated_items}", end="")
 
         return result
 
     def start_search(self, sentence: str, num_generations: int = 25):
         self.orig_sentence = sentence
-        print("start search")
+        debug_print("start search")
 
         tokenized_sentence: SENTENCE_T = sent_tokenize(sentence)
 
-        print(tokenized_sentence)
+        debug_print(tokenized_sentence)
         toxicity_initial, similarity_initial = self.fitness(tokenized_sentence)
         sentence_pool: list[SENTENCE_INFO_T] = [(tokenized_sentence, toxicity_initial, similarity_initial)]
         for ng in range(num_generations):
@@ -124,7 +131,7 @@ class EvoAlgoV1:
                 self.db.add_record("".join(sent), t, s, ng)
 
             sentence_pool.extend(result)
-            print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")
-            print(f"avg toxicity preselect :{np.mean([x[1] for x in sentence_pool])}")
+            debug_print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")
+            debug_print(f"avg toxicity preselect :{np.mean([x[1] for x in sentence_pool])}")
             sentence_pool = self.select(sentence_pool)
-            print(f"avg toxicity postselect:{np.mean([x[1] for x in sentence_pool])}")
+            debug_print(f"avg toxicity postselect:{np.mean([x[1] for x in sentence_pool])}")

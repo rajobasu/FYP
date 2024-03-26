@@ -2,7 +2,7 @@ import time
 
 import numpy as np
 
-from constants import RECORD_EXPERIMENT
+from constants import RECORD_EXPERIMENT, FREE_CUDA_ID
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId, get_llm
 from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
@@ -13,32 +13,61 @@ from storage.simple_storage import InMemStorage
 from toxicity.distance import get_distance, get_exponential_distance
 from toxicity.models.detoxify_specifics import DetoxifyModel
 from toxicity.toxicity import ToxicityModelWrapper
+from utils.util import debug_print
 
 
-def main():
-    print("Fetching data...")
-    data_list = get_data()
-
+def init_models():
     print("Initialising models...")
     # initialise models
     morpher = SynonymParaphraserMorper()
     toxic = ToxicityModelWrapper(DetoxifyModel(), get_distance)
     sent_sim = MiniLM()
 
-    for item in data_list:
-        print("-" * 20)
-        print("Searching for data item: ")
-        print(item)
-        print(f"toxicity: {toxic.predict(item)}")
-        print("-" * 20)
+    return toxic, morpher, sent_sim
 
-        db = InMemStorage(item, toxic.predict(item))
-        # searcher = PopulationBasedIterativeSearch(toxic, morpher, sent_sim, db)
-        searcher = EvoAlgoV1(toxic, morpher, sent_sim, db)
 
-        searcher.start_search(item)
+def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_dist_param, search_params):
+    # note that we are assuming that sentence here is a single string.
+    print("search with params: ", tox_dist_param | search_params)
+    debug_print("Searching for data item: ", sentence)
+    db = InMemStorage(sentence, tox_dist_param | search_params)
+    toxic.set_params(tox_dist_param)
+    t1 = time.time_ns()
+    searcher = EvoAlgoV1(toxic, morpher, sent_sim, db, search_params)
+    searcher.start_search(sentence)
+    time_taken = (time.time_ns() - t1) / 1e9
+    db.output_records()
+    print(f"TIME_TAKEN_TO_FINISH: {time_taken:.4f}")
+    print("-" * 20)
 
-        db.output_records()
+
+def main():
+    print("Fetching data...")
+    print("GPU: ", FREE_CUDA_ID)
+    data_item = get_data()[0]
+
+    toxic, morpher, sent_sim = init_models()
+
+    experiment_modes = [
+        # [{"distance_param": 300}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        # [{"distance_param": 150}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        # [{"distance_param": 80}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        # [{"distance_param": 20}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        # [{"distance_param": 5}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        # [{"distance_param": 1}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+    ]
+
+    for exp_params in experiment_modes:
+        experiment_per_sentence(
+            sentence=data_item,
+            toxic=toxic,
+            morpher=morpher,
+            sent_sim=sent_sim,
+            tox_dist_param=exp_params[0],
+            search_params=exp_params[1]
+        )
+
+
 
 
 def test1():
@@ -57,6 +86,7 @@ def test1():
 if __name__ == "__main__":
     main()
     # test1()
+    # print("running this just for fun")
 
 """
 TODO: make logging much better. 
