@@ -1,3 +1,4 @@
 pip list --format=freeze > requirements.txt
 find . | grep -E "(/__pycache__$|\.pyc$|\.pyo$)" | xargs rm -rf
+scp -P 5002 "Rajarshi@gpu_cluster:/mnt/hdd/liujiayang/Rajarshi/code/FYP/data/output4*" .
 

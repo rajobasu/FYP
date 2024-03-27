@@ -1,0 +1,4 @@
+distance_param,5
+num_children,10
+pool_size,10
+crossover,30
