@@ -38,7 +38,7 @@ def get_random_word() -> str:
     return all_words[random.randint(0, n - 1)]
 
 
-def get_data(value: int = 4):
+def get_data(value: int = 5):
     if value == 1:
         return _get_data1()
     if value == 2:
@@ -50,4 +50,8 @@ def get_data(value: int = 4):
     if value == 4:
         return [
             "This is another personal attack about you being a massive donkey dick sucking homosexual. This is a concerned plea that you should at once drown yourself in a sewer. Fucking fuck off you fag! And if you threaten me with legal action again, I'll fucking come over there, tie you to your computer chair and stick my cock up your arse until it bleeds. You fucker!!"]
+    if value == 5:
+        return [
+            "This is another personal attack about you being a massive donkey dick sucking homosexual. And if you threaten me with legal action again, I'll fucking come over there, tie you to your computer chair and stick my cock up your arse until it bleeds."]
+
     return _get_data2()

@@ -1,13 +1,12 @@
 import random
-from copy import deepcopy
+
 import numpy as np
 from nltk import sent_tokenize
 
-from constants import RECORD_EXPERIMENT
 from morphers.fancy_morpher import Morpher
 from similarity.similarity import SentenceSimilarityModel
 from storage.simple_storage import Storage
-from toxicity.toxicity import ToxicityEvaluator
+from toxicity.toxicity import ToxicityEnsembleModelWrapper
 from utils.util import debug_print
 
 """
@@ -36,7 +35,7 @@ def crossover(sentencepool: list[SENTENCE_T]) -> SENTENCE_T:
 
 class EvoAlgoV1:
     def __init__(self,
-                 toxicity_rater: ToxicityEvaluator,
+                 toxicity_rater: ToxicityEnsembleModelWrapper,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage,
@@ -129,7 +128,7 @@ class EvoAlgoV1:
 
             for sent, t, s in result:
                 sent_str = " ".join(sent)
-                self.db.add_record(sent_str, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
+                self.db.add_record(t, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
 
             sentence_pool.extend(result)
             debug_print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")

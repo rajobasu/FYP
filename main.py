@@ -2,41 +2,63 @@ import time
 
 import numpy as np
 
-from constants import RECORD_EXPERIMENT, FREE_CUDA_ID
+from constants import FREE_CUDA_ID
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId, get_llm
-from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
+from morphers.fancy_morpher import SynonymParaphraserMorper
 from search.evolutionary_algos import EvoAlgoV1
-from search.random_search import PopulationBasedIterativeSearch
 from similarity.similarity import MiniLM
 from storage.simple_storage import InMemStorage
-from toxicity.distance import get_distance, get_exponential_distance
-from toxicity.models.detoxify_specifics import DetoxifyModel
-from toxicity.toxicity import ToxicityModelWrapper
+from toxicity.distance import get_distance_ensemble
+from toxicity.models.detoxify_specifics import DetoxifyBaseModel, DetoxifyBooleanWrapper
+from toxicity.toxicity import ToxicityEnsembleModelWrapper, BooleanToxicityEvaluatorWrapper
 from utils.util import debug_print
+
+
+def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
+    ensemble_toxic = ToxicityEnsembleModelWrapper(get_distance_ensemble)
+    ensemble_toxic.set_params(tox_params)
+    thresholds = tox_params["thresholds"]
+    for val in thresholds:
+        ensemble_toxic.add_model(DetoxifyBooleanWrapper(base_model, threshold=val))
+
+    return ensemble_toxic
 
 
 def init_models():
     print("Initialising models...")
     # initialise models
+    toxic = DetoxifyBaseModel()
     morpher = SynonymParaphraserMorper()
-    toxic = ToxicityModelWrapper(DetoxifyModel(), get_distance)
     sent_sim = MiniLM()
 
     return toxic, morpher, sent_sim
 
 
-def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_dist_param, search_params):
+def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, search_params):
     # note that we are assuming that sentence here is a single string.
-    print("search with params: ", tox_dist_param | search_params)
+    print("search with params: ", tox_params | search_params)
     debug_print("Searching for data item: ", sentence)
-    db = InMemStorage(sentence, tox_dist_param | search_params)
-    toxic.set_params(tox_dist_param)
+
+    # more setup
+    db = InMemStorage(sentence, tox_params | search_params)
+
+    # timed search
     t1 = time.time_ns()
-    searcher = EvoAlgoV1(toxic, morpher, sent_sim, db, search_params)
+
+    searcher = EvoAlgoV1(
+        make_toxicity_model(toxic, tox_params),
+        morpher,
+        sent_sim,
+        db,
+        search_params
+    )
     searcher.start_search(sentence)
+
     time_taken = (time.time_ns() - t1) / 1e9
+
     db.output_records()
+
     print(f"TIME_TAKEN_TO_FINISH: {time_taken:.4f}")
     print("-" * 20)
 
@@ -55,6 +77,11 @@ def main():
         # [{"distance_param": 20}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 5}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 1}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
+        [{"distance_param": 256, "thresholds": [0.7, 0.4, 0.2, 0.05]},
+         {"num_children": 8, "pool_size": 8, "crossover": 16}],
+        [{"distance_param": 256, "thresholds": [0.05]},
+         {"num_children": 8, "pool_size": 8, "crossover": 16}]
+
     ]
 
     for exp_params in experiment_modes:
@@ -63,11 +90,9 @@ def main():
             toxic=toxic,
             morpher=morpher,
             sent_sim=sent_sim,
-            tox_dist_param=exp_params[0],
+            tox_params=exp_params[0],
             search_params=exp_params[1]
         )
-
-
 
 
 def test1():
