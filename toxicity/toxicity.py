@@ -5,7 +5,7 @@ import numpy as np
 
 class ToxicityEvaluator(ABC):
     @abstractmethod
-    def predict(self, sentence: str) -> float:
+    def predict(self, sentence: str) -> int:
         pass
 
     def stats(self) -> tuple[float, float]:
@@ -14,6 +14,17 @@ class ToxicityEvaluator(ABC):
     def set_params(self, params):
         pass
 
+
+class EnsembleToxicityEvaluator(ABC):
+    @abstractmethod
+    def predict(self, sentence: str) -> list[int]:
+        pass
+
+    def stats(self) -> tuple[float, float]:
+        return 0, 0
+
+    def set_params(self, params):
+        pass
 
 class ToxicityModelWrapper(ToxicityEvaluator):
     def __init__(self, model, distance_func):

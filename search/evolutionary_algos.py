@@ -69,7 +69,7 @@ class EvoAlgoV1:
         best_similarity = max([x[2] for x in sentencepool])
 
         def scoring(t: float, s: float, bs: float):
-            return (1 - t)  # * (s / bs)
+            return (1 - t)   * (s / bs)
 
         return sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)[:self.POOL_SIZE]
 

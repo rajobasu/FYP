@@ -46,3 +46,8 @@ synonym sub
 toxicity alternative models:
 
 - https://huggingface.co/s-nlp/roberta_toxicity_classifier?text=This+is+such+a+bad+thing+to+do
+
+Conclusions:
+
+- the number of iterations done to see how much time it takes for random morphing to converge also depends on the
+  scoring function
