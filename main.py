@@ -77,12 +77,33 @@ def main():
         # [{"distance_param": 20}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 5}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 1}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
-        [{"distance_param": 256, "thresholds": [0.7, 0.4, 0.2, 0.05]},
-         {"num_children": 8, "pool_size": 8, "crossover": 16}],
-        [{"distance_param": 256, "thresholds": [0.05]},
-         {"num_children": 8, "pool_size": 8, "crossover": 16}]
 
+        # [{"distance_param": 192, "thresholds": [0.4, 0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 192, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 128, "thresholds": [0.4, 0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 128, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 64, "thresholds": [0.4, 0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 64, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 32, "thresholds": [0.4, 0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # [{"distance_param": 32, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40}]
+
+        [{"distance_param": 192, "thresholds": [0.5]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        [{"distance_param": 192, "thresholds": [0.3]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40}],
     ]
+
+
 
     for exp_params in experiment_modes:
         experiment_per_sentence(

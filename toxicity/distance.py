@@ -34,7 +34,6 @@ def binsrch(
             hi = mid
     return lo / limit
 
-
 def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sentence: str, limit) -> list[float]:
     generated_sentences = [sentence]
     for _ in range(limit):
@@ -47,7 +46,7 @@ def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sen
     ) for evaluator in evaluators]
 
     weights = [x + 1 for x in range(len(vals))]
-    weights.reverse()
+    # weights.reverse()
     return np.dot(vals, weights) / sum(weights)
 
 

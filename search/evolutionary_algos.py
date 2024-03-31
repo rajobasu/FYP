@@ -68,7 +68,7 @@ class EvoAlgoV1:
         best_similarity = max([x[2] for x in sentencepool])
 
         def scoring(t: float, s: float, bs: float):
-            return (1 - t)   * (s / bs)
+            return (1 - t) * (s / bs)
 
         return sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)[:self.POOL_SIZE]
 
@@ -103,12 +103,10 @@ class EvoAlgoV1:
         toxicity_initial, similarity_initial = self.fitness(tokenized_sentence)
         sentence_pool: list[SENTENCE_INFO_T] = [(tokenized_sentence, toxicity_initial, similarity_initial)]
         for ng in range(num_generations):
-            print(f"Generation {ng}")
+            print(f"Generation {ng: >3}", end="")
 
             # generate mutations of a sentence and add them to the pool.
             result = []
-            # for item in sentence_pool:
-            #     result.extend(self.create_generation(item[0], _))
 
             sentence_only_pool = [item[0] for item in sentence_pool]
             outputs = self.modifier.modify_batch(sentence_only_pool, children_per_sentence=self.NUM_CHILDREN)
@@ -117,13 +115,11 @@ class EvoAlgoV1:
                 result.append((output, t, s))
 
             self.generated_items = 0
-            # print()
 
             sentences_only = [x[0] for x in sentence_pool]
             for _ in range(self.CROSSOVER):
                 sample = crossover(sentences_only)
                 t, s = self.fitness(sample)
-                debug_print(f"CROSSVR: {t} {s} {sample}")
                 result.append((sample, t, s))
 
             for sent, t, s in result:
@@ -131,7 +127,7 @@ class EvoAlgoV1:
                 self.db.add_record(t, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
 
             sentence_pool.extend(result)
-            debug_print(f"min toxicity achieved  :{min([x[1] for x in sentence_pool])}")
-            debug_print(f"avg toxicity preselect :{np.mean([x[1] for x in sentence_pool])}")
+            print(f"min :{min([x[1] for x in sentence_pool]):.5f}", end="")
+            print(f" avg pre:{np.mean([x[1] for x in sentence_pool]):.5f}", end="")
             sentence_pool = self.select(sentence_pool)
-            debug_print(f"avg toxicity postselect:{np.mean([x[1] for x in sentence_pool])}")
+            print(f" avg post:{np.mean([x[1] for x in sentence_pool]):.5f}")
