@@ -51,3 +51,4 @@ Conclusions:
 
 - the number of iterations done to see how much time it takes for random morphing to converge also depends on the
   scoring function
+- We get more information from the distance function for harder models [61, 62, 63]

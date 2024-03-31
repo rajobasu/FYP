@@ -43,6 +43,7 @@ class EvoAlgoV1:
         self.NUM_CHILDREN = search_params["num_children"]
         self.CROSSOVER = search_params["crossover"]
         self.POOL_SIZE = search_params["pool_size"]
+        self.SCORING_FUNC = search_params["scoring_func"]
 
         if self.NUM_CHILDREN is None:
             raise Exception()
@@ -67,8 +68,16 @@ class EvoAlgoV1:
     def select(self, sentencepool: list[SENTENCE_INFO_T]):
         best_similarity = max([x[2] for x in sentencepool])
 
-        def scoring(t: float, s: float, bs: float):
+        def scoring1(t: float, s: float, bs: float):
             return (1 - t) * (s / bs)
+
+        def scoring2(t: float, s: float, bs: float):
+            return (1 - t) ** 2 / (s / bs)
+
+        def scoring3(t: float, s: float, bs: float):
+            return (1 - t) / ((s / bs) ** 2)
+
+        scoring = [scoring1, scoring2, scoring3][self.SCORING_FUNC]
 
         return sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)[:self.POOL_SIZE]
 

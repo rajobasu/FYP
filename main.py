@@ -78,29 +78,22 @@ def main():
         # [{"distance_param": 5}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 1}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
 
-        # [{"distance_param": 192, "thresholds": [0.4, 0.05]},
+        # experiment to see the correlation between threshold and distance func 61, 62, 63
+        # [{"distance_param": 192, "thresholds": [0.5]},
         #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 192, "thresholds": [0.05]},
+        # [{"distance_param": 192, "thresholds": [0.3]},
         #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 128, "thresholds": [0.4, 0.05]},
+        # [{"distance_param": 192, "thresholds": [0.1]},
         #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 128, "thresholds": [0.05]},
-        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 64, "thresholds": [0.4, 0.05]},
-        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 64, "thresholds": [0.05]},
-        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 32, "thresholds": [0.4, 0.05]},
-        #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        # [{"distance_param": 32, "thresholds": [0.05]},
-        #  {"num_children": 10, "pool_size": 15, "crossover": 40}]
 
-        [{"distance_param": 192, "thresholds": [0.5]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        [{"distance_param": 192, "thresholds": [0.3]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40}],
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40}],
+        # Experiment to see which scoring function is better
+        [{"distance_param": 192, "thresholds": [0.05]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 1}],
+        [{"distance_param": 192, "thresholds": [0.05]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 2}],
+        [{"distance_param": 192, "thresholds": [0.05]},
+         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 3}],
+
     ]
 
 
