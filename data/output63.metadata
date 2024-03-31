@@ -1,0 +1,5 @@
+distance_param,192
+thresholds,[0.1]
+num_children,10
+pool_size,15
+crossover,40
