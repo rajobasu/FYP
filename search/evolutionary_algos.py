@@ -44,6 +44,9 @@ class EvoAlgoV1:
         self.CROSSOVER = search_params["crossover"]
         self.POOL_SIZE = search_params["pool_size"]
         self.SCORING_FUNC = search_params["scoring_func"]
+        self.GROWTH_ADDITIVE = 0 if search_params["growth_delta"] is None else search_params["growth_delta"]
+        self.current_pool_size = self.POOL_SIZE
+        self.last_pool_min = 1
 
         if self.NUM_CHILDREN is None:
             raise Exception()
@@ -67,6 +70,7 @@ class EvoAlgoV1:
 
     def select(self, sentencepool: list[SENTENCE_INFO_T]):
         best_similarity = max([x[2] for x in sentencepool])
+        min_tox = min([x[1] for x in sentencepool])
 
         def scoring1(t: float, s: float, bs: float):
             return (1 - t) * (s / bs)
@@ -79,7 +83,14 @@ class EvoAlgoV1:
 
         scoring = [scoring1, scoring2, scoring3][self.SCORING_FUNC]
 
-        return sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)[:self.POOL_SIZE]
+        selected_list = sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)
+
+        if min_tox == self.last_pool_min:
+            self.current_pool_size += self.GROWTH_ADDITIVE
+        elif self.current_pool_size > self.POOL_SIZE:
+            self.current_pool_size -= self.GROWTH_ADDITIVE
+
+        return selected_list[:self.current_pool_size]
 
     def get_generation_as_batch(self, sentence):
         pass
@@ -102,7 +113,7 @@ class EvoAlgoV1:
 
         return result
 
-    def start_search(self, sentence: str, num_generations: int = 25):
+    def start_search(self, sentence: str, num_generations: int = 40):
         self.orig_sentence = sentence
         debug_print("start search")
 

@@ -87,12 +87,20 @@ def main():
         #  {"num_children": 10, "pool_size": 15, "crossover": 40}],
 
         # Experiment to see which scoring function is better
-        [{"distance_param": 192, "thresholds": [0.05]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 1}],
-        [{"distance_param": 192, "thresholds": [0.05]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 2}],
-        [{"distance_param": 192, "thresholds": [0.05]},
-         {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 3}],
+        # [{"distance_param": 192, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 1}],
+        # [{"distance_param": 192, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 2}],
+        # [{"distance_param": 192, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 0}],
+
+        # grow pool_size
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 0}],
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1}],
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2}],
 
     ]
 
