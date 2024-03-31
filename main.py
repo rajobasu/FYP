@@ -94,14 +94,15 @@ def main():
         # [{"distance_param": 192, "thresholds": [0.05]},
         #  {"num_children": 10, "pool_size": 15, "crossover": 40, "scoring_func": 0}],
 
-        # grow pool_size
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 0}],
+        # Experiment to grow pool_size
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 0}],
         [{"distance_param": 192, "thresholds": [0.1]},
          {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1}],
         [{"distance_param": 192, "thresholds": [0.1]},
          {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2}],
 
+        # Experiment to make sc
     ]
 
 

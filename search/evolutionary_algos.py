@@ -90,6 +90,8 @@ class EvoAlgoV1:
         elif self.current_pool_size > self.POOL_SIZE:
             self.current_pool_size -= self.GROWTH_ADDITIVE
 
+        self.last_pool_min = min_tox
+
         return selected_list[:self.current_pool_size]
 
     def get_generation_as_batch(self, sentence):
