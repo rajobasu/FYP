@@ -1,0 +1,7 @@
+distance_param,192
+thresholds,[0.1]
+num_children,10
+pool_size,10
+crossover,40
+scoring_func,0
+growth_delta,0
