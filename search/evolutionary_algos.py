@@ -175,10 +175,14 @@ class EvoAlgoV1:
             if self.auto_dist:
                 mean_toxicity = np.mean([x[1] for x in result])
                 curr = self.toxic.distance_param
-                self.toxic.set_distance_param(int(1.3 * curr * mean_toxicity))
+                self.toxic.set_distance_param(int(1.3 * curr * mean_toxicity + 4))
 
             sentence_pool.extend(result)
             print(f" min :{min([x[1] for x in sentence_pool]):.5f}", end="")
             print(f" avg pre:{np.mean([x[1] for x in sentence_pool]):.5f}", end="")
             sentence_pool = self.selector(sentence_pool)
             print(f" avg post:{np.mean([x[1] for x in sentence_pool]):.5f}")
+
+            # we need to re-evaluate the sentences if auto_dist is turned on
+            if self.auto_dist:
+                sentence_pool = [(sent, *self.fitness(sent)) for sent, _, _ in sentence_pool]
