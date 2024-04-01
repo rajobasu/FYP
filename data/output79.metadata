@@ -1,0 +1,9 @@
+distance_param,128
+thresholds,[0.5, 0.1]
+num_children,10
+pool_size,4
+crossover,4
+scoring_func,0
+growth_delta,2
+scoring_method,ScoringMethods.REDUCER
+throw_half,True
