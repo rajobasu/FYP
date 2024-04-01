@@ -145,16 +145,36 @@ def main():
         #   "scoring_method": ScoringMethods.FRONTIER, "throw_half": False}],
 
         # try scoring function for ensemble where we only dicount based on number of 0.0
-        [{"distance_param": 192, "thresholds": [0.6, 0.3, 0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 192, "thresholds": [0.6, 0.3, 0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        #
+        # [{"distance_param": 192, "thresholds": [0.3, 0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        #
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
 
-        [{"distance_param": 192, "thresholds": [0.3, 0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        # try seeing if the scoring works better when we have less tries on the distance metric
+        [{"distance_param": 128, "thresholds": [0.5, 0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
           "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        [{"distance_param": 128, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        [{"distance_param": 32, "thresholds": [0.5, 0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        [{"distance_param": 32, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        [{"distance_param": 8, "thresholds": [0.5, 0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        [{"distance_param": 8, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
           "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
 
     ]]
