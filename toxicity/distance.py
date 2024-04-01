@@ -35,7 +35,7 @@ def binsrch(
     return lo / limit
 
 
-def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sentence: str, limit) -> list[float]:
+def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sentence: str, limit) -> float:
     generated_sentences = [sentence]
     for _ in range(limit):
         generated_sentences.append(random_morpher.modify(generated_sentences[-1]))
@@ -46,10 +46,8 @@ def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sen
         generated_sentences=generated_sentences
     ) for evaluator in evaluators]
 
-    weights = [x + 1 for x in range(len(vals))]
-    # weights.reverse()
-    return np.dot(vals, weights) / sum(weights)
-
+    num_0 = vals.count(0.0)
+    return vals[-1] * (0.9 ** num_0)
 
 def get_exponential_distance(toxicity_rater: ToxicityEvaluator, sentence: str):
     pass

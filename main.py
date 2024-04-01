@@ -53,6 +53,7 @@ def fill_default_params(experiment_mode):
         } | search_params
     ]
 
+
 def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, search_params):
     # note that we are assuming that sentence here is a single string.
     print("search with params: ", tox_params | search_params)
@@ -129,23 +130,34 @@ def main():
         #   "scoring_method": ScoringMethods.FRONTIER}],
 
         # Experiment to see if throw half is better
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": False}],
+        #
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.FRONTIER, "throw_half": True}],
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.FRONTIER, "throw_half": False}],
+
+        # try scoring function for ensemble where we only dicount based on number of 0.0
+        [{"distance_param": 192, "thresholds": [0.6, 0.3, 0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+
+        [{"distance_param": 192, "thresholds": [0.3, 0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+
         [{"distance_param": 192, "thresholds": [0.1]},
          {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
           "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": False}],
-
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.FRONTIER, "throw_half": True}],
-        [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.FRONTIER, "throw_half": False}],
 
     ]]
-
-
 
     for exp_params in experiment_modes:
         experiment_per_sentence(
