@@ -88,7 +88,7 @@ def main():
 
     toxic, morpher, sent_sim = init_models()
 
-    experiment_modes = list(fill_default_params([
+    experiment_modes = fill_default_params([
         # [{"distance_param": 300}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 150}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 80}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
@@ -143,7 +143,7 @@ def main():
          {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
           "scoring_method": ScoringMethods.FRONTIER, "throw_half": False}],
 
-    ]))
+    ])
 
 
 
