@@ -3,6 +3,7 @@ import random
 import numpy as np
 from nltk import sent_tokenize
 
+from constants import ScoringMethods
 from morphers.fancy_morpher import Morpher
 from similarity.similarity import SentenceSimilarityModel
 from storage.simple_storage import Storage
@@ -46,7 +47,10 @@ class EvoAlgoV1:
         self.SCORING_FUNC = search_params["scoring_func"]
         self.GROWTH_ADDITIVE = 0 if search_params["growth_delta"] is None else search_params["growth_delta"]
         self.current_pool_size = self.POOL_SIZE
-        self.last_pool_min = 1
+        self.last_pool_min = 1.0
+        self.selector = self.select_frontier \
+            if search_params["scoring_method"] == ScoringMethods.FRONTIER \
+            else self.select
 
         if self.NUM_CHILDREN is None:
             raise Exception()
@@ -93,6 +97,18 @@ class EvoAlgoV1:
         self.last_pool_min = min_tox
 
         return selected_list[:self.current_pool_size]
+
+    def select_frontier(self, sentencepool: list[SENTENCE_INFO_T]):
+        sorted_sentences = sorted(sentencepool, key=lambda x: (x[1], -x[2]))  # increasing toxicity
+        # we now create a frontier
+        result_sentences = []
+        best_similarity = 0.0
+        for sentence in sorted_sentences:
+            if sentence[2] >= best_similarity:
+                result_sentences.append(sentence)
+                best_similarity = sentence[2]
+
+        return result_sentences[:self.current_pool_size]
 
     def get_generation_as_batch(self, sentence):
         pass
@@ -149,7 +165,7 @@ class EvoAlgoV1:
                 self.db.add_record(t, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
 
             sentence_pool.extend(result)
-            print(f"min :{min([x[1] for x in sentence_pool]):.5f}", end="")
+            print(f" min :{min([x[1] for x in sentence_pool]):.5f}", end="")
             print(f" avg pre:{np.mean([x[1] for x in sentence_pool]):.5f}", end="")
-            sentence_pool = self.select(sentence_pool)
+            sentence_pool = self.selector(sentence_pool)
             print(f" avg post:{np.mean([x[1] for x in sentence_pool]):.5f}")

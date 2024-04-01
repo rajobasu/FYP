@@ -1,6 +1,7 @@
 # these only set up BROADER PROGRAM PARAMETERS.
 # HYPER PARAMETERS FOR OTHER THINGS IN THE PROGRAMARE SET ON THE INDIVIDUAL FILES FOR EXAMPLE IT HE SEARCH
 import os
+from enum import Enum
 
 import numpy as np
 from dotenv import load_dotenv, dotenv_values
@@ -20,7 +21,9 @@ def get_freer_gpu():
 # ----------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------- CONSTANTS --------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------
-
+class ScoringMethods(Enum):
+    FRONTIER = 0,
+    REDUCER = 1
 
 DEBUG_MODE = False
 LOGGING_ENABLED = True

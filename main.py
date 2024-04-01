@@ -2,7 +2,7 @@ import time
 
 import numpy as np
 
-from constants import FREE_CUDA_ID
+from constants import FREE_CUDA_ID, ScoringMethods
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId, get_llm
 from morphers.fancy_morpher import SynonymParaphraserMorper
@@ -102,10 +102,14 @@ def main():
         [{"distance_param": 192, "thresholds": [0.1]},
          {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2}],
 
-        # Experiment to make sc
+        # Experiment to make compare frontier based vs single scoring based search
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
+          "scoring_method": ScoringMethods.REDUCER}],
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
+          "scoring_method": ScoringMethods.FRONTIER}],
     ]
-
-
 
     for exp_params in experiment_modes:
         experiment_per_sentence(
