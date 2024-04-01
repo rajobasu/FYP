@@ -49,7 +49,8 @@ def fill_default_params(experiment_mode):
             "scoring_func": 0,
             "growth_delta": 1,
             "scoring_method": ScoringMethods.REDUCER,
-            "throw_half": False
+            "throw_half": False,
+            "auto_dist": True
         } | search_params
     ]
 
@@ -158,24 +159,26 @@ def main():
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
 
         # try seeing if the scoring works better when we have less tries on the distance metric
-        [{"distance_param": 128, "thresholds": [0.5, 0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 128, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 32, "thresholds": [0.5, 0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 32, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 8, "thresholds": [0.5, 0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
-        [{"distance_param": 8, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 128, "thresholds": [0.5, 0.1]},
+        #  {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 128, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 32, "thresholds": [0.5, 0.1]},
+        #  {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+        # [{"distance_param": 32, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 2,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
+
+        # try auto distance mode
+        [{"distance_param": 128, "thresholds": [0.05]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 0,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False}],
+        [{"distance_param": 128, "thresholds": [0.01]},
+         {"num_children": 10, "pool_size": 4, "crossover": 4, "scoring_func": 0, "growth_delta": 0,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
 
     ]]
 
