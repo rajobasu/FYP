@@ -166,7 +166,7 @@ class EvoAlgoV1:
                 self.db.add_record(t, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
 
             if self.throw_half:
-                sentence_pool = sentence_pool[:self.current_pool_size / 2]
+                sentence_pool = sentence_pool[:self.current_pool_size // 2]
 
             sentence_pool.extend(result)
             print(f" min :{min([x[1] for x in sentence_pool]):.5f}", end="")
