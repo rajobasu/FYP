@@ -35,6 +35,24 @@ def init_models():
     return toxic, morpher, sent_sim
 
 
+def fill_default_params(experiment_mode):
+    tox_params, search_params = experiment_mode[0], experiment_mode[1]
+    return [
+        {
+            "distance_param": 256,
+            "thresholds": 0.05
+        } | tox_params,
+        {
+            "num_children": 10,
+            "pool_size": 10,
+            "crossover": 40,
+            "scoring_func": 0,
+            "growth_delta": 1,
+            "scoring_method": ScoringMethods.REDUCER,
+            "throw_half": False
+        } | search_params
+    ]
+
 def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, search_params):
     # note that we are assuming that sentence here is a single string.
     print("search with params: ", tox_params | search_params)
@@ -70,7 +88,7 @@ def main():
 
     toxic, morpher, sent_sim = init_models()
 
-    experiment_modes = [
+    experiment_modes = list(fill_default_params([
         # [{"distance_param": 300}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 150}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
         # [{"distance_param": 80}, {"num_children": 10, "pool_size": 10, "crossover": 30}], done this
@@ -103,13 +121,31 @@ def main():
         #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2}],
 
         # Experiment to make compare frontier based vs single scoring based search
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
+        #   "scoring_method": ScoringMethods.REDUCER}],
+        # [{"distance_param": 192, "thresholds": [0.1]},
+        #  {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
+        #   "scoring_method": ScoringMethods.FRONTIER}],
+
+        # Experiment to see if throw half is better
         [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
-          "scoring_method": ScoringMethods.REDUCER}],
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True}],
         [{"distance_param": 192, "thresholds": [0.1]},
-         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 1,
-          "scoring_method": ScoringMethods.FRONTIER}],
-    ]
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": False}],
+
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.FRONTIER, "throw_half": True}],
+        [{"distance_param": 192, "thresholds": [0.1]},
+         {"num_children": 10, "pool_size": 10, "crossover": 40, "scoring_func": 0, "growth_delta": 2,
+          "scoring_method": ScoringMethods.FRONTIER, "throw_half": False}],
+
+    ]))
+
+
 
     for exp_params in experiment_modes:
         experiment_per_sentence(
