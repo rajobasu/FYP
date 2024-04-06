@@ -2,6 +2,7 @@ from typing import Any
 
 from transformers import AutoTokenizer, AutoModelForTokenClassification, TokenClassificationPipeline
 
+import utils.util
 from constants import FREE_CUDA_ID
 from utils.stats import timing
 
@@ -53,10 +54,11 @@ class POSTagger:
 
         self.model_name = "QCRI/bert-base-multilingual-cased-pos-english"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.model = AutoModelForTokenClassification.from_pretrained(self.model_name).to("cuda")
+        self.model = AutoModelForTokenClassification.from_pretrained(self.model_name).to(FREE_CUDA_ID)
 
         self.pipeline = TokenClassificationPipeline(model=self.model, tokenizer=self.tokenizer,
-                                                    device=int(FREE_CUDA_ID[-1]))
+                                           device=int(FREE_CUDA_ID[-1]))
+        self.BATCH_SIZE = 32
 
     # @timing(name="POST_GEN")
     def generate(self, sentence: str):
@@ -65,4 +67,8 @@ class POSTagger:
 
     @timing(name="POS_BATCH")
     def generate_batch(self, sentences: list[str]):
-        return [post_processing(x) for x in self.pipeline(sentences, batch_size=16)]
+        results = []
+        for batched_items in utils.util.split_batch(sentences, self.BATCH_SIZE):
+            results.extend([post_processing(x) for x in self.pipeline(batched_items)])
+
+        return results

@@ -15,7 +15,7 @@ def get_freer_gpu(best=0):
     os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
     with open("tmp", "r") as f:
         mem_av = [(int(x.split()[2]), i) for i, x in enumerate(f.readlines())]
-        answer = sorted(mem_av, reverse=True)[best][1]
+        answer = sorted(mem_av, reverse=True)[min(len(mem_av) - 1, best)][1]
     os.system('rm -f tmp')
     return f"cuda:{answer}"
 

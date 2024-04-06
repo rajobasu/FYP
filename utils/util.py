@@ -9,3 +9,7 @@ def debug_print(item, pretty=False):
             pprint(item)
         else:
             print(item)
+
+
+def split_batch(texts: list[str], batch_size):
+    return [texts[i:i + batch_size] for i in range(0, len(texts), batch_size)]
