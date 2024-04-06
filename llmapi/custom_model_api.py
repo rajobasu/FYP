@@ -4,6 +4,7 @@ from enum import Enum
 from constants import ENV_VARS, FREE_CUDA_ID, FREE_LLM_CUDA_ID
 from transformers import pipeline
 from utils import util
+from utils.stats import timing
 
 
 class LlmId(Enum):
@@ -40,6 +41,7 @@ class Vicuna(Llm):
         output = self.pipe(USER_PROMPT, do_sample=True)[0]['generated_text'].split("ASSISTANT:")[1].strip()
         return output
 
+    @timing(name="Vic_BT")
     def batch_generate(self, texts: list[str]):
         SYSTEM_PROMPT = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
         USER_PROMPTS = [f"{{ {SYSTEM_PROMPT} }} USER: {{ {input_str} }} ASSISTANT:" for input_str in texts]

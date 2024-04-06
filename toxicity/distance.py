@@ -10,7 +10,6 @@ from utils.stats import timing
 random_morpher = RandomMorpher()
 
 
-@timing(name="GET_DIST")
 def binsrch(
         *,
         toxicity_rater: BooleanToxicityEvaluatorWrapper,

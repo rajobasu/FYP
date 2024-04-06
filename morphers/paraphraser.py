@@ -13,7 +13,7 @@ class Paraphraser:
         self.model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws").to(FREE_CUDA_ID)
         self.BATCH_SIZE = 16
 
-    @timing("PRHSR")
+    # @timing("PRHSR")
     def generate(self, sentence, n: int = 5) -> list[str]:
         text = "paraphrase: " + sentence + " </s>"
 
@@ -59,7 +59,7 @@ class Paraphraser:
             clean_up_tokenization_spaces=True
         ) for output in outputs]
 
-    @timing("PRHSR_BATCH")
+    @timing("BT_PPR")
     def generate_batch(self, sentences, children_per_sentence) -> list[list[str]]:
         """
 
