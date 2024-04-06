@@ -91,7 +91,13 @@ class BinarySearcher:
 
 def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorWrapper, limit: int) -> list[float]:
     searchers = [BinarySearcher(toxicity_rater=evaluator, limit=limit, sentence=sentence) for sentence in sentences]
+    ctr = 0
     while True:
+        ctr += 1
+        if ctr >= 20:
+            print("CATASTROPHIC FAILURE")
+            exit(0)
+
         ids = []
         sentences = []
         for i, searcher in enumerate(searchers):

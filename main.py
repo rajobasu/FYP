@@ -2,7 +2,7 @@ import time
 
 import numpy as np
 
-from constants import FREE_CUDA_ID, ScoringMethods
+from constants import FREE_CUDA_ID, ScoringMethods, FREE_LLM_CUDA_ID
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId, get_llm
 from morphers.fancy_morpher import SynonymParaphraserMorper
@@ -33,8 +33,8 @@ from utils.util import debug_print
 def init_models():
     print("Initialising models...")
     # initialise models
-    # toxic = LlmModel(llm_id=LlmId.VICUNA_7B)
-    toxic = DetoxifyBaseModel()
+    toxic = LlmModel(llm_id=LlmId.VICUNA_7B)
+    # toxic = LlmModel()
     morpher = SynonymParaphraserMorper()
     sent_sim = MiniLM()
 
@@ -93,6 +93,7 @@ def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, sear
 def main():
     print("Fetching data...")
     print("GPU: ", FREE_CUDA_ID)
+    print("LLM: ", FREE_LLM_CUDA_ID)
     data_item = get_data()[0]
 
     toxic, morpher, sent_sim = init_models()
