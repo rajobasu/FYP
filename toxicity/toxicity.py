@@ -13,11 +13,8 @@ class ToxicityEvaluator(ABC):
 
 
 class BooleanToxicityEvaluatorWrapper(ToxicityEvaluator, ABC):
-    def __init__(self, base_model: ToxicityEvaluator, threshold):
-        pass
-
     def backdoor_predict(self, sentence):
-        pass
+        return 0
 
 
 class ToxicityEnsembleModelWrapper:

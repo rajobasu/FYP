@@ -11,6 +11,7 @@ from similarity.similarity import MiniLM
 from storage.simple_storage import InMemStorage
 from toxicity.distance import get_distance_ensemble
 from toxicity.models.detoxify_specifics import DetoxifyBaseModel, DetoxifyBooleanWrapper
+from toxicity.models.llm import LlmModel
 from toxicity.toxicity import ToxicityEnsembleModelWrapper, BooleanToxicityEvaluatorWrapper
 from utils.util import debug_print
 
@@ -18,9 +19,14 @@ from utils.util import debug_print
 def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
     ensemble_toxic = ToxicityEnsembleModelWrapper(get_distance_ensemble)
     ensemble_toxic.set_params(tox_params)
-    thresholds = tox_params["thresholds"]
-    for val in thresholds:
-        ensemble_toxic.add_model(DetoxifyBooleanWrapper(base_model, threshold=val))
+
+    if tox_params["model_choice"] != "tox":
+        print("using LLM")
+        ensemble_toxic.add_model(base_model)
+    else:
+        thresholds = tox_params["thresholds"]
+        for val in thresholds:
+            ensemble_toxic.add_model(DetoxifyBooleanWrapper(base_model, threshold=val))
 
     return ensemble_toxic
 
@@ -28,7 +34,7 @@ def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
 def init_models():
     print("Initialising models...")
     # initialise models
-    toxic = DetoxifyBaseModel()
+    toxic = LlmModel(llm_id=LlmId.VICUNA_7B)
     morpher = SynonymParaphraserMorper()
     sent_sim = MiniLM()
 
@@ -58,7 +64,6 @@ def fill_default_params(experiment_mode):
 def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, search_params):
     # note that we are assuming that sentence here is a single string.
     print("search with params: ", tox_params | search_params)
-    debug_print("Searching for data item: ", sentence)
 
     # more setup
     db = InMemStorage(sentence, tox_params | search_params)
@@ -180,12 +185,12 @@ def main():
         #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
 
-        [{"distance_param": 192, "thresholds": [0.05]},
-         {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
+        [{"distance_param": 192, "thresholds": [0.05], "model_choice": LlmId.VICUNA_7B},
+         {"num_children": 5, "pool_size": 4, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
           "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False}],
-        [{"distance_param": 192, "thresholds": [0.05]},
-         {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
+        # [{"distance_param": 192, "thresholds": [0.05]},
+        #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
+        #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
 
     ]]
 

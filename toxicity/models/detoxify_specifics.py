@@ -20,8 +20,6 @@ class DetoxifyBaseModel(ToxicityEvaluator):
 
 class DetoxifyBooleanWrapper(BooleanToxicityEvaluatorWrapper):
     def __init__(self, base_model: ToxicityEvaluator, threshold=TOXIC_THRESHOLD):
-        super().__init__(base_model, threshold)
-
         self.model = base_model
         self.threshold = threshold
 

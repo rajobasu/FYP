@@ -89,7 +89,6 @@ class EvoAlgoV1:
 
         scoring = [scoring1, scoring2, scoring3][self.SCORING_FUNC]
 
-
         selected_list = sorted(sentencepool, key=lambda x: scoring(x[1], x[2], best_similarity), reverse=True)
         selected_list = selected_list[:2 * self.current_pool_size]
         selected_list = sorted(selected_list, key=lambda x: x[1])
@@ -173,12 +172,9 @@ class EvoAlgoV1:
             if self.throw_half:
                 sentence_pool = sentence_pool[:self.current_pool_size // 2]
 
-
-
             if self.auto_dist:
                 mean_toxicity = np.mean([x[1] for x in result])
                 self.toxic.set_distance_param(int(1.3 * denom * mean_toxicity + 4))
-
 
             sentence_pool.extend(result)
             print(f" min :{min([x[1] for x in sentence_pool]) * denom:.5f}", end="")
