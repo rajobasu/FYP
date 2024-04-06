@@ -21,4 +21,4 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
         results = []
         for batched_sentences in utils.util.split_batch(sentences, self.BATCH_SIZE):
             results.extend(self._llm.batch_generate(batched_sentences))
-        return results
+        return [0 if is_valid_answer(res) else 0 for res in results]
