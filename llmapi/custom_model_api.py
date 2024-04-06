@@ -44,7 +44,7 @@ class Vicuna(Llm):
         SYSTEM_PROMPT = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
         USER_PROMPTS = [f"{{ {SYSTEM_PROMPT} }} USER: {{ {input_str} }} ASSISTANT:" for input_str in texts]
         output = self.pipe(USER_PROMPTS)
-        return [item['generated_text'].split("ASSISTANT:")[1].strip() for item in output]
+        return [item[0]['generated_text'].split("ASSISTANT:")[1].strip() for item in output]
 
 
 class Gemma(Llm):
