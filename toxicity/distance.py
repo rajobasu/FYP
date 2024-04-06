@@ -104,7 +104,9 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
     for searcher in searchers:
         setup_questions.extend(searcher.get_setup_question())
     setup_answers = evaluator.predict_batch(setup_questions)
-
+    print("\n"*5)
+    print(f"SETUP {setup_answers}")
+    print("\n"*5)
     for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
         searcher.answer_setup_question(ans[0], ans[1])
 
