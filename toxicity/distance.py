@@ -9,6 +9,7 @@ from utils.stats import timing
 
 random_morpher = SynonymParaphraserMorper()
 
+
 class BinarySearcher:
     def __init__(self, *,
                  toxicity_rater: BooleanToxicityEvaluatorWrapper,
@@ -61,22 +62,51 @@ class BinarySearcher:
         return self.lo / self.limit
 
 
+class LinearSearcher:
+    def __init__(self, *,
+                 toxicity_rater: BooleanToxicityEvaluatorWrapper,
+                 limit: int,
+                 sentence: str):
+        self.limit = limit
+        self.iterator = 0
+        self.satisfied = False
+        self.curr_sentence = sentence
+
+    def get_next_question(self):
+        if self.satisfied or self.iterator > self.limit:
+            return None
+
+        return self.curr_sentence
+
+    def update_with_answer(self, answer):
+        if answer is None:
+            return
+        if answer == 1:
+            self.iterator += 1
+            self.curr_sentence = random_morpher.modify(self.curr_sentence)
+        else:
+            self.satisfied = True
+
+    def get_answer(self):
+        return self.iterator / self.limit
+
+
 def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorWrapper, limit: int) -> list[float]:
-    searchers = [BinarySearcher(toxicity_rater=evaluator, limit=limit, sentence=sentence) for sentence in sentences]
-    setup_questions = []
-    for searcher in searchers:
-        setup_questions.extend(searcher.get_setup_question())
-    setup_answers = evaluator.predict_batch(setup_questions)
-    print("\n"*5)
-    print(setup_questions)
-    print(f"SETUP {setup_answers}")
-    print("\n"*5)
-    for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
-        searcher.answer_setup_question(ans[0], ans[1])
+    searchers = [LinearSearcher(toxicity_rater=evaluator, limit=limit, sentence=sentence) for sentence in sentences]
+    # setup_questions = []
+    # for searcher in searchers:
+    #     setup_questions.extend(searcher.get_setup_question())
+    # setup_answers = evaluator.predict_batch(setup_questions)
+    # print("\n" * 5)
+    # print(setup_questions)
+    # print(f"SETUP {setup_answers}")
+    # print("\n" * 5)
+    # for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
+    #     searcher.answer_setup_question(ans[0], ans[1])
 
     ctr = 0
     while True:
-        print("NEW ITERATION OF BINARY_SEARCH")
+        print("NEW ITERATION OF LINEAR_SEARCH")
         ctr += 1
         if ctr >= 20:
             print("CATASTROPHIC FAILURE")
