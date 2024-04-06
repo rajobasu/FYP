@@ -7,7 +7,8 @@ from constants import ScoringMethods
 from morphers.fancy_morpher import Morpher
 from similarity.similarity import SentenceSimilarityModel
 from storage.simple_storage import Storage
-from toxicity.toxicity import ToxicityEnsembleModelWrapper
+from toxicity.distance import batch_distance
+from toxicity.toxicity import ToxicityEnsembleModelWrapper, BooleanToxicityEvaluatorWrapper
 from utils.util import debug_print
 
 """
@@ -36,7 +37,7 @@ def crossover(sentencepool: list[SENTENCE_T]) -> SENTENCE_T:
 
 class EvoAlgoV1:
     def __init__(self,
-                 toxicity_rater: ToxicityEnsembleModelWrapper,
+                 toxicity_rater: BooleanToxicityEvaluatorWrapper,
                  modifier: Morpher,
                  similarity_rater: SentenceSimilarityModel,
                  db: Storage,
@@ -53,6 +54,7 @@ class EvoAlgoV1:
             else self.select
         self.throw_half = search_params["throw_half"]
         self.auto_dist = search_params["auto_dist"]
+        self.distance_param = search_params["distance_param"]
 
         if self.NUM_CHILDREN is None:
             raise Exception()
@@ -69,7 +71,18 @@ class EvoAlgoV1:
         self.orig_sentence: str = ""  # note that this is treated as a single string since we dont really modify it anyway.
 
     def fitness(self, sentence: SENTENCE_T) -> FITNESS_T:
-        return self.toxic.predict(" ".join(sentence)), self.sent_sim.predict(self.orig_sentence, " ".join(sentence))
+        return self.batch_fitness([sentence])[0]
+
+    def batch_fitness(self, sentences: list[SENTENCE_T]) -> list[FITNESS_T]:
+        converted_sentences = [" ".join(sentence) for sentence in sentences]
+        toxicities = batch_distance(
+            sentences=converted_sentences,
+            evaluator=self.toxic,
+            limit=self.distance_param
+        )
+        similarities = [self.sent_sim.predict(self.orig_sentence, sentence) for sentence in converted_sentences]
+
+        return [(t, s) for t, s in zip(toxicities, similarities)]
 
     def mutate(self, sentence: SENTENCE_T) -> SENTENCE_T:
         return self.modifier.modify(sentence)
@@ -114,34 +127,12 @@ class EvoAlgoV1:
 
         return result_sentences[:self.current_pool_size]
 
-    def get_generation_as_batch(self, sentence):
-        pass
-
-    def create_generation(
-            self, sentence: SENTENCE_T,
-            generation_num: int,
-    ) -> list[SENTENCE_INFO_T]:
-        result: list[SENTENCE_INFO_T] = []
-
-        for _ in range(self.NUM_CHILDREN):
-            modified_sentence = self.mutate(sentence)
-            toxic_score, similarity_score = self.fitness(modified_sentence)
-
-            result.append((modified_sentence, toxic_score, similarity_score))
-            debug_print(f"MUTATED: {toxic_score: .3f} {similarity_score : .3f} {modified_sentence} ")
-
-            self.generated_items += 1
-            # debug_print(f"\r{self.generated_items}", end="")
-
-        return result
-
     def start_search(self, sentence: str, num_generations: int = 40):
         self.orig_sentence = sentence
         debug_print("start search")
 
         tokenized_sentence: SENTENCE_T = sent_tokenize(sentence)
 
-        debug_print(tokenized_sentence)
         toxicity_initial, similarity_initial = self.fitness(tokenized_sentence)
         sentence_pool: list[SENTENCE_INFO_T] = [(tokenized_sentence, toxicity_initial, similarity_initial)]
         for ng in range(num_generations):
@@ -151,20 +142,18 @@ class EvoAlgoV1:
             result = []
 
             sentence_only_pool = [item[0] for item in sentence_pool]
+
             outputs = self.modifier.modify_batch(sentence_only_pool, children_per_sentence=self.NUM_CHILDREN)
-            for output in outputs:
-                t, s = self.fitness(output)
+            for _ in range(self.CROSSOVER):
+                outputs.append(crossover(sentence_only_pool))
+
+            fitness_vals = self.batch_fitness(outputs)
+            for output, (t, s) in zip(outputs, fitness_vals):
                 result.append((output, t, s))
 
             self.generated_items = 0
 
-            sentences_only = [x[0] for x in sentence_pool]
-            for _ in range(self.CROSSOVER):
-                sample = crossover(sentences_only)
-                t, s = self.fitness(sample)
-                result.append((sample, t, s))
-
-            denom = self.toxic.distance_param
+            denom = self.distance_param
             for sent, t, s in result:
                 sent_str = " ".join(sent)
                 self.db.add_record(t * denom, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
@@ -174,7 +163,7 @@ class EvoAlgoV1:
 
             if self.auto_dist:
                 mean_toxicity = np.mean([x[1] for x in result])
-                self.toxic.set_distance_param(int(1.3 * denom * mean_toxicity + 4))
+                self.distance_param = int(1.3 * denom * mean_toxicity + 4)
 
             sentence_pool.extend(result)
             print(f" min :{min([x[1] for x in sentence_pool]) * denom:.5f}", end="")

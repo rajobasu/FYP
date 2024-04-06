@@ -11,7 +11,7 @@ class Paraphraser:
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")
         self.model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws").to(FREE_CUDA_ID)
-        self.BATCH_SIZE = 32
+        self.BATCH_SIZE = 16
 
     @timing("PRHSR")
     def generate(self, sentence, n: int = 5) -> list[str]:

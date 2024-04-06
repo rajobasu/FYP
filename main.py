@@ -9,26 +9,25 @@ from morphers.fancy_morpher import SynonymParaphraserMorper
 from search.evolutionary_algos import EvoAlgoV1
 from similarity.similarity import MiniLM
 from storage.simple_storage import InMemStorage
-from toxicity.distance import get_distance_ensemble
 from toxicity.models.detoxify_specifics import DetoxifyBaseModel, DetoxifyBooleanWrapper
 from toxicity.models.llm import LlmModel
 from toxicity.toxicity import ToxicityEnsembleModelWrapper, BooleanToxicityEvaluatorWrapper
 from utils.util import debug_print
 
 
-def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
-    ensemble_toxic = ToxicityEnsembleModelWrapper(get_distance_ensemble)
-    ensemble_toxic.set_params(tox_params)
-
-    if tox_params["model_choice"] != "tox":
-        print("using LLM")
-        ensemble_toxic.add_model(base_model)
-    else:
-        thresholds = tox_params["thresholds"]
-        for val in thresholds:
-            ensemble_toxic.add_model(DetoxifyBooleanWrapper(base_model, threshold=val))
-
-    return ensemble_toxic
+# def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
+#     ensemble_toxic = ToxicityEnsembleModelWrapper(get_distance_ensemble)
+#     ensemble_toxic.set_params(tox_params)
+#
+#     if tox_params["model_choice"] != "tox":
+#         print("using LLM")
+#         ensemble_toxic.add_model(base_model)
+#     else:
+#         thresholds = tox_params["thresholds"]
+#         for val in thresholds:
+#             ensemble_toxic.add_model(DetoxifyBooleanWrapper(base_model, threshold=val))
+#
+#     return ensemble_toxic
 
 
 def init_models():
@@ -47,7 +46,8 @@ def fill_default_params(experiment_mode):
     return [
         {
             "distance_param": 256,
-            "thresholds": 0.05
+            "thresholds": 0.05,
+            "model_choice": "tox"
         } | tox_params,
         {
             "num_children": 10,
@@ -57,7 +57,8 @@ def fill_default_params(experiment_mode):
             "growth_delta": 1,
             "scoring_method": ScoringMethods.REDUCER,
             "throw_half": False,
-            "auto_dist": True
+            "auto_dist": True,
+            "distance_param": 192
         } | search_params
     ]
 
@@ -73,7 +74,7 @@ def experiment_per_sentence(sentence, toxic, morpher, sent_sim, tox_params, sear
     t1 = time.time_ns()
 
     searcher = EvoAlgoV1(
-        make_toxicity_model(toxic, tox_params),
+        toxic, # we now only take a boolean model, not a ensemble
         morpher,
         sent_sim,
         db,
@@ -188,7 +189,7 @@ def main():
 
         [{"distance_param": 192, "thresholds": [0.05], "model_choice": "tox"},
          {"num_children": 20, "pool_size": 10, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False}],
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False, "distance_param": 192}],
         # [{"distance_param": 192, "thresholds": [0.05]},
         #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],

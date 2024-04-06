@@ -11,6 +11,9 @@ class ToxicityEvaluator(ABC):
     def set_params(self, params):
         pass
 
+    def predict_batch(self, sentences: list[str]):
+        return [self.predict(sentence) for sentence in sentences]
+
 
 class BooleanToxicityEvaluatorWrapper(ToxicityEvaluator, ABC):
     def backdoor_predict(self, sentence):
