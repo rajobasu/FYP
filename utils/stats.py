@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def set_up_logging():
-    f_format = logging.Formatter('%(asctime)s')
+    f_format = logging.Formatter('%(asctime)s:%(message)s')
     file_name = f"{ENV_VARS['LOG_BASE']}/logs/.STATS.log"
     f_handler = logging.FileHandler(file_name)
     f_handler.setFormatter(f_format)
