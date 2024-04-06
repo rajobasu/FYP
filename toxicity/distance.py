@@ -29,6 +29,7 @@ class BinarySearcher:
         self.mid = 0
 
     def get_setup_question(self):
+
         return [self.generated_sentences[0], self.generated_sentences[-1]]
 
     def answer_setup_question(self, val1, val2):
@@ -67,6 +68,7 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
         setup_questions.extend(searcher.get_setup_question())
     setup_answers = evaluator.predict_batch(setup_questions)
     print("\n"*5)
+    print(setup_questions)
     print(f"SETUP {setup_answers}")
     print("\n"*5)
     for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
