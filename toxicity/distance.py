@@ -2,6 +2,7 @@ import math
 
 import numpy as np
 
+import utils.util
 from morphers.fancy_morpher import RandomMorpher
 from toxicity.toxicity import ToxicityEvaluator, BooleanToxicityEvaluatorWrapper
 from utils.stats import timing
@@ -63,11 +64,16 @@ class BinarySearcher:
         # [0000000000] -> we also check for this case explicitly
         # [1111111111] -> we check for this case explicitly
 
-        if toxicity_rater.predict(self.generated_sentences[0]) == 0:
-            self.lo = self.hi = 0
-        elif toxicity_rater.predict(self.generated_sentences[-1]) == 1:
-            self.lo = self.hi = limit
         self.mid = 0
+
+    def get_setup_question(self):
+        return [self.generated_sentences[0], self.generated_sentences[-1]]
+
+    def answer_setup_question(self, val1, val2):
+        if val1 == 0:
+            self.lo = self.hi = 0
+        elif val2 == 1:
+            self.lo = self.hi = self.limit
 
     def get_next_question(self):
         if self.lo >= self.hi - 1:  # in effect if they have a gap of 2 or less
@@ -91,6 +97,14 @@ class BinarySearcher:
 
 def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorWrapper, limit: int) -> list[float]:
     searchers = [BinarySearcher(toxicity_rater=evaluator, limit=limit, sentence=sentence) for sentence in sentences]
+    setup_questions = []
+    for searcher in searchers:
+        setup_questions.extend(searcher.get_setup_question())
+    setup_answers = evaluator.predict_batch(setup_questions)
+
+    for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
+        searcher.answer_setup_question(ans[0], ans[1])
+
     ctr = 0
     while True:
         ctr += 1

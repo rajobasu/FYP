@@ -2,6 +2,7 @@ from judges.judge import is_valid_answer
 from llmapi.custom_model_api import Llm, get_llm
 from toxicity.toxicity import ToxicityEvaluator, BooleanToxicityEvaluatorWrapper
 import utils.util
+from utils.stats import timing
 
 
 class LlmModel(BooleanToxicityEvaluatorWrapper):
@@ -15,6 +16,7 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
         # note that this gives a measure of toxicity.
         return 0 if is_valid_answer(output_sentence) else 1
 
+    @timing("BT_LLM")
     def predict_batch(self, sentences: list[str]):
         results = []
         for batched_sentences in utils.util.split_batch(sentences, self.BATCH_SIZE):

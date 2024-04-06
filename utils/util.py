@@ -1,4 +1,5 @@
 from pprint import pprint
+from typing import Any
 
 from constants import DEBUG_MODE
 
@@ -11,5 +12,5 @@ def debug_print(item, pretty=False):
             print(item)
 
 
-def split_batch(texts: list[str], batch_size):
+def split_batch(texts: list[Any], batch_size) -> list[list[Any]]:
     return [texts[i:i + batch_size] for i in range(0, len(texts), batch_size)]

@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def set_up_logging():
-    f_format = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
+    f_format = logging.Formatter('%(asctime)s')
     file_name = f"{ENV_VARS['LOG_BASE']}/logs/.STATS.log"
     f_handler = logging.FileHandler(file_name)
     f_handler.setFormatter(f_format)
@@ -23,7 +23,7 @@ def set_up_logging():
 if LOGGING_ENABLED:
     set_up_logging()
 
-HEADINGS = [""]#, "SNAP_FREQ", "CML_AVG", "CML_FRQ"]
+HEADINGS = ["", "ctr"]#, "SNAP_FREQ", "CML_AVG", "CML_FRQ"]
 
 
 class IndivStats:
@@ -32,6 +32,7 @@ class IndivStats:
         self.time_list_snap = []
         self.time_list_cumul = []
         self.t = 0
+        self.ctr = 0
 
     def start_timer(self):
         self.t = time.time_ns()
@@ -40,10 +41,12 @@ class IndivStats:
         t2 = time.time_ns()
         self.time_list_snap.append((t2 - self.t) / 1e9)
         self.time_list_cumul.append((t2 - self.t) / 1e9)
+        self.ctr += 1
 
     def getStats(self):
         res = {
             "": np.mean(self.time_list_cumul),
+            "ctr": self.ctr
             # "SNAP_FREQ": len(self.time_list_snap),
             # "CML_AVG": np.mean(self.time_list_cumul),
             # "CML_FREQ": len(self.time_list_cumul)
