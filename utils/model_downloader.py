@@ -4,14 +4,14 @@ import os
 from dotenv import load_dotenv
 from huggingface_hub import snapshot_download
 
+from constants import ENV_VARS
 from llmapi.custom_model_api import LlmId
 
 
 def main(model_id):
-    load_dotenv("../.env")
-
-    MODELS_DIR = os.getenv("MODELS_DIR")
-    HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
+    print(ENV_VARS)
+    MODELS_DIR = ENV_VARS["MODELS_DIR"]
+    HUGGING_FACE_TOKEN = ENV_VARS["HUGGING_FACE_TOKEN"]
 
     if not MODELS_DIR:
         print("ERROR: MODELS_DIR environment variable not defined")
@@ -35,4 +35,4 @@ def main(model_id):
 
 
 if __name__ == "__main__":
-    main(LlmId.GEMMA_2B_IT.value)
+    main(LlmId.VICUNA_7B.value)
