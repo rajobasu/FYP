@@ -9,43 +9,6 @@ from utils.stats import timing
 
 random_morpher = RandomMorpher()
 
-
-def binsrch(
-        *,
-        toxicity_rater: BooleanToxicityEvaluatorWrapper,
-        limit: int,
-        generated_sentences: list[str],
-) -> float:
-    if toxicity_rater.predict(generated_sentences[-1]) == 1:
-        return 1
-
-    lo = 0
-    hi = limit
-    while lo < hi:
-        mid = int(math.ceil((lo + hi) / 2))
-        if hi == mid:
-            hi = hi - 1
-            continue
-
-        val = toxicity_rater.predict(generated_sentences[mid])
-        if val == 1:
-            lo = mid + 1
-        else:
-            hi = mid
-    return lo / limit
-
-
-# def get_distance_ensemble(evaluators: list[BooleanToxicityEvaluatorWrapper], sentence: str, limit) -> float:
-#     vals = [binsrch(
-#         toxicity_rater=evaluator,
-#         limit=limit,
-#         generated_sentences=generated_sentences
-#     ) for evaluator in evaluators]
-#
-#     num_0 = vals.count(0.0)
-#     return vals[-1] * (0.9 ** num_0)
-#
-
 class BinarySearcher:
     def __init__(self, *,
                  toxicity_rater: BooleanToxicityEvaluatorWrapper,

@@ -9,10 +9,7 @@ from morphers.fancy_morpher import SynonymParaphraserMorper
 from search.evolutionary_algos import EvoAlgoV1
 from similarity.similarity import MiniLM
 from storage.simple_storage import InMemStorage
-from toxicity.models.detoxify_specifics import DetoxifyBaseModel, DetoxifyBooleanWrapper
 from toxicity.models.llm import LlmModel
-from toxicity.toxicity import ToxicityEnsembleModelWrapper, BooleanToxicityEvaluatorWrapper
-from utils.util import debug_print
 
 
 # def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
@@ -188,9 +185,9 @@ def main():
         #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
 
-        [{"distance_param": 192, "thresholds": [0.05], "model_choice": LlmId.VICUNA_7B},
-         {"num_children": 20, "pool_size": 10, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
-          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False, "distance_param": 192}],
+        [{"distance_param": 512, "thresholds": [0.05], "model_choice": LlmId.VICUNA_7B},
+         {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
+          "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False, "distance_param": 512}],
         # [{"distance_param": 192, "thresholds": [0.05]},
         #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
