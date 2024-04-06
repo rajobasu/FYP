@@ -3,11 +3,11 @@ import math
 import numpy as np
 
 import utils.util
-from morphers.fancy_morpher import RandomMorpher
+from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
 from toxicity.toxicity import ToxicityEvaluator, BooleanToxicityEvaluatorWrapper
 from utils.stats import timing
 
-random_morpher = RandomMorpher()
+random_morpher = SynonymParaphraserMorper()
 
 class BinarySearcher:
     def __init__(self, *,
