@@ -3,7 +3,7 @@ import time
 from constants import FREE_CUDA_ID, FREE_LLM_CUDA_ID
 from dataparser import get_data
 from llmapi.custom_model_api import LlmId
-from morphers.fancy_morpher import RandomMorpher
+from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
 from toxicity.distance import random_morpher
 from toxicity.models.llm import LlmModel
 
@@ -17,11 +17,12 @@ def main():
     print("llm : ", FREE_LLM_CUDA_ID)
     t1 = time.time_ns()
     llm = LlmModel(llm_id=LlmId.VICUNA_7B)
-    data = get_data()
-    morpher = RandomMorpher()
+    data = get_data()[0]
+    morpher = SynonymParaphraserMorper()
     for _ in range(100):
         val = llm.predict(data)
         print(val, data)
+
         data = morpher.modify(data)
 
 
