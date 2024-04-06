@@ -110,6 +110,7 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
 
     ctr = 0
     while True:
+        print("NEW ITERATION OF BINARY_SEARCH")
         ctr += 1
         if ctr >= 20:
             print("CATASTROPHIC FAILURE")
@@ -123,6 +124,7 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
                 ids.append(i)
                 sentences.append(sent)
 
+        print(f"SEARCHERS PARTICIPATED: {len(ids)} ")
         if not ids:
             break
 

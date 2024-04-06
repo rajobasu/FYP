@@ -16,9 +16,11 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
         # note that this gives a measure of toxicity.
         return 0 if is_valid_answer(output_sentence) else 1
 
-    @timing("BT_LLM")
+    @timing(name="BT_LLM")
     def predict_batch(self, sentences: list[str]):
+        print("Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         results = []
         for batched_sentences in utils.util.split_batch(sentences, self.BATCH_SIZE):
             results.extend(self._llm.batch_generate(batched_sentences))
+        print("batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
         return [0 if is_valid_answer(res) else 0 for res in results]
