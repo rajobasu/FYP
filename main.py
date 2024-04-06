@@ -187,7 +187,7 @@ def main():
         #  {"num_children": 10, "pool_size": 8, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
         #   "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": True}],
 
-        [{"distance_param": 192, "thresholds": [0.05], "model_choice": "tox"},
+        [{"distance_param": 192, "thresholds": [0.05], "model_choice": LlmId.VICUNA_7B},
          {"num_children": 20, "pool_size": 10, "crossover": 8, "scoring_func": 0, "growth_delta": 0,
           "scoring_method": ScoringMethods.REDUCER, "throw_half": True, "auto_dist": False, "distance_param": 192}],
         # [{"distance_param": 192, "thresholds": [0.05]},
