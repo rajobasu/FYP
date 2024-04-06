@@ -8,7 +8,7 @@ from utils.stats import timing
 class LlmModel(BooleanToxicityEvaluatorWrapper):
     def __init__(self, llm_id):
         self._llm = get_llm(llm_id=llm_id)
-        self.BATCH_SIZE = 2
+        self.BATCH_SIZE = 6
 
     def predict(self, sentence: str) -> float:
         output_sentence = self._llm.generate(sentence)
