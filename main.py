@@ -34,7 +34,8 @@ def make_toxicity_model(base_model, tox_params) -> ToxicityEnsembleModelWrapper:
 def init_models():
     print("Initialising models...")
     # initialise models
-    toxic = LlmModel(llm_id=LlmId.VICUNA_7B)
+    # toxic = LlmModel(llm_id=LlmId.VICUNA_7B)
+    toxic = DetoxifyBaseModel()
     morpher = SynonymParaphraserMorper()
     sent_sim = MiniLM()
 
