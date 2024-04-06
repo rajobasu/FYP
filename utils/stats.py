@@ -77,14 +77,14 @@ class StatsRegistry:
                 for _, item in self.stats.items():
                     for head in HEADINGS:
                         val = f"{head}[{_}]"
-                        str_to_print += f"{val : >20} "
+                        str_to_print += f"{val : >10} "
                 logger.info(str_to_print)
 
             str_to_print = ""
             for _, item in self.stats.items():
                 stat = item.getStats()
                 for head in HEADINGS:
-                    str_to_print += f"{stat[head] : >20.5} "
+                    str_to_print += f"{float(stat[head]) : >10.5} "
             logger.info(str_to_print)
 
         return self.stats[name]
