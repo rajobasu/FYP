@@ -3,7 +3,7 @@ from pprint import pprint
 
 from detoxify import Detoxify
 
-from constants import FREE_CUDA_ID
+from constants import FREE_CUDA_ID, FREE_LLM_CUDA_ID
 from llmapi.custom_model_api import LlmId
 from main import make_toxicity_model
 from morphers.fancy_morpher import SynonymParaphraserMorper
@@ -18,6 +18,7 @@ def main2(*args):
 
 def main():
     print("cuda : ", FREE_CUDA_ID)
+    print("llm : ", FREE_LLM_CUDA_ID)
     t1 = time.time_ns()
     llm = LlmModel(llm_id=LlmId.VICUNA_7B)
     for _ in range(10):

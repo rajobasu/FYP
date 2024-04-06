@@ -65,4 +65,4 @@ class POSTagger:
 
     @timing(name="POS_BATCH")
     def generate_batch(self, sentences: list[str]):
-        return [post_processing(x) for x in self.pipeline(sentences)]
+        return [post_processing(x) for x in self.pipeline(sentences, batch_size=16)]

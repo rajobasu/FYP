@@ -52,7 +52,8 @@ class Paraphraser:
             top_k=120,
             top_p=0.95,
             early_stopping=True,
-            num_return_sequences=children_per_sentence
+            num_return_sequences=children_per_sentence,
+            batch_size=16
         )
 
         results = [self.tokenizer.decode(

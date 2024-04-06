@@ -1,6 +1,6 @@
 from detoxify import Detoxify
 
-from constants import FREE_CUDA_ID
+from constants import FREE_CUDA_ID, FREE_LLM_CUDA_ID
 from toxicity.toxicity import ToxicityEvaluator, BooleanToxicityEvaluatorWrapper
 from utils.stats import timing
 
@@ -10,7 +10,7 @@ ENSEMBLE_TOXIC_THRESHOLD = [TOXIC_THRESHOLD, 0.2, 0.5]
 
 class DetoxifyBaseModel(ToxicityEvaluator):
     def __init__(self):
-        self.model = Detoxify('original', device=FREE_CUDA_ID)
+        self.model = Detoxify('original', device=FREE_LLM_CUDA_ID)
 
     def predict(self, sentence: str) -> float:
         prediction = self.model.predict(sentence)

@@ -11,11 +11,13 @@ from dotenv import load_dotenv, dotenv_values
 # -------------------------------------------- HELPER FUNCTIONS --------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------
 
-def get_freer_gpu():
+def get_freer_gpu(best=0):
     os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
-    memory_available = [int(x.split()[2]) for x in open('tmp', 'r').readlines()]
+    with open("tmp", "r") as f:
+        mem_av = [(int(x.split()[2]), i) for i, x in enumerate(f.readlines())]
+        answer = sorted(mem_av)[best]
     os.system('rm -f tmp')
-    return f"cuda:{np.argmax(memory_available)}"
+    return f"cuda:{answer}"
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -25,9 +27,11 @@ class ScoringMethods(Enum):
     FRONTIER = 0,
     REDUCER = 1
 
+
 DEBUG_MODE = False
 LOGGING_ENABLED = True
 RECORD_EXPERIMENT = True
 
 FREE_CUDA_ID = get_freer_gpu()
+FREE_LLM_CUDA_ID = get_freer_gpu(1)
 ENV_VARS = dict(dotenv_values(".env"))
