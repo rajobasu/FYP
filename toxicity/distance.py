@@ -86,10 +86,13 @@ class BinarySearcher:
         if answer is None:
             return
 
+        print(f"BEFORE: [{self.lo}, {self.hi}]", end="")
         if answer == 1:
             self.lo = self.mid
         elif answer == 0:
             self.hi = self.mid
+
+        print(f" AFTER: [{self.lo}, {self.hi}]")
 
     def get_answer(self):
         return self.lo / self.limit
