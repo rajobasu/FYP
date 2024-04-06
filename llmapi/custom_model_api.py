@@ -46,7 +46,7 @@ class Vicuna(Llm):
     def batch_generate(self, texts: list[str]):
         SYSTEM_PROMPT = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
         USER_PROMPTS = [f"{{ {SYSTEM_PROMPT} }} USER: {{ {input_str} }} ASSISTANT:" for input_str in texts]
-        output = self.pipe(USER_PROMPTS)
+        output = self.pipe(USER_PROMPTS, max_new_tokens=100)
         return [item[0]['generated_text'].split("ASSISTANT:")[1].strip() for item in output]
 
 

@@ -24,4 +24,4 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
             results.extend(self._llm.batch_generate(batched_sentences))
             print("batch predicted")
         print("batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-        return [0 if is_valid_answer(res) else 0 for res in results]
+        return [0 if is_valid_answer(res) else 1 for res in results]
