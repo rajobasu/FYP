@@ -26,9 +26,9 @@ class Llm:
     def generate(self, input_str: str):
         pass
 
-
     def batch_generate(self, texts: list[str]):
         pass
+
 
 class Vicuna(Llm):
     def __init__(self):
@@ -38,7 +38,8 @@ class Vicuna(Llm):
         SYSTEM_PROMPT = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions."
         USER_PROMPT = f"{{ {SYSTEM_PROMPT} }} USER: {{ {input_str} }} ASSISTANT:"
         # PARAMS =
-        output = self.pipe(USER_PROMPT, do_sample=True)[0]['generated_text'].split("ASSISTANT:")[1].strip()
+        output = self.pipe(USER_PROMPT, max_new_tokens=100, do_sample=True)[0]['generated_text'].split("ASSISTANT:")[
+            1].strip()
         return output
 
     @timing(name="Vic_BT")
@@ -56,7 +57,8 @@ class Gemma(Llm):
     def generate(self, input_str: str):
         input_ids = self.tokenizer(input_str, return_tensors="pt").to(self.device)
         outputs = self.model.generate(**input_ids, max_length=1000)
-        return self.tokenizer.decode(outputs[0]).replace(input_str, "", 1).replace("<bos>", "").replace("<eos>", "").strip(
+        return self.tokenizer.decode(outputs[0]).replace(input_str, "", 1).replace("<bos>", "").replace("<eos>",
+                                                                                                        "").strip(
             " .?\t\s\n")
 
 
