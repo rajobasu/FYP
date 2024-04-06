@@ -2,7 +2,7 @@ PHRASES = []
 
 
 def get_phrases():
-    with open("./data/rejection_phrases", "r") as f:
+    with open("./data/rejection_phrases.txt", "r") as f:
         for line in f.readlines():
             line = line.strip()
             PHRASES.append(line)
