@@ -40,10 +40,11 @@ class InMemStorage(Storage):
         self.original_sentence = original_sentence
         self.metadata = metadata
         self.all_sentences: List[Tuple[float, float, str, int]] = []
+        self.id = get_and_increment_id()
 
     def add_record(self, sentence: str, toxicity: float, similarity: float, generation: int = 1):
         self.all_sentences.append((toxicity, similarity, sentence, generation))
-        # self.output_temp_record(toxicity, similarity, generation, sentence)
+        self.output_temp_record(toxicity, similarity, generation, sentence)
 
     def print_records(self):
         pprint(self.all_sentences)
@@ -53,7 +54,7 @@ class InMemStorage(Storage):
         if not RECORD_EXPERIMENT:
             return
 
-        _id = get_and_increment_id()
+        _id = self.id
         print(_id)
         print("outputting")
         with open(f"{ENV_VARS['DATA_BASE']}/data/output{_id}.metadata", "w", encoding="utf-8") as f:

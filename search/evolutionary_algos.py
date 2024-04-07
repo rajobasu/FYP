@@ -136,7 +136,7 @@ class EvoAlgoV1:
         toxicity_initial, similarity_initial = self.fitness(tokenized_sentence)
         sentence_pool: list[SENTENCE_INFO_T] = [(tokenized_sentence, toxicity_initial, similarity_initial)]
         for ng in range(num_generations):
-            print(f"Generation {ng: >3}", end="")
+            print(f"Generation {ng: >3}", end="", flush=True)
 
             # generate mutations of a sentence and add them to the pool.
             result = []
@@ -166,10 +166,10 @@ class EvoAlgoV1:
                 self.distance_param = int(1.3 * denom * mean_toxicity + 4)
 
             sentence_pool.extend(result)
-            print(f" min :{min([x[1] for x in sentence_pool]) * denom:.5f}", end="")
-            print(f" avg pre:{np.mean([x[1] for x in sentence_pool]) * denom:.5f}", end="")
+            print(f" min :{min([x[1] for x in sentence_pool]) * denom:.5f}", end="", flush=True)
+            print(f" avg pre:{np.mean([x[1] for x in sentence_pool]) * denom:.5f}", end="", flush=True)
             sentence_pool = self.selector(sentence_pool)
-            print(f" avg post:{np.mean([x[1] for x in sentence_pool]) * denom:.5f}")
+            print(f" avg post:{np.mean([x[1] for x in sentence_pool]) * denom:.5f}", flush=True)
 
             # we need to re-evaluate the sentences if auto_dist is turned on
             if self.auto_dist:
