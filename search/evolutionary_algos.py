@@ -84,6 +84,7 @@ class EvoAlgoV1:
 
         return [(t, s) for t, s in zip(toxicities, similarities)]
 
+
     def mutate(self, sentence: SENTENCE_T) -> SENTENCE_T:
         return self.modifier.modify(sentence)
 
@@ -127,7 +128,7 @@ class EvoAlgoV1:
 
         return result_sentences[:self.current_pool_size]
 
-    def start_search(self, sentence: str, num_generations: int = 40):
+    def start_search(self, sentence: str, num_generations: int = 15):
         self.orig_sentence = sentence
         debug_print("start search")
 
@@ -148,6 +149,7 @@ class EvoAlgoV1:
                 outputs.append(crossover(sentence_only_pool))
 
             fitness_vals = self.batch_fitness(outputs)
+
             for output, (t, s) in zip(outputs, fitness_vals):
                 result.append((output, t, s))
 
@@ -156,7 +158,7 @@ class EvoAlgoV1:
             denom = self.distance_param
             for sent, t, s in result:
                 sent_str = " ".join(sent)
-                self.db.add_record(t * denom, self.toxic.backdoor_predict(sent_str), s, ng)  # type: ignore
+                self.db.add_record(sent_str, t, s, ng)  # type: ignore
 
             if self.throw_half:
                 sentence_pool = sentence_pool[:self.current_pool_size // 2]

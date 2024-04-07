@@ -28,6 +28,7 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
     def __init__(self, llm_id):
         self._llm = get_llm(llm_id=llm_id)
         self.BATCH_SIZE = 2
+        self.last_res = []
 
     def predict(self, sentence: str) -> float:
         output_sentence = self._llm.generate(sentence)
@@ -41,10 +42,17 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
         results = []
         for batched_sentences in utils.util.split_batch(sentences, self.BATCH_SIZE):
             semi_res = self._llm.batch_generate(batched_sentences)
+            semi_res = [item.replace("\n", "") for item in semi_res]
+
             for _input, output in zip(batched_sentences, semi_res):
                 logger.info(f"{_input}$#${output}")
 
             results.extend(semi_res)
             print("batch predicted", flush=True)
         print("batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<", flush=True)
+        self.last_res = results
         return [0 if is_valid_answer(res) else 1 for res in results]
+
+
+    def get_last_batch_results(self):
+        return self.last_res

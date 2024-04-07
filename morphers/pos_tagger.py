@@ -58,7 +58,7 @@ class POSTagger:
 
         self.pipeline = TokenClassificationPipeline(model=self.model, tokenizer=self.tokenizer,
                                            device=int(FREE_CUDA_ID[-1]))
-        self.BATCH_SIZE = 16
+        self.BATCH_SIZE = 32
 
     # @timing(name="POST_GEN")
     def generate(self, sentence: str):

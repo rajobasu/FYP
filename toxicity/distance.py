@@ -1,14 +1,31 @@
+import logging
 import math
 
 import numpy as np
 
 import utils.util
+from constants import ENV_VARS, LOGGING_ENABLED
 from morphers.fancy_morpher import RandomMorpher, SynonymParaphraserMorper
 from toxicity.toxicity import ToxicityEvaluator, BooleanToxicityEvaluatorWrapper
 from utils.stats import timing
 
 random_morpher = SynonymParaphraserMorper()
 
+logger = logging.getLogger(__name__)
+
+
+def set_up_logging():
+    f_format = logging.Formatter('%(message)s')
+    file_name = f"{ENV_VARS['LOG_BASE']}/logs/success.log"
+    f_handler = logging.FileHandler(file_name)
+    f_handler.setFormatter(f_format)
+    f_handler.setLevel(logging.DEBUG)
+
+    logger.addHandler(f_handler)
+    logger.setLevel(logging.DEBUG)
+
+if LOGGING_ENABLED:
+    set_up_logging()
 
 class BinarySearcher:
     def __init__(self, *,
@@ -125,7 +142,13 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
             break
 
         results = evaluator.predict_batch(sentences)
-        for i, res in zip(ids, results):
+        last = evaluator.get_last_batch_results()
+
+        for ctr, (i, res) in enumerate(zip(ids, results)):
+            if res == 0:
+                # we have a success, we should log this
+                logger.info(sentences[ctr] + "#$#" + last[ctr])
+
             searchers[i].update_with_answer(res)
 
     return [searcher.get_answer() for searcher in searchers]
