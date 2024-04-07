@@ -121,11 +121,11 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
     # for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
     #     searcher.answer_setup_question(ans[0], ans[1])
 
-    ctr = 0
+    countr = 0
     while True:
         print("NEW ITERATION OF LINEAR_SEARCH")
-        ctr += 1
-        if ctr >= 20:
+        countr += 1
+        if countr >= 20:
             print("CATASTROPHIC FAILURE")
             exit(0)
 
