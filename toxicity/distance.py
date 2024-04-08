@@ -90,7 +90,7 @@ class LinearSearcher:
         self.curr_sentence = sentence
 
     def get_next_question(self):
-        if self.satisfied or self.iterator > self.limit:
+        if self.satisfied or self.iterator >= self.limit:
             return None
 
         return self.curr_sentence
