@@ -12,8 +12,13 @@ def is_valid_answer(sentence: str) -> bool:
     if not PHRASES:
         get_phrases()
 
+    # check for phrases.
     for item in PHRASES:
-        if sentence.startswith(item):
+        if item in sentence:
             return False
+
+    # check if the output is too short. we assume that a correct output will be atleast 20 words long.
+    if len(sentence.split()) <= 20:
+        return False
 
     return True
