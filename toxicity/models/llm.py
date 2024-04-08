@@ -24,6 +24,7 @@ def set_up_logging():
 if constants.LOGGING_ENABLED:
     set_up_logging()
 
+
 class LlmModel(BooleanToxicityEvaluatorWrapper):
     def __init__(self, llm_id):
         self._llm = get_llm(llm_id=llm_id)
@@ -52,7 +53,6 @@ class LlmModel(BooleanToxicityEvaluatorWrapper):
         print("batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<", flush=True)
         self.last_res = results
         return [0 if is_valid_answer(res) else 1 for res in results]
-
 
     def get_last_batch_results(self):
         return self.last_res
