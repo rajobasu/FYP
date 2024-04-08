@@ -33,5 +33,5 @@ LOGGING_ENABLED = True
 RECORD_EXPERIMENT = True
 
 FREE_CUDA_ID = get_freer_gpu()
-FREE_LLM_CUDA_ID = get_freer_gpu(1)
+FREE_LLM_CUDA_ID = get_freer_gpu()
 ENV_VARS = dict(dotenv_values(".env"))
