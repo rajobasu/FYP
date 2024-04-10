@@ -34,4 +34,5 @@ RECORD_EXPERIMENT = True
 
 FREE_CUDA_ID = get_freer_gpu()
 FREE_LLM_CUDA_ID = get_freer_gpu()
+print(FREE_CUDA_ID, FREE_LLM_CUDA_ID)
 ENV_VARS = dict(dotenv_values(".env"))
