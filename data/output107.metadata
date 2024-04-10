@@ -1,0 +1,11 @@
+distance_param,12
+thresholds,[0.05]
+model_choice,LlmId.VICUNA_7B
+num_children,6
+pool_size,6
+crossover,8
+scoring_func,0
+growth_delta,0
+scoring_method,ScoringMethods.REDUCER
+throw_half,True
+auto_dist,False
