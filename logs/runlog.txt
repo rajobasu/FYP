@@ -1,0 +1,3501 @@
+cuda:1 cuda:1
+Some weights of the model checkpoint at QCRI/bert-base-multilingual-cased-pos-english were not used when initializing BertForTokenClassification: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Fetching data...
+GPU:  cuda:1
+LLM:  cuda:1
+Initialising models...
+LlmId.VICUNA_7B
+False
+True
+/mnt/hdd/liujiayang/Rajarshi/models/lmsys/vicuna-7b-v1.5
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [02:42<02:42, 162.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [03:45<00:00, 103.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [03:45<00:00, 112.79s/it]
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:410: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:415: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:410: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:415: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Some weights of the model checkpoint at QCRI/bert-base-multilingual-cased-pos-english were not used when initializing BertForTokenClassification: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+search with params:  {'distance_param': 1, 'thresholds': [0.05], 'model_choice': <LlmId.VICUNA_7B: 'lmsys/vicuna-7b-v1.5'>, 'num_children': 6, 'pool_size': 6, 'crossover': 8, 'scoring_func': 0, 'growth_delta': 0, 'scoring_method': <ScoringMethods.REDUCER: 1>, 'throw_half': True, 'auto_dist': False}
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3504: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/base.py:1157: UserWarning: You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+  warnings.warn(
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 1 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 0 
+BREAKING OUT OF ITERATIONS
+Generation   0NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 14 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 13 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 13 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 13 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 13 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 12 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 9 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 9 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 8 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 8 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 8 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 7 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 7 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   1NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 40 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 40 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 39 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 35 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 31 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 30 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 26 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 23 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 21 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 19 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 17 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   2NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 40 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 38 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 37 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key behaviour was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 34 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key behaviour was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 30 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 30 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 28 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key behaviour was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 22 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key behaviour was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 20 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key behaviour was not present in word2vec?
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   3NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 41 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 39 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 38 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 37 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 34 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 32 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 30 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 29 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 29 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 27 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 26 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 25 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 25 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   4NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key realise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 41 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 38 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 37 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 37 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 35 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key revitalise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 33 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key revitalise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 31 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 28 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 27 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 26 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 21 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   5NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 41 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 40 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 39 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 34 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 34 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 33 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 31 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 30 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 28 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 28 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 27 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 25 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Key recognise was not present in word2vec?
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   6NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 41 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 39 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 38 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 36 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 35 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 34 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 31 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 29 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 26 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   7NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 43 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 42 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 41 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 38 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 35 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 33 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 29 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 28 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 26 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 24 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 23 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 20 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 18 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 17 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 16 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ min :1.00000 avg pre:1.00000 avg post:1.00000
+Generation   8NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predict successful <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+NEW ITERATION OF LINEAR_SEARCH
+SEARCHERS PARTICIPATED: 44 
+Trying to batch predict >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+batch predicted
+Traceback (most recent call last):
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/main.py", line 226, in <module>
+    main()
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/main.py", line 202, in main
+    experiment_per_sentence(
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/main.py", line 80, in experiment_per_sentence
+    searcher.start_search(sentence)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/search/evolutionary_algos.py", line 152, in start_search
+    fitness_vals = self.batch_fitness(outputs)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/search/evolutionary_algos.py", line 79, in batch_fitness
+    toxicities, actual_iterations = batch_distance(
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/toxicity/distance.py", line 147, in batch_distance
+    results = evaluator.predict_batch(sentences)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/utils/stats.py", line 102, in wrap
+    result = f(*args, **kw)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/toxicity/models/llm.py", line 45, in predict_batch
+    semi_res = self._llm.batch_generate(batched_sentences)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/utils/stats.py", line 102, in wrap
+    result = f(*args, **kw)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/FYP/llmapi/custom_model_api.py", line 49, in batch_generate
+    output = self.pipe(USER_PROMPTS, max_new_tokens=100)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 241, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1177, in __call__
+    outputs = list(final_iterator)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/pt_utils.py", line 125, in __next__
+    processed = self.infer(item, **self.params)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/base.py", line 1102, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/pipelines/text_generation.py", line 328, in _forward
+    generated_sequence = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/utils.py", line 1544, in generate
+    return self.greedy_search(
+  File "/mnt/hdd/liujiayang/Rajarshi/code/venvdir/fyp2/lib/python3.10/site-packages/transformers/generation/utils.py", line 2463, in greedy_search
+    if unfinished_sequences.max() == 0:
+KeyboardInterrupt
