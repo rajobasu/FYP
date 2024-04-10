@@ -69,19 +69,20 @@ class EvoAlgoV1:
         self.db = db
         self.generated_items = 0
         self.orig_sentence: str = ""  # note that this is treated as a single string since we dont really modify it anyway.
+        self.actual_iterations: list[int] = []
 
     def fitness(self, sentence: SENTENCE_T) -> FITNESS_T:
         return self.batch_fitness([sentence])[0]
 
     def batch_fitness(self, sentences: list[SENTENCE_T]) -> list[FITNESS_T]:
         converted_sentences = [" ".join(sentence) for sentence in sentences]
-        toxicities = batch_distance(
+        toxicities, actual_iterations = batch_distance(
             sentences=converted_sentences,
             evaluator=self.toxic,
             limit=self.distance_param
         )
         similarities = [self.sent_sim.predict(self.orig_sentence, sentence) for sentence in converted_sentences]
-
+        self.actual_iterations = actual_iterations
         return [(t, s) for t, s in zip(toxicities, similarities)]
 
 
@@ -156,9 +157,9 @@ class EvoAlgoV1:
             self.generated_items = 0
 
             denom = self.distance_param
-            for sent, t, s in result:
+            for (sent, t, s), at in zip(result, self.actual_iterations):
                 sent_str = " ".join(sent)
-                self.db.add_record(sent_str, t, s, ng)  # type: ignore
+                self.db.add_record(sent_str, at, s, ng)  # type: ignore
 
             if self.throw_half:
                 sentence_pool = sentence_pool[:self.current_pool_size // 2]
@@ -174,5 +175,5 @@ class EvoAlgoV1:
             print(f" avg post:{np.mean([x[1] for x in sentence_pool]) * denom:.5f}", flush=True)
 
             # we need to re-evaluate the sentences if auto_dist is turned on
-            if self.auto_dist:
-                sentence_pool = [(sent, *self.fitness(sent)) for sent, _, _ in sentence_pool]
+            # if self.auto_dist:
+            #     sentence_pool = [(sent, *self.fitness(sent)) for sent, _, _ in sentence_pool]

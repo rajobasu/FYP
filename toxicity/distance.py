@@ -24,8 +24,10 @@ def set_up_logging():
     logger.addHandler(f_handler)
     logger.setLevel(logging.DEBUG)
 
+
 if LOGGING_ENABLED:
     set_up_logging()
+
 
 class BinarySearcher:
     def __init__(self, *,
@@ -90,12 +92,13 @@ class LinearSearcher:
         self.curr_sentence = sentence
 
     def get_next_question(self):
-        if self.satisfied or self.iterator >= self.limit:
+        if self.satisfied:
             return None
 
         return self.curr_sentence
 
     def update_with_answer(self, answer):
+        # we can only get none if we gave them none.
         if answer is None:
             return
         if answer == 1:
@@ -104,12 +107,16 @@ class LinearSearcher:
         else:
             self.satisfied = True
 
-    def get_answer(self):
-        return self.iterator / self.limit
+    def get_answer(self) -> float:
+        return min(1.0, self.iterator / self.limit)
+
+    def get_actual_iterations(self) -> int:
+        return self.iterator
 
 
-def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorWrapper, limit: int) -> list[float]:
+def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorWrapper, limit: int) -> tuple[list[float], list[int]]:
     searchers = [LinearSearcher(toxicity_rater=evaluator, limit=limit, sentence=sentence) for sentence in sentences]
+
     # setup_questions = []
     # for searcher in searchers:
     #     setup_questions.extend(searcher.get_setup_question())
@@ -121,13 +128,8 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
     # for searcher, ans in zip(searchers, utils.util.split_batch(setup_answers, 2)):
     #     searcher.answer_setup_question(ans[0], ans[1])
 
-    countr = 0
-    while True:
+    for __ in range(20):
         print("NEW ITERATION OF LINEAR_SEARCH")
-        countr += 1
-        if countr >= 20:
-            print("CATASTROPHIC FAILURE")
-            exit(0)
 
         ids = []
         sentences = []
@@ -139,6 +141,7 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
 
         print(f"SEARCHERS PARTICIPATED: {len(ids)} ")
         if not ids:
+            print("BREAKING OUT OF ITERATIONS")
             break
 
         results = evaluator.predict_batch(sentences)
@@ -151,4 +154,5 @@ def batch_distance(*, sentences: list[str], evaluator: BooleanToxicityEvaluatorW
 
             searchers[i].update_with_answer(res)
 
-    return [searcher.get_answer() for searcher in searchers]
+    return ([searcher.get_answer() for searcher in searchers],
+            [searcher.get_actual_iterations() for searcher in searchers])
